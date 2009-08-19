@@ -272,6 +272,7 @@ table .icon {
 }
 .left_menu a:hover {
     background-image: url(../images/background/bullet_hover.png);
+    color: rgb(92,186,218);
 }
 .left_menu table {
 	width: 100%;
