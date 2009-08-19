@@ -145,7 +145,7 @@ table .icon {
     height: 33px;
 	padding-left: 35px;
 	margin: 0 0 0 10px;
-	background: url(../images/menu/menu_sprite_hover.png) no-repeat;
+	background: url(../images/menu/menu_sprite.png) no-repeat;
 }
 .location-menu {
 	float: right;
@@ -199,7 +199,7 @@ table .icon {
 
 .main_menu a:hover {
 	text-decoration: underline;
-	background-image: url(../images/menu/menu_sprite.png);
+	background-image: url(../images/menu/menu_sprite_hover.png);
 }
 
 /***********************************************************************************
