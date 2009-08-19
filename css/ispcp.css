@@ -112,6 +112,9 @@ a:hover, a:focus {
     margin: 0 5px;
     float: right;
 }
+.icon:first-child {
+    margin-right: 0;
+}
 table .icon {
     float: none;
 }
