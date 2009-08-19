@@ -103,6 +103,23 @@ dd {
 	margin: 0;
 }
 
+.buttons {
+    text-align: right;
+}
+
+.buttons input {
+    background: transparent url(../images/background/button.jpg) center left repeat-x;
+    height: 21px;
+    line-height: 21px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    border-color:#EEEEEE #000000 #000000 #EEEEEE;
+    border-style:solid;
+    border-width:1px;
+    font-weight: bold;
+}
+
 .icon {
     background: transparent url(../images/icons/icons_sprite.png) top left no-repeat;
     padding-left: 20px;
@@ -241,6 +258,7 @@ table .icon {
 .main_menu a:hover {
 	text-decoration: underline;
 	background-image: url(../images/menu/menu_sprite_hover.png);
+    color: rgb(92,186,218);
 }
 
 /***********************************************************************************
@@ -280,7 +298,7 @@ table .icon {
 	margin: 10px 0;
 }
 .left_menu th {
-	background: #000 url(../images/top/top_bar_bg.jpg) repeat-x top left;
+	background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
 	padding: 5px 0 5px 20px;
 	text-align: left;
 	font-size: 12px;
@@ -305,7 +323,7 @@ table .icon {
     background: #eee;
 }
 .body th {
-    background: #000 url(../images/content/tableheader.jpg) repeat-x;
+    background: #000 url(../images/background/top_bar_bg.jpg) repeat-x;
     white-space: nowrap;
     color: #fff;
     font-weight: bold;
