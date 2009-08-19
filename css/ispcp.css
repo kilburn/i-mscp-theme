@@ -276,9 +276,17 @@ fieldset {
     padding: 0;
     margin: 0 0 1em;
     border: none;
+	position: relative;
 }
-legend {
-    display: none;
+legend, h3 {
+    padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 14px;
+	font-family: arial;
+	font-weight: bold;
+	margin-bottom: 0.2em;
 }
 
 
