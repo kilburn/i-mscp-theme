@@ -148,7 +148,7 @@ table .icon {
     height: 33px;
 	padding-left: 35px;
 	margin: 0 0 0 10px;
-	background: url(../images/menu/menu_sprite.png) no-repeat;
+	background: url(../images/menu/menu_sprite_hover.png) no-repeat;
 }
 .location-menu {
 	float: right;
@@ -267,6 +267,14 @@ table .icon {
     font-weight: bold;
     text-align: left;
     padding: 5px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.body th:first-child {
+	border-left: 1px solid #000;
+}
+.body th:last-child {
+	border-right: 1px solid #000;
 }
 .body td {
     padding: 5px;
