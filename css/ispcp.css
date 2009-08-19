@@ -91,17 +91,18 @@ a:hover, a:focus {
 	text-decoration: underline;
 }
 
-.message {
-    margin: 2em 1em 1em;
-    border: 1px solid rgb(149,74,0);
-    background: rgb(255,236,156);
-    padding: 1em;
-    color: rgb(149,74,0);
-    text-align: center;
+dl {
+	margin-left: 2em;
 }
-.message p {
-    margin: 0;
+
+dt {
+	font-weight: bold;
+	margin-top: 0.5em;
 }
+dd {
+	margin: 0;
+}
+
 .icon {
     background: transparent url(../images/icons/icons_sprite.png) top left no-repeat;
     padding-left: 20px;
@@ -127,6 +128,43 @@ table .icon {
     width: 0px;
     overflow: hidden;
     height: 20px;
+}
+
+.warning, .success, .error, .info {
+    margin: 2em 1em 1em;
+    border: 1px solid;
+    padding: 15px 10px 15px 50px;
+    text-align: left;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+}
+
+.warning {
+	color: rgb(149,74,0);
+	border-color: rgb(149,74,0);
+	background-color: rgb(255,236,156);
+	background-image: url(../images/messages/warning.png);
+}
+
+.success {
+	color: rgb(61,122,21);
+	border-color: rgb(61,122,21);
+	background-color: rgb(214,241,179);
+	background-image: url(../images/messages/success.png);
+}
+
+.error {
+	color: rgb(202,29,17);
+	border-color: rgb(202,29,17);
+	background-color: rgb(253,191,173);
+	background-image: url(../images/messages/error.png);
+}
+
+.info {
+	color: rgb(15,61,135);
+	border-color: rgb(15,61,135);
+	background-color: rgb(176,222,245);
+	background-image: url(../images/messages/info.png);
 }
 
 /***********************************************************************************
@@ -255,10 +293,10 @@ table .icon {
 }
 .body tr {
     border: 1px solid rgb(223,223,223);
-    background: #eee;
+    background: #fff;
 }
 .body tr:nth-child(odd) {
-    background: #fff;
+    background: #eee;
 }
 .body th {
     background: #000 url(../images/content/tableheader.jpg) repeat-x;
