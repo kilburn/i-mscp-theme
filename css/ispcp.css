@@ -222,7 +222,7 @@ table .icon {
     display: inline;
 }
 .left_menu a {
-	color: #fff;
+	color: #1789ad;
 	display: block;
 	padding: 5px 20px;
 }
@@ -232,7 +232,7 @@ table .icon {
 	margin: 10px 0;
 }
 .left_menu th {
-	background: #000;
+	background: #000 url(../images/top/top_bar_bg.jpg) repeat-x top left;
 	padding: 5px 0 5px 20px;
 	text-align: left;
 	font-size: 12px;
