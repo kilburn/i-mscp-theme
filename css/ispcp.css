@@ -10,24 +10,24 @@ body,html {
 	min-width: 850px;
 	margin: 0;
 	padding: 0;
-	background: url(../images/top/left_bg.jpg) repeat-y top left;
+	background: url(../images/background/left_bg.jpg) repeat-y top left;
 	font-family: arial;
 	font-size: 12px;
 }
 
 .header {
-	background: url(../images/top/top_bg.jpg) repeat-x top left;
+	background: url(../images/background/top_bg.jpg) repeat-x top left;
 	overflow: hidden;
 	white-space: nowrap;
     height: 89px;
 }
 
 .header .logo {
-	background: url(../images/top/top_main_bg.jpg) no-repeat;
+	background: url(../images/background/top_main_bg.jpg) no-repeat;
 }
 
 .location {
-	background: #000 url(../images/top/top_bar_bg.jpg) repeat-x top left;
+	background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
 	color: #fff;
 	padding-left: 197px;
 	height: 25px;
@@ -202,7 +202,7 @@ table .icon {
  ***********************************************************************************/
 .main_menu {
     float: right;
-	background: url(../images/top/mainmenu_left.png) no-repeat top left #000;
+	background: url(../images/background/mainmenu_left.png) no-repeat top left #000;
 	height: 64px;
     text-align: right;
     _width: 3px;
@@ -210,7 +210,7 @@ table .icon {
 .main_menu ul {
 	margin: 0 0 0 11px;
 	padding: 0 10px 0 0;
-	background: url(../images/top/mainmenu_bg.png) repeat-x top left;
+	background: url(../images/background/mainmenu_bg.png) repeat-x top left;
 	height: 64px;
 }
 .main_menu li {
@@ -251,7 +251,7 @@ table .icon {
 	width: 197px;
 	float: left;
 	padding-bottom: 60px;
-	background: transparent url(../images/top/left_top_bg.jpg) no-repeat top;
+	background: transparent url(../images/background/left_top_bg.jpg) no-repeat top;
 }
 .left_menu ul {
 	margin: 10px 0;
@@ -264,9 +264,14 @@ table .icon {
     display: inline;
 }
 .left_menu a {
-	color: #1789ad;
+	color: #fff;
 	display: block;
-	padding: 5px 20px;
+	padding: 10px 20px;
+    border-bottom: 1px dotted #666;
+    background: transparent url(../images/background/bullet.png) no-repeat 5px center;
+}
+.left_menu a:hover {
+    background-image: url(../images/background/bullet_hover.png);
 }
 .left_menu table {
 	width: 100%;
@@ -370,12 +375,12 @@ legend, h3 {
 .location .webtools { background-position: 0 -960px; }
 /* Content icons (table_icons) */
 .body .adminlog { background-position: 0 0; }
-.body .billing { background-position: 0 -75px; }
+.body .billing { background-position: 0 -75px; } 
 .body .debugger { background-position: 0 -149px; }
 .body .diskusage { background-position: 0 -224px; }
 .body .doc { background-position: 0 -299px; }
 .body .domains { background-position: 0 -374px; }
-.body .email { background-position: 0 -449px; } 
+.body .email { background-position: 0 -449px; }
 .body .errors { background-position: 0 -524px; }
 .body .flash { background-position: 0 -599px; }
 .body .ftp { background-position: 0 -674px; }
@@ -439,23 +444,22 @@ legend, h3 {
 .i_htaccessicon { background-position: 0 -2600px; }
 .i_identity { background-position: 0 -2696px; }
 .i_locale { background-position: 0 -2762px; }
-.i_logout_interface { background-position: 0 -2828px; }
-.i_mail_icon { background-position: 0 -2894px; }
-.i_manage_users_big { background-position: 0 -2960px; }
-.i_next { background-position: 0 -3042px; }
-.i_next_gray { background-position: 0 -3112px; }
-.i_ok { background-position: 0 -3182px; }
-.i_pma { background-position: 0 -3248px; }
-.i_prev { background-position: 0 -3314px; }
-.i_prev_gray { background-position: 0 -3384px; }
-.i_purchasing_big { background-position: 0 -3454px; }
-.i_reload { background-position: 0 -3536px; }
-.i_settings_big { background-position: 0 -3602px; }
-.i_show_alias { background-position: 0 -3684px; }
-.i_statistics_big { background-position: 0 -3750px; }
-.i_stats { background-position: 0 -3832px; }
-.i_support_big { background-position: 0 -3898px; }
-.i_user { background-position: 0 -3979px; }
-.i_users { background-position: 0 -4045px; }
-.i_webmailicon { background-position: 0 -4111px; }
-.i_webtools_big { background-position: 0 -4207px; }
+.i_mail_icon { background-position: 0 -2828px; }
+.i_manage_users_big { background-position: 0 -2894px; }
+.i_next { background-position: 0 -2976px; }
+.i_next_gray { background-position: 0 -3046px; }
+.i_ok { background-position: 0 -3116px; }
+.i_pma { background-position: 0 -3182px; }
+.i_prev { background-position: 0 -3248px; }
+.i_prev_gray { background-position: 0 -3318px; }
+.i_purchasing_big { background-position: 0 -3388px; }
+.i_reload { background-position: 0 -3470px; }
+.i_settings_big { background-position: 0 -3536px; }
+.i_show_alias { background-position: 0 -3618px; }
+.i_statistics_big { background-position: 0 -3684px; }
+.i_stats { background-position: 0 -3766px; }
+.i_support_big { background-position: 0 -3832px; }
+.i_user { background-position: 0 -3913px; }
+.i_users { background-position: 0 -3979px; }
+.i_webmailicon { background-position: 0 -4045px; }
+.i_webtools_big { background-position: 0 -4141px; }
