@@ -267,6 +267,7 @@ table .icon {
 	color: #fff;
 	display: block;
 	padding: 5px 20px;
+    font-weight: bold;
     background: transparent url(../images/background/bullet.png) no-repeat 5px center;
 }
 .left_menu a:hover {
