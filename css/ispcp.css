@@ -144,7 +144,6 @@ table .icon {
 
 .paginator {
     margin: 0.5em 0;
-    overflow: hidden;
 }
 .paginator .icon {
     width: 0px;
