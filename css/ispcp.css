@@ -70,16 +70,13 @@ h2 span {
 	border-bottom: 1px solid #ccc;
 	margin-right: -33px;
 }
-h3 {
-    
-}
 
 form {
     margin: 0.5em 0;
 }
 
 p {
-    	margin: 0 0 1em;
+		margin: 0 0 1em;
 }
 
 a {
@@ -111,13 +108,17 @@ dd {
     background: transparent url(../images/background/button.jpg) center left repeat-x;
     height: 21px;
     line-height: 21px;
-    padding: 0 10px;
+    padding: 0 10px 2px;
     color: #fff;
     font-size: 12px;
-    border-color:#EEEEEE #000000 #000000 #EEEEEE;
-    border-style:solid;
-    border-width:1px;
+    border-color: #eee #000 #000 #eee;
+    border-style: solid;
+    border-width: 1px;
     font-weight: bold;
+}
+.buttons input:hover, .buttons input:focus {
+	color: rgb(92,186,218);
+	cursor: pointer;
 }
 
 .icon {
