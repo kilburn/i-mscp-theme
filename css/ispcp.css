@@ -70,13 +70,20 @@ h2 span {
     border-bottom: 1px solid #ccc;
     margin-right: -33px;
 }
+h3 {
+    
+}
 
 form {
     margin: 0.5em 0;
 }
 
 p {
+<<<<<<< HEAD:css/ispcp.css
         margin: 0 0 1em;
+=======
+    	margin: 0 0 1em;
+>>>>>>> cac8cdc... Minor tweaks to buttons by Zothos:css/ispcp.css
 }
 
 a {
@@ -108,12 +115,12 @@ dd {
     background: transparent url(../images/background/button.jpg) center left repeat-x;
     height: 21px;
     line-height: 21px;
-    padding: 0 10px 2px;
+    padding: 0 10px;
     color: #fff;
     font-size: 12px;
-    border-color: #eee #000 #000 #eee;
-    border-style: solid;
-    border-width: 1px;
+    border-color:#EEEEEE #000000 #000000 #EEEEEE;
+    border-style:solid;
+    border-width:1px;
     font-weight: bold;
 }
 .buttons input:hover, .buttons input:focus {
@@ -232,7 +239,6 @@ table .icon {
     margin: 0;
 }
 .path a:hover {
-    background: rgba(255,255,255,0.1);
     color: rgb(92,186,218);
 }
 
@@ -327,8 +333,6 @@ table .icon {
 .left_menu a:hover {
     background-image: url(../images/background/bullet_hover.png);
     color: rgb(92,186,218);
-    background-color: rgba(255,255,255,0.1);
-    -moz-border-radius: 4px;
 }
 .left_menu table {
     width: 100%;
