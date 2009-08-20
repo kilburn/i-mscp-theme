@@ -3,49 +3,49 @@
  ***********************************************************************************/
 
 html {
-	position: relative;
+    position: relative;
 }
 body,html {
-	min-height: 100%;
-	min-width: 850px;
-	margin: 0;
-	padding: 0;
-	background: url(../images/background/left_bg.jpg) repeat-y top left;
-	font-family: arial;
-	font-size: 12px;
+    min-height: 100%;
+    min-width: 850px;
+    margin: 0;
+    padding: 0;
+    background: url(../images/background/left_bg.jpg) repeat-y top left;
+    font-family: arial;
+    font-size: 12px;
 }
 
 .header {
-	background: url(../images/background/top_bg.jpg) repeat-x top left;
-	overflow: hidden;
-	white-space: nowrap;
+    background: url(../images/background/top_bg.jpg) repeat-x top left;
+    overflow: hidden;
+    white-space: nowrap;
     height: 89px;
 }
 
 .header .logo {
-	background: url(../images/background/top_main_bg.jpg) no-repeat;
+    background: url(../images/background/top_main_bg.jpg) no-repeat;
 }
 
 .location {
-	background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
-	color: #fff;
-	padding-left: 197px;
-	height: 25px;
+    background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
+    color: #fff;
+    padding-left: 197px;
+    height: 25px;
     line-height: 25px;
-	position: relative;
-	overflow: visible;
+    position: relative;
+    overflow: visible;
 }
 
 .body {
-	margin: 0 20px 0 240px;
+    margin: 0 20px 0 240px;
 }
 
 .footer {
-	position: absolute; 
-	bottom: 10px;
-	text-align: center;
-	color: #fff;
-	width: 197px;
+    position: absolute; 
+    bottom: 10px;
+    text-align: center;
+    color: #fff;
+    width: 197px;
     left: 0;
 }
 
@@ -54,21 +54,21 @@ body,html {
  ***********************************************************************************/
 
 h2 {
-	font-family: Geneva,Arial,Helvetica,sans-serif;
-	font-size: 18px;
-	font-variant: small-caps;
-	font-weight: bold;
-	position: relative;
-	left: -33px;
-	padding-left: 33px;
-	height: 33px;
-	background: url(../images/content/content_sprite.png) no-repeat;
-	margin: 1em 0 0;
+    font-family: Geneva,Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-variant: small-caps;
+    font-weight: bold;
+    position: relative;
+    left: -33px;
+    padding-left: 33px;
+    height: 33px;
+    background: url(../images/content/content_sprite.png) no-repeat;
+    margin: 1em 0 0;
 }
 h2 span {
-	display: block;
-	border-bottom: 1px solid #ccc;
-	margin-right: -33px;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-right: -33px;
 }
 
 form {
@@ -76,28 +76,28 @@ form {
 }
 
 p {
-		margin: 0 0 1em;
+        margin: 0 0 1em;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
     color: #009;
     outline: none;
 }
 a:hover, a:focus {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 dl {
-	margin-left: 2em;
+    margin-left: 2em;
 }
 
 dt {
-	font-weight: bold;
-	margin-top: 0.5em;
+    font-weight: bold;
+    margin-top: 0.5em;
 }
 dd {
-	margin: 0;
+    margin: 0;
 }
 
 .buttons {
@@ -117,8 +117,8 @@ dd {
     font-weight: bold;
 }
 .buttons input:hover, .buttons input:focus {
-	color: rgb(92,186,218);
-	cursor: pointer;
+    color: rgb(92,186,218);
+    cursor: pointer;
 }
 
 .icon {
@@ -153,36 +153,36 @@ table .icon {
     border: 1px solid;
     padding: 15px 10px 15px 50px;
     text-align: left;
-	background-repeat: no-repeat;
-	background-position: 10px center;
+    background-repeat: no-repeat;
+    background-position: 10px center;
 }
 
 .warning {
-	color: rgb(149,74,0);
-	border-color: rgb(149,74,0);
-	background-color: rgb(255,236,156);
-	background-image: url(../images/messages/warning.png);
+    color: rgb(149,74,0);
+    border-color: rgb(149,74,0);
+    background-color: rgb(255,236,156);
+    background-image: url(../images/messages/warning.png);
 }
 
 .success {
-	color: rgb(61,122,21);
-	border-color: rgb(61,122,21);
-	background-color: rgb(214,241,179);
-	background-image: url(../images/messages/success.png);
+    color: rgb(61,122,21);
+    border-color: rgb(61,122,21);
+    background-color: rgb(214,241,179);
+    background-image: url(../images/messages/success.png);
 }
 
 .error {
-	color: rgb(202,29,17);
-	border-color: rgb(202,29,17);
-	background-color: rgb(253,191,173);
-	background-image: url(../images/messages/error.png);
+    color: rgb(202,29,17);
+    border-color: rgb(202,29,17);
+    background-color: rgb(253,191,173);
+    background-image: url(../images/messages/error.png);
 }
 
 .info {
-	color: rgb(15,61,135);
-	border-color: rgb(15,61,135);
-	background-color: rgb(176,222,245);
-	background-image: url(../images/messages/info.png);
+    color: rgb(15,61,135);
+    border-color: rgb(15,61,135);
+    background-color: rgb(176,222,245);
+    background-image: url(../images/messages/info.png);
 }
 
 /***********************************************************************************
@@ -190,29 +190,63 @@ table .icon {
  ***********************************************************************************/
 
 .location-area {
-	position: absolute;
-	left: 0;
-	top: -5px;
+    position: absolute;
+    left: 0;
+    top: -5px;
     margin: 0;
     padding: 0;
     height: 33px;
 }
 .location-area h1 {
-	font-size: 13px;
-	padding: 0;
-	line-height: 33px;
+    font-size: 13px;
+    padding: 0;
+    line-height: 33px;
     height: 33px;
-	padding-left: 35px;
-	margin: 0 0 0 10px;
-	background: url(../images/menu/menu_sprite_hover.png) no-repeat;
+    padding-left: 35px;
+    margin: 0 0 0 10px;
+    background: url(../images/menu/menu_sprite_hover.png) no-repeat;
 }
 .location-menu {
-	float: right;
-	margin-right: 10px;
+    float: right;
+    margin-right: 10px;
 }
 .location-menu a {
-	color: #f00;
+    color: #f00;
     font-weight: bold;
+}
+.path {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.path a {
+    color: #fff;
+    padding: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    margin: 0;
+}
+.path a:hover {
+    background: rgba(255,255,255,0.1);
+    color: rgb(92,186,218);
+}
+
+.path li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.path li:before {
+    content: "\0020 \0020 \0020 \00BB \0020";
+    color: #fff;
+}
+.path li:first-child:before {
+    content: "";
 }
 
 /***********************************************************************************
@@ -220,28 +254,28 @@ table .icon {
  ***********************************************************************************/
 .main_menu {
     float: right;
-	background: url(../images/background/mainmenu_left.png) no-repeat top left #000;
-	height: 64px;
+    background: url(../images/background/mainmenu_left.png) no-repeat top left #000;
+    height: 64px;
     text-align: right;
     _width: 3px;
 }
 .main_menu ul {
-	margin: 0 0 0 11px;
-	padding: 0 10px 0 0;
-	background: url(../images/background/mainmenu_bg.png) repeat-x top left;
-	height: 64px;
+    margin: 0 0 0 11px;
+    padding: 0 10px 0 0;
+    background: url(../images/background/mainmenu_bg.png) repeat-x top left;
+    height: 64px;
 }
 .main_menu li {
-	margin: 0;
-	padding: 0;
-	display: inline;
+    margin: 0;
+    padding: 0;
+    display: inline;
 }
 .main_menu a {
-	margin: 10px 0 0 5px;
-	display: inline-block;
-	padding: 33px 0 0;
-	color: #fff;
-	background: url(../images/menu/menu_sprite.png) no-repeat;
+    margin: 10px 0 0 5px;
+    display: inline-block;
+    padding: 33px 0 0;
+    color: #fff;
+    background: url(../images/menu/menu_sprite.png) no-repeat;
     text-align: center;
 }
 
@@ -257,8 +291,8 @@ table .icon {
 /******* end of hack ******/
 
 .main_menu a:hover {
-	text-decoration: underline;
-	background-image: url(../images/menu/menu_sprite_hover.png);
+    text-decoration: underline;
+    background-image: url(../images/menu/menu_sprite_hover.png);
     color: rgb(92,186,218);
 }
 
@@ -266,46 +300,49 @@ table .icon {
  * LEFT MENU STYLE
  ***********************************************************************************/
 .left_menu {
-	color: #fff;
-	width: 197px;
-	float: left;
-	padding-bottom: 60px;
-	background: transparent url(../images/background/left_top_bg.jpg) no-repeat top;
+    color: #fff;
+    width: 197px;
+    float: left;
+    padding-bottom: 60px;
+    background: transparent url(../images/background/left_top_bg.jpg) no-repeat top;
 }
 .left_menu ul {
-	margin: 10px 0;
-	padding: 0;
-	list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
 }
 .left_menu li {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     display: inline;
 }
 .left_menu a {
-	color: #fff;
-	display: block;
-	padding: 5px 20px;
+    color: #fff;
+    display: block;
+    padding: 5px 18px;
     font-weight: bold;
-    background: transparent url(../images/background/bullet.png) no-repeat 5px center;
+    background: transparent url(../images/background/bullet.png) no-repeat 3px center;
+    margin: 2px;
 }
 .left_menu a:hover {
     background-image: url(../images/background/bullet_hover.png);
     color: rgb(92,186,218);
+    background-color: rgba(255,255,255,0.1);
+    -moz-border-radius: 4px;
 }
 .left_menu table {
-	width: 100%;
-	border-collapse: collapse;
-	margin: 10px 0;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
 }
 .left_menu th {
-	background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
-	padding: 5px 0 5px 20px;
-	text-align: left;
-	font-size: 12px;
+    background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
+    padding: 5px 0 5px 20px;
+    text-align: left;
+    font-size: 12px;
 }
 .left_menu td {
-	padding: 5px 0 5px 20px;
+    padding: 5px 0 5px 20px;
 }
 
 /***********************************************************************************
@@ -330,14 +367,14 @@ table .icon {
     font-weight: bold;
     text-align: left;
     padding: 5px;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 .body th:first-child {
-	border-left: 1px solid #000;
+    border-left: 1px solid #000;
 }
 .body th:last-child {
-	border-right: 1px solid #000;
+    border-right: 1px solid #000;
 }
 .body td {
     padding: 5px;
@@ -347,17 +384,17 @@ fieldset {
     padding: 0;
     margin: 0 0 1em;
     border: none;
-	position: relative;
+    position: relative;
 }
 legend, h3 {
     padding: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-size: 14px;
-	font-family: arial;
-	font-weight: bold;
-	margin-bottom: 0.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: bold;
+    margin-bottom: 0.2em;
 }
 
 
