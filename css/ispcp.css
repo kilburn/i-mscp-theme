@@ -199,15 +199,16 @@ table .icon {
 .location-area {
     position: absolute;
     left: 0;
-    top: -5px;
+    top: 0;
     margin: 0;
     padding: 0;
     height: 33px;
+    z-Index: 999;
 }
 .location-area h1 {
     font-size: 13px;
     padding: 0;
-    line-height: 33px;
+    line-height: 25px;
     height: 33px;
     padding-left: 35px;
     margin: 0 0 0 10px;
@@ -233,10 +234,8 @@ table .icon {
     height: 25px;
     line-height: 25px;
     vertical-align: middle;
-    display: inline-block;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
     margin: 0;
+    font-size: 11px;
 }
 .path a:hover {
     color: rgb(92,186,218);
