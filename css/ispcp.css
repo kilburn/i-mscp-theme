@@ -23,7 +23,7 @@ body,html {
 }
 
 .header .logo {
-    background: url(../images/background/top_main_bg.jpg) no-repeat;
+    background: url(../images/background/top_left_bg.jpg) no-repeat;
 }
 
 .location {
@@ -211,7 +211,7 @@ table .icon {
     height: 33px;
     padding-left: 35px;
     margin: 0 0 0 10px;
-    background: url(../images/menu/menu_sprite_hover.png) no-repeat;
+    background: url(../images/menu/menu_sprite.png) no-repeat;
 }
 .location-menu {
     float: right;
@@ -260,7 +260,7 @@ table .icon {
  ***********************************************************************************/
 .main_menu {
     float: right;
-    background: url(../images/background/mainmenu_left.png) no-repeat top left #000;
+    background: transparent url(../images/background/mainmenu_left.png) no-repeat top left;
     height: 64px;
     text-align: right;
     _width: 3px;
@@ -268,7 +268,7 @@ table .icon {
 .main_menu ul {
     margin: 0 0 0 11px;
     padding: 0 10px 0 0;
-    background: url(../images/background/mainmenu_bg.png) repeat-x top left;
+    background: transparent url(../images/background/mainmenu_bg.png) repeat-x top left;
     height: 64px;
 }
 .main_menu li {
