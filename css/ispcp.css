@@ -2,9 +2,6 @@
  * PAGE LAYOUT
  ***********************************************************************************/
 
-html {
-    position: relative;
-}
 body,html {
     min-height: 100%;
     min-width: 850px;
@@ -13,6 +10,10 @@ body,html {
     background: url(../images/background/left_bg.jpg) repeat-y top left;
     font-family: arial;
     font-size: 12px;
+}
+html {
+    position: relative;
+    padding-bottom: 1em;
 }
 
 .header {
@@ -79,11 +80,7 @@ form {
 }
 
 p {
-<<<<<<< HEAD:css/ispcp.css
-        margin: 0 0 1em;
-=======
     	margin: 0 0 1em;
->>>>>>> cac8cdc... Minor tweaks to buttons by Zothos:css/ispcp.css
 }
 
 a {
@@ -216,12 +213,30 @@ table .icon {
 }
 .location-menu {
     float: right;
-    margin-right: 10px;
+    list-style-type: none;
+    margin: -1px 10px 0;
+    padding: 0;
+    height: 25px;
+    line-height: 25px;
+}
+.location-menu li {
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 .location-menu a {
     color: #f00;
     font-weight: bold;
+    background: transparent no-repeat center left;
+    padding: 0 5px 0 22px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
 }
+.location-menu .help { background-image: url(../images/user/help.png); }
+.location-menu .logout { background-image: url(../images/user/logout.png); }
+.location-menu .backadmin { background-image: url(../images/user/backadmin.png); }
+
 .path {
     list-style-type: none;
     display: inline;
@@ -382,9 +397,11 @@ table .icon {
 .body td {
     padding: 5px;
     white-space: nowrap;
+    border-top: 1px solid rgb(223,223,223);
+    border-bottom: 1px solid rgb(223,223,223);
 }
 fieldset {
-    padding: 0;
+    padding: 2em 0 0;
     margin: 0 0 1em;
     border: none;
     position: relative;
@@ -397,7 +414,8 @@ legend, h3 {
     font-size: 14px;
     font-family: arial;
     font-weight: bold;
-    margin-bottom: 0.2em;
+    color: #000;
+    margin-bottom: -1em;
 }
 
 
