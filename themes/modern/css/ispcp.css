@@ -1,285 +1,543 @@
+/***********************************************************************************
+ * PAGE LAYOUT
+ ***********************************************************************************/
 
-html, body {
-	height:				100%;
-	margin:				0;
-	padding:			0;
-	border:				none;
+body,html {
+    min-height: 100%;
+    min-width: 850px;
+    margin: 0;
+    padding: 0;
+    background: url(../images/background/left_bg.jpg) repeat-y top left;
+    font-family: arial;
+    font-size: 12px;
+}
+html {
+    position: relative;
+    padding-bottom: 1em;
 }
 
-body {
-	background-color:	#ffffff;
+.header {
+    background: url(../images/background/top_bg.jpg) repeat-x top left;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 89px;
 }
 
-/*********************************** LINKS ************************************/
-a.link, a.link:link, a.link:visited {
-	color:				#000099;
-	text-decoration:	underline;
-	font-weight:		normal;
+.header .logo {
+    background: url(../images/background/top_left_bg.jpg) no-repeat;
 }
 
-a.link:hover, a.link:active, a.link:focus {
-	color:				#000000;
-	text-decoration:	none;
+.location {
+    background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
+    color: #fff;
+    padding-left: 197px;
+    height: 25px;
+    line-height: 25px;
+    position: relative;
+    overflow: visible;
 }
 
-a.linkdark, a.linkdark:link, a.linkdark:visited {
-	color:				#cccccc;
-	text-decoration:	underline;
-	font-weight:		normal;
+.body {
+    margin: 0 20px 0 240px;
 }
 
-a.linkdark:hover, a.linkdark:active, a.linkdark:focus {
-	color:				#f4dc6b;
-	text-decoration:	none;
+.footer {
+    position: absolute; 
+    bottom: 10px;
+    text-align: center;
+    color: #fff;
+    width: 197px;
+    left: 0;
 }
 
-a.menu, a.menu:link, a.menu:visited {
-	font-family:		Arial, Helvetica, sans-serif;
-	font-size:			9pt;
-	color:				#000000;
-	font-weight:		bold;
-	font-variant:		small-caps;
+/***********************************************************************************
+ * GENERAL INTERFACE STYLES
+ ***********************************************************************************/
+
+h2 {
+    font-family: Geneva,Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-variant: small-caps;
+    font-weight: bold;
+    position: relative;
+    left: -33px;
+    padding-left: 33px;
+    height: 33px;
+    background: url(../images/content/content_sprite.png) no-repeat;
+    margin: 1em 0 0;
+}
+h2 span {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin-right: -33px;
+}
+h3 {
+    
 }
 
-a.menu:hover, a.menu:active, a.menu:focus {
-	color:				#333333;
-	text-decoration:	none;
+form {
+    margin: 0.5em 0;
 }
 
-a.menu_active, a.menu_active:link, a.menu_active:visited {
-	font-family:		Arial, Helvetica, sans-serif;
-	font-size:			9pt;
-	color:				#000000;
-	font-weight:		bold;
-	font-variant:		small-caps;
+p {
+    	margin: 0 0 1em;
 }
 
-a.menu_active:hover, a.menu_active:active, a.menu_active:focus {
-	color:				#333333;
-	text-decoration:	none;
+a {
+    text-decoration: none;
+    color: #009;
+    outline: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
 }
 
-a.submenu {
-	margin-top:			0px;
-	display:			block;
-	font-family:		Geneva, Arial, Helvetica, sans-serif;
-	font-weight:		bold;
-	font-size:			11px;
-	vertical-align:		middle;
-	color:				#ffffff;
-	height:				25px;
-	padding:			2px;
-	padding-left:		20px;
-	padding-top:		5px;
-	text-decoration:	none;
+dl {
+    margin-left: 2em;
 }
 
-a.submenu:link, a.submenu:visited {
-	color:				#ffffff;
-	background-image:	url(../images/top/link_bg.jpg);
-	vertical-align:		middle;
+dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+dd {
+    margin: 0;
 }
 
-a.submenu:hover, a.submenu:active, a.submenu:focus {
-	color:				#f4dc6b;
-	background-image:	url(../images/top/link_hover_bg.jpg);
-	vertical-align:		middle;
+.buttons {
+    text-align: right;
+    margin-top: 0.5em;
 }
 
-.logoutbutton a, .logoutbutton a:link, .logoutbutton a:visited {
-	font-family:		Arial, Helvetica, sans-serif;
-	font-weight:		bold;
-	font-size:			14px;
-	color:				#ffffff;
-	height:				24px;
-	padding:			1px;
-	white-space:		nowrap;
-	text-decoration:	none;
+.buttons input {
+    background: transparent url(../images/background/button.jpg) center left repeat-x;
+    height: 21px;
+    line-height: 21px;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 12px;
+    border-color:#EEEEEE #000000 #000000 #EEEEEE;
+    border-style:solid;
+    border-width:1px;
+    font-weight: bold;
+}
+.buttons input:hover, .buttons input:focus {
+    color: rgb(92,186,218);
+    cursor: pointer;
 }
 
-.logoutbutton a:hover, .logoutbutton a:active, .logoutbutton a:focus {
-	color:				#f4dc6b;
+.icon {
+    background: transparent url(../images/icons/icons_sprite.png) top left no-repeat;
+    padding-left: 20px;
+    height: 16px;
+    line-height: 16px;
+    display: -moz-inline-block;
+    display: inline-block;
+    margin: 0 5px;
+    float: right;
+}
+.icon:first-child {
+    margin-right: 0;
+}
+table .icon {
+    float: none;
 }
 
-.logoutbutton img {
-	vertical-align:		middle;
-	padding-right:		5px;
+.paginator {
+    margin: 0.5em 0;
+}
+.paginator .icon {
+    width: 0px;
+    overflow: hidden;
+    height: 20px;
 }
 
-.login {
-	font-family:		Geneva, Arial, Helvetica, sans-serif;
-	font-size:			11px;
-	color:				#000;
-	white-space:		nowrap;
-	text-decoration:	none;
+.warning, .success, .error, .info {
+    margin: 2em 1em 1em;
+    border: 1px solid;
+    padding: 15px 10px 15px 50px;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: 10px center;
 }
 
-a.login, a.login:link, a.login:visited {
-	font-family:		Geneva, Arial, Helvetica, sans-serif;
-	font-size:			11px;
-	color:				#3b73ca;
-	white-space:		nowrap;
-	text-decoration:	underline;
+.warning {
+    color: rgb(149,74,0);
+    border-color: rgb(149,74,0);
+    background-color: rgb(255,236,156);
+    background-image: url(../images/messages/warning.png);
 }
 
-a.login:hover, a.login:active, a.login:hover {
-	color:				#000000;
-	text-decoration:	none;
+.success {
+    color: rgb(61,122,21);
+    border-color: rgb(61,122,21);
+    background-color: rgb(214,241,179);
+    background-image: url(../images/messages/success.png);
 }
 
-/*********************************** OTHER ************************************/
-
-.logoutbutton {
-	padding-left:		15px;
+.error {
+    color: rgb(202,29,17);
+    border-color: rgb(202,29,17);
+    background-color: rgb(253,191,173);
+    background-image: url(../images/messages/error.png);
 }
 
-.title {
-	font-family:		Geneva, Arial, Helvetica, sans-serif;
-	font-size:			11pt;
-	font-weight:		bold;
-	font-variant:		small-caps;
-	text-decoration:	none;
-	border-bottom:		#cccccc solid 1px;
+.info {
+    color: rgb(15,61,135);
+    border-color: rgb(15,61,135);
+    background-color: rgb(176,222,245);
+    background-image: url(../images/messages/info.png);
 }
 
-.titlemenu {
-	font-family:		Geneva, Arial, Helvetica, sans-serif;
-	font-size:			11pt;
-	font-weight:		bold;
-	font-variant:		small-caps;
-	color:				#ffffff;
-	padding-left:		5px;
-	vertical-align:		text-top;
+/***********************************************************************************
+ * LOCATION BAR STYLES
+ ***********************************************************************************/
+
+.location-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 33px;
+    z-Index: 999;
+}
+.location-area h1 {
+    font-size: 13px;
+    padding: 0;
+    line-height: 25px;
+    height: 33px;
+    padding-left: 35px;
+    margin: 0 0 0 10px;
+    background: url(../images/menu/menu_sprite.png) no-repeat;
+}
+.location-menu {
+    float: right;
+    list-style-type: none;
+    margin: -1px 10px 0;
+    padding: 0;
+    height: 25px;
+    line-height: 25px;
+}
+.location-menu li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.location-menu a {
+    color: #f00;
+    font-weight: bold;
+    background: transparent no-repeat center left;
+    padding: 0 5px 0 22px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+}
+.location-menu .help { background-image: url(../images/user/help.png); }
+.location-menu .logout { background-image: url(../images/user/logout.png); }
+.location-menu .backadmin { background-image: url(../images/user/backadmin.png); }
+
+.path {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.path a {
+    color: #fff;
+    padding: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 11px;
+}
+.path a:hover {
+    color: rgb(92,186,218);
 }
 
-.bottom {
-	color:				#ffffff;
-	font-family:		Arial, Helvetica, sans-serif;
-	font-size:			7pt;
-	background-image:	url(../images/top/menu_bg.jpg);
+.path li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.path li:before {
+    content: "\0020 \0020 \0020 \00BB \0020";
+    color: #fff;
+}
+.path li:first-child:before {
+    content: "";
 }
 
-.message {
-	color:				#ff0000;
+/***********************************************************************************
+ * MAIN MENU STYLE
+ ***********************************************************************************/
+.main_menu {
+    float: right;
+    background: transparent url(../images/background/mainmenu_left.png) no-repeat top left;
+    height: 64px;
+    text-align: right;
+    _width: 3px;
+}
+.main_menu ul {
+    margin: 0 0 0 11px;
+    padding: 0 10px 0 0;
+    background: transparent url(../images/background/mainmenu_bg.png) repeat-x top left;
+    height: 64px;
+}
+.main_menu li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.main_menu a {
+    margin: 10px 0 0 5px;
+    display: inline-block;
+    padding: 33px 0 0;
+    color: #fff;
+    background: url(../images/menu/menu_sprite.png) no-repeat;
+    text-align: center;
 }
 
-td {
-	font-family:		Arial, Helvetica, sans-serif;
-	font-size:			12px;
+/* Firefox 1.x/2.x hack because they don't support inline-block! */
+.main_menu a, x:-moz-any-link {
+    float: left;
+    display: block;
+}
+.main_menu a, x:-moz-any-link, x:default {
+    float: none;
+    display: inline-block;
+}
+/******* end of hack ******/
+
+.main_menu a:hover, .mail_menu .active {
+    text-decoration: underline;
+    background-image: url(../images/menu/menu_sprite_hover.png);
+    color: rgb(92,186,218);
 }
 
-td.loginTop {
-	background-image:	url(../images/login/login_top.jpg);
+/***********************************************************************************
+ * LEFT MENU STYLE
+ ***********************************************************************************/
+.left_menu {
+    color: #fff;
+    width: 197px;
+    float: left;
+    padding-bottom: 60px;
+    background: transparent url(../images/background/left_top_bg.jpg) no-repeat top;
+}
+.left_menu ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+.left_menu li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.left_menu a {
+    color: #fff;
+    display: block;
+    padding: 5px 18px;
+    font-weight: bold;
+    background: transparent url(../images/background/bullet.png) no-repeat 3px center;
+    margin: 2px;
+}
+.left_menu a:hover {
+    background-image: url(../images/background/bullet_hover.png);
+    color: rgb(92,186,218);
+}
+.left_menu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+.left_menu th {
+    background: #000 url(../images/background/top_bar_bg.jpg) repeat-x top left;
+    padding: 5px 0 5px 20px;
+    text-align: left;
+    font-size: 12px;
+}
+.left_menu td {
+    padding: 5px 0 5px 20px;
 }
 
-td.backButton {
-	background-image:	url(../images/button.jpg);
-	color:				red;
+/***********************************************************************************
+ * BODY STYLE
+ ***********************************************************************************/
+
+.body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.body tr {
+    border: 1px solid rgb(223,223,223);
+    background: #fff;
+}
+.body tr:nth-child(odd) {
+    background: #eee;
+}
+.body th {
+    background: #000 url(../images/background/top_bar_bg.jpg) repeat-x;
+    white-space: nowrap;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.body th:first-child {
+    border-left: 1px solid #000;
+}
+.body th:last-child {
+    border-right: 1px solid #000;
+}
+.body td {
+    padding: 5px;
+    white-space: nowrap;
+    border-top: 1px solid rgb(223,223,223);
+    border-bottom: 1px solid rgb(223,223,223);
+}
+fieldset {
+    padding: 2em 0 0;
+    margin: 0 0 1em;
+    border: none;
+    position: relative;
+}
+legend, h3 {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: -1em;
 }
 
-td.stats {
-	background-image:	url(../images/bars/stats_background.gif);
-}
 
-td.statsBar {
-	background-image:	url(../images/bars/statsbar_background.gif);
-}
+/***********************************************************************************
+ * ICONS
+ ***********************************************************************************/
 
-td.content {
-	font-size:			12px;
-	color:				#000000;
-	white-space:		nowrap;
-	background:			#efefef;
-	height:				22px;
-	padding:			2px;
-}
-
-td.content2 {
-	font-size:			12px;
-	color:				#000000;
-	white-space:		nowrap;
-	background:			#efefef;
-	height:				22px;
-	padding:			2px;
-}
-
-td.content3 {
-	font-size:			12px;
-	color:				#ffffff;
-	white-space:		nowrap;
-	background:			#000000;
-	line-height:		24px;
-	padding:			2px;
-	padding-left:		5px;
-	border-bottom:		2px solid #000000;
-	border-right:		2px solid #000000;
-	border-top:			2px solid #eeeeee;
-	border-left:		2px solid #eeeeee;
-	background-image:	url(../images/content/tableheader.jpg);
-	background-repeat:	repeat-x;
-}
-
-td.content4 {
-	font-size:			12px;
-	color:				#333333;
-	white-space:		nowrap;
-	background:			#dddddd;
-	height:				22px;
-	padding:			2px;
-}
-
-/* Hover Lines, two ways */
-tr.hl:hover td.content,
-tr.hl:hover td.content2,
-table.hl tr:hover td.content,
-table.hl tr:hover td.content2 {
-	background-color: #a8a8a8;
-}
-
-.textinput {
-	background-color:	white;
-	border:				1px solid #cccccc;
-	font-family:		Verdana;
-	font-size:			8pt;
-	height:				21px;
-	margin:				2px;
-}
-
-.textinput2 {
-	background-color:	white;
-	border:				1px solid #cccccc;
-	font-family:		Verdana;
-	font-size:			8pt;
-	margin:				2px;
-}
-
-.button {
-	font-family:		Arial, Helvetica, sans-serif;
-	height:				21px;
-	font-size:			12px;
-	color:				#ffffff;
-	text-align:			center;
-	background-color:	#323232;
-	background-image:	url(../images/button.jpg);
-	background-repeat:	repeat-x;
-	border-bottom:		1px solid #000000;
-	border-right:		1px solid #000000;
-	border-top:			1px solid #eeeeee;
-	border-left:		1px solid #eeeeee;
-
-}
-
-.login_bottom {
-	font-size:			10px;
-	color:				#99a0b1;
-}
-
-.login_text {
-	color:				#334163;
-}
-
-.login_time {
-	color:				#99a0b1;
-	font-size:			24px;
-	font-weight:		bold;
-}
+/* Main menu icons */
+.main_menu .custom_link { background-position: center 0; }
+.main_menu .database { background-position: center -80px; }
+.main_menu .domains { background-position: center -160px; }
+.main_menu .email { background-position: center -240px; }
+.main_menu .ftp { background-position: center -320px; }
+.main_menu .general { background-position: center -400px; }
+.main_menu .hosting_plans { background-position: center -480px; }
+.main_menu .manage_users { background-position: center -560px; }
+.main_menu .purchasing { background-position: center -640px; }
+.main_menu .settings { background-position: center -720px; }
+.main_menu .statistics { background-position: center -800px; }
+.main_menu .support { background-position: center -880px; }
+.main_menu .webtools { background-position: center -960px; }
+/* Left menu heading icons */
+.location .custom_link { background-position: 0 0; }
+.location .database { background-position: 0 -80px; }
+.location .domains { background-position: 0 -160px; }
+.location .email { background-position: 0 -240px; }
+.location .ftp { background-position: 0 -320px; }
+.location .general { background-position: 0 -400px; }
+.location .hosting_plans { background-position: 0 -480px; }
+.location .manage_users { background-position: 0 -560px; }
+.location .purchasing { background-position: 0 -640px; }
+.location .settings { background-position: 0 -720px; }
+.location .statistics { background-position: 0 -800px; }
+.location .support { background-position: 0 -880px; }
+.location .webtools { background-position: 0 -960px; }
+/* Content icons (table_icons) */
+.body .adminlog { background-position: 0 0; }
+.body .billing { background-position: 0 -75px; } 
+.body .debugger { background-position: 0 -149px; }
+.body .diskusage { background-position: 0 -224px; }
+.body .doc { background-position: 0 -299px; }
+.body .domains { background-position: 0 -374px; }
+.body .email { background-position: 0 -449px; }
+.body .errors { background-position: 0 -524px; }
+.body .flash { background-position: 0 -599px; }
+.body .ftp { background-position: 0 -674px; }
+.body .general { background-position: 0 -749px; }
+.body .hdd { background-position: 0 -824px; }
+.body .htaccess { background-position: 0 -899px; }
+.body .ip { background-position: 0 -974px; }
+.body .layout { background-position: 0 -1049px; }
+.body .maintenancemode { background-position: 0 -1124px; }
+.body .multilanguage { background-position: 0 -1199px; }
+.body .no { background-position: 0 -1274px; }
+.body .password { background-position: 0 -1349px; }
+.body .purchasing { background-position: 0 -1424px; }
+.body .serverstatus { background-position: 0 -1499px; }
+.body .settings { background-position: 0 -1574px; }
+.body .sql { background-position: 0 -1649px; }
+.body .stats { background-position: 0 -1724px; }
+.body .support { background-position: 0 -1799px; }
+.body .systeminfo { background-position: 0 -1874px; }
+.body .tools { background-position: 0 -1949px; }
+.body .traffic { background-position: 0 -2024px; }
+.body .update { background-position: 0 -2099px; }
+.body .user { background-position: 0 -2174px; }
+.body .users { background-position: 0 -2249px; }
+.body .users2 { background-position: 0 -2324px; }
+/* Content icons (link icons) */
+.i_add_user { background-position: 0 0; }
+.i_awstatsicon { background-position: 0 -66px; }
+.i_backupicon { background-position: 0 -162px; }
+.i_bc_folder { background-position: 0 -258px; }
+.i_bc_locked { background-position: 0 -324px; }
+.i_bc_parent { background-position: 0 -390px; }
+.i_change_password { background-position: 0 -456px; }
+.i_close_interface { background-position: 0 -522px; }
+.i_database_big { background-position: 0 -588px; }
+.i_database_small { background-position: 0 -670px; }
+.i_db_comit { background-position: 0 -736px; }
+.i_delete { background-position: 0 -802px; }
+.i_details { background-position: 0 -868px; }
+.i_disabled { background-position: 0 -934px; }
+.i_document { background-position: 0 -1000px; }
+.i_domain_big { background-position: 0 -1066px; }
+.i_domain_icon { background-position: 0 -1148px; }
+.i_edit { background-position: 0 -1214px; }
+.i_email_big { background-position: 0 -1280px; }
+.i_error { background-position: 0 -1362px; }
+.i_error401 { background-position: 0 -1428px; }
+.i_error403 { background-position: 0 -1522px; }
+.i_error404 { background-position: 0 -1616px; }
+.i_error500 { background-position: 0 -1710px; }
+.i_error503 { background-position: 0 -1804px; }
+.i_errordocsicon { background-position: 0 -1898px; }
+.i_filemanagericon { background-position: 0 -1994px; }
+.i_ftp_account { background-position: 0 -2090px; }
+.i_ftp_big { background-position: 0 -2156px; }
+.i_general_big { background-position: 0 -2238px; }
+.i_goto { background-position: 0 -2320px; }
+.i_help { background-position: 0 -2386px; }
+.i_hide_alias { background-position: 0 -2452px; }
+.i_hosting_plans_big { background-position: 0 -2518px; }
+.i_htaccessicon { background-position: 0 -2600px; }
+.i_identity { background-position: 0 -2696px; }
+.i_locale { background-position: 0 -2762px; }
+.i_mail_icon { background-position: 0 -2828px; }
+.i_manage_users_big { background-position: 0 -2894px; }
+.i_next { background-position: 0 -2976px; }
+.i_next_gray { background-position: 0 -3046px; }
+.i_ok { background-position: 0 -3116px; }
+.i_pma { background-position: 0 -3182px; }
+.i_prev { background-position: 0 -3248px; }
+.i_prev_gray { background-position: 0 -3318px; }
+.i_purchasing_big { background-position: 0 -3388px; }
+.i_reload { background-position: 0 -3470px; }
+.i_settings_big { background-position: 0 -3536px; }
+.i_show_alias { background-position: 0 -3618px; }
+.i_statistics_big { background-position: 0 -3684px; }
+.i_stats { background-position: 0 -3766px; }
+.i_support_big { background-position: 0 -3832px; }
+.i_user { background-position: 0 -3913px; }
+.i_users { background-position: 0 -3979px; }
+.i_webmailicon { background-position: 0 -4045px; }
+.i_webtools_big { background-position: 0 -4141px; }
