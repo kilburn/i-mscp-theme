@@ -29,18 +29,17 @@
 
         <div class="location">
             <div class="location-area icons-left">
-		<h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
+                <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
             </div>
             <ul class="location-menu">
-	         <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
-
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
-            <ul class="path"> 
-                <li><a href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li> 
-                <li><a href="personal_change.php">{TR_PERSONAL_DATA}</a></li>                              
-            </ul> 
-        </div> 
-                 
+            <ul class="path">
+                <li><a href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li>
+                <li><a href="personal_change.php">{TR_PERSONAL_DATA}</a></li>
+            </ul>
+        </div>
+
         <div class="left_menu">
             {MENU}
         </div>
@@ -115,6 +114,7 @@
                 
                 <div class="buttons">
                     <input name="Submit" type="submit" class="button" value="{TR_UPDATE_DATA}" />
+                    <input type="hidden" name="uaction" value="updt_data" />
                 </div>
             </form>
         </div>
