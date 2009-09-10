@@ -75,12 +75,12 @@
                       <td><input type="text" name="firm" ide="firm" value="{FIRM}" /></td>
                     </tr>
                     <tr>
-                      <td><label for="street_1">{TR_STREET_1}</label></td>
-                      <td><input type="text" name="street_1" ide="street_1" value="{STREET_1}" /></td>
+                      <td><label for="street1">{TR_STREET_1}</label></td>
+                      <td><input type="text" name="street1" ide="street1" value="{STREET_1}" /></td>
                     </tr>
                     <tr>
-                      <td><label for="street_2">{TR_STREET_2}</label></td>
-                      <td><input type="text" name="street_2" ide="street_2" value="{STREET_2}" /></td>
+                      <td><label for="street2">{TR_STREET_2}</label></td>
+                      <td><input type="text" name="street2" ide="street2" value="{STREET_2}" /></td>
                     </tr>
                     <tr>
                       <td><label for="zip_postal_code">{TR_ZIP_POSTAL_CODE}</label></td>
