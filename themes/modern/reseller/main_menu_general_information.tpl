@@ -1,63 +1,17 @@
-<table align="left" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-      <td class="menu"><div align="center"><a href="index.php" onmouseover="MM_swapImage('general','','{THEME_COLOR_PATH}/images/icons/general_a.gif',1)" onmouseout="MM_swapImgRestore()"><img src="{THEME_COLOR_PATH}/images/icons/general_a.gif" name="general" width="47" height="46" border="0" alt="" id="general" /></a></div></td>
-  </tr><tr>
-    <td class="menu"><div align="center"><a href="index.php" class="menu_active" onmouseover="MM_swapImage('general','','{THEME_COLOR_PATH}/images/icons/general_a.gif',1)" onmouseout="MM_swapImgRestore()">{TR_MENU_GENERAL_INFORMATION}</a></div></td>
-  </tr>
-</table></td>
-    <td width="30">&nbsp;</td>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-      <td class="menu"><div align="center"><a href="users.php" onmouseover="MM_swapImage('manage_users','','{THEME_COLOR_PATH}/images/icons/manage_users_a.gif',1)" onmouseout="MM_swapImgRestore()"><img src="{THEME_COLOR_PATH}/images/icons/manage_users.gif" name="manage_users" width="47" height="46" border="0" alt="" id="manage_users" /></a></div></td>
-  </tr><tr>
-    <td class="menu"><div align="center"><a href="users.php" class="menu_active" onmouseover="MM_swapImage('manage_users','','{THEME_COLOR_PATH}/images/icons/manage_users_a.gif',1)" onmouseout="MM_swapImgRestore()">{TR_MENU_MANAGE_USERS}</a></div></td>
-  </tr>
-</table></td>
-    <td width="30">&nbsp;</td>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-      <td class="menu"><div align="center"><a href="hosting_plan.php" onmouseover="MM_swapImage('hosting_plans','','{THEME_COLOR_PATH}/images/icons/hosting_plans_a.gif',1)" onmouseout="MM_swapImgRestore()"><img src="{THEME_COLOR_PATH}/images/icons/hosting_plans.gif" name="hosting_plans" width="47" height="46" border="0" alt="" id="hosting_plans" /></a></div></td>
-  </tr><tr>
-    <td class="menu"><div align="center"><a href="hosting_plan.php" class="menu_active" onmouseover="MM_swapImage('hosting_plans','','{THEME_COLOR_PATH}/images/icons/hosting_plans_a.gif',1)" onmouseout="MM_swapImgRestore()">{TR_MENU_HOSTING_PLANS}</a></div></td>
-  </tr>
-</table></td>
-    <td width="30">&nbsp;</td>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-      <td class="menu"><div align="center"><a href="orders.php" onmouseover="MM_swapImage('orders','','{THEME_COLOR_PATH}/images/icons/purchasing_a.gif',1)" onmouseout="MM_swapImgRestore()"><img src="{THEME_COLOR_PATH}/images/icons/purchasing.gif" name="orders" width="47" height="46" border="0" alt="" id="orders" /></a></div></td>
-  </tr><tr>
-    <td class="menu"><div align="center"><a href="orders.php" class="menu_active" onmouseover="MM_swapImage('orders','','{THEME_COLOR_PATH}/images/icons/purchasing_a.gif',1)" onmouseout="MM_swapImgRestore()">{TR_MENU_ORDERS}</a></div></td>
-  </tr>
-</table></td>
-    <td width="30">&nbsp;</td>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-      <td class="menu"><div align="center"><a href="user_statistics.php" onmouseover="MM_swapImage('statistics','','{THEME_COLOR_PATH}/images/icons/statistics_a.gif',1)" onmouseout="MM_swapImgRestore()"><img src="{THEME_COLOR_PATH}/images/icons/statistics.gif" name="statistics" width="47" height="46" border="0" alt="" id="statistics" /></a></div></td>
-  </tr><tr>
-    <td class="menu"><div align="center"><a href="user_statistics.php" class="menu_active" onmouseover="MM_swapImage('statistics','','{THEME_COLOR_PATH}/images/icons/statistics_a.gif',1)" onmouseout="MM_swapImgRestore()">{TR_MENU_DOMAIN_STATISTICS}</a></div></td>
-  </tr>
-</table></td>
-<!-- BDP: isactive_support -->
-    <td width="30">&nbsp;</td>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-      <td class="menu"><div align="center"><a href="{SUPPORT_SYSTEM_PATH}" target="{SUPPORT_SYSTEM_TARGET}" onmouseover="MM_swapImage('support','','{THEME_COLOR_PATH}/images/icons/support_a.gif',1)" onmouseout="MM_swapImgRestore()"><img src="{THEME_COLOR_PATH}/images/icons/support.gif" name="support" width="47" height="46" border="0" alt="" id="support" /></a></div></td>
-  </tr><tr>
-    <td class="menu"><div align="center"><a href="{SUPPORT_SYSTEM_PATH}" target="{SUPPORT_SYSTEM_TARGET}" class="menu_active" onmouseover="MM_swapImage('support','','{THEME_COLOR_PATH}/images/icons/support_a.gif',1)" onmouseout="MM_swapImgRestore()">{TR_MENU_QUESTIONS_AND_COMMENTS}</a></div></td>
-  </tr>
-</table></td>
-<!-- EDP: isactive_support -->
-<!-- BDP: custom_buttons -->
-    <td width="30">&nbsp;</td>
-    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-      <td class="menu"><div align="center"><a href="{BUTTON_LINK}" {BUTTON_TARGET} onmouseover="MM_swapImage('custom_link_{BUTTON_ID}','','{THEME_COLOR_PATH}/images/icons/custom_link_a.gif',1)" onmouseout="MM_swapImgRestore()"><img src="{THEME_COLOR_PATH}/images/icons/custom_link.gif" name="custom_link_{BUTTON_ID}" width="47" height="46" border="0" alt="" id="custom_link_{BUTTON_ID}" /></a></div></td>
-  </tr><tr>
-    <td class="menu"><div align="center"><a href="{BUTTON_LINK}" {BUTTON_TARGET} class="menu_active" onmouseover="MM_swapImage('custom_link_{BUTTON_ID}','','{THEME_COLOR_PATH}/images/icons/custom_link_a.gif',1)" onmouseout="MM_swapImgRestore()">{BUTTON_NAME}</a></div></td>
-	  </tr>
-</table></td>
-<!-- EDP: custom_buttons -->
-  </tr>
-</table>
+<div class="main_menu">
+    <ul class="icons">
+        <li><a class="general" class="active" href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li>
+        <li><a class="manage_users" href="users.php">{TR_MENU_MANAGE_USERS}</a></li>
+        <!-- BDP: hosting_plans -->
+        <li><a class="hosting_plans" href="hosting_plan.php">{TR_MENU_HOSTING_PLANS}</a></li>
+        <!-- EDP: hosting_plans -->
+        <li><a class="orders" href="orders.php">{TR_MENU_ORDERS}</a></li>
+        <li><a class="statistics" href="user_statistics.php">{TR_MENU_DOMAIN_STATISTICS}</a></li>
+        <!-- BDP: isactive_support -->
+        <li><a class="settings" href="ticket_system.php">{TR_MENU_QUESTIONS_AND_COMMENTS}</a></li>
+        <!-- EDP: isactive_support -->
+        <!-- BDP: custom_buttons -->
+        <li><a class="custom_link" href="{BUTTON_LINK}" {BUTTON_TARGET}>{BUTTON_NAME}</a></li>
+        <!-- EDP: custom_buttons -->
+    </ul>
+</div>
