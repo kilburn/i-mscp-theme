@@ -67,7 +67,7 @@
             <!-- EDP: page_message -->
 
 
-            <h2 class="administrators"><span>{TR_ADMINISTRATORS}</span></h2>
+            <h2 class="users"><span>{TR_ADMINISTRATORS}</span></h2>
 
             <!-- BDP: admin_message -->
             <div class="warning">{ADMIN_MESSAGE}</div>
@@ -170,7 +170,7 @@
                 </tr>
                 <!-- BDP: usr_item -->
                 <tr>
-                    <td><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="icon i_{STATUS_ICON}">&nbsp;</a></td>
+                    <td><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="icon i_{STATUS_ICON}">{STATUS_ICON}</a></td>
                     <td><a href="http://www.{USR_USERNAME}/" target="_blank" class="icon i_goto">{USR_USERNAME}</a></td>
                     <td>{USER_CREATED_ON}</td>
                     <td>{USR_CREATED_BY}</td>
