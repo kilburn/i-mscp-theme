@@ -386,6 +386,7 @@ table .icon {
 .body tr:nth-child(odd) {
     background: #eee;
 }
+.body tfoot td,
 .body th {
     background: #000 url(../images/background/top_bar_bg.jpg) repeat-x;
     white-space: nowrap;
