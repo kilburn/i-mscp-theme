@@ -8,12 +8,28 @@
         <title>{TR_ADMIN_MANAGE_USERS_PAGE_TITLE}</title>
         <meta name="robots" content="nofollow, noindex" />
         <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/ispcp.js"></script>
         <!--[if IE 6]>
         <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
         <script type="text/javascript">
             DD_belatedPNG.fix('*');
         </script>
         <![endif]-->
+        <script type="text/javascript">
+        <!--
+        function action_status(url, dmn_name) {
+            if (!confirm(sprintf("{TR_MESSAGE_CHANGE_STATUS}", dmn_name)))
+                return false;
+            location = url;
+        }
+
+        function action_delete(url, dmn_name) {
+            if (!confirm(sprintf("{TR_MESSAGE_DELETE}", dmn_name)))
+                return false;
+            location = url;
+        }
+        //-->
+        </script>
     </head>
 
     <body>
@@ -45,220 +61,159 @@
         </div>
 
         <div class="body">
-    
-         
-                 <h2 class="administrators"><span>{TR_ADMINISTRATORS}</span></h2>
-                 <!-- BDP: page_message -->
-                 <div class="warning">{MESSAGE}</div>
-                 <!-- EDP: page_message -->
-                     
-             <tr>
-                 <td valign="top"><!-- BDP: props_list -->
-                     <table width="100%" cellpadding="5" cellspacing="5">
-                         <!-- BDP: admin_message -->
-                         <tr>
-                             <td width="25">&nbsp;</td>
-                             <td colspan="3" class="title"><span class="message">{ADMIN_MESSAGE}</span></td>
-          </tr>
-          <!-- EDP: admin_message -->
-          <!-- BDP: admin_list -->
-            <td width="25">&nbsp;</td>
-            <td class="content3"><b>{TR_ADMIN_USERNAME}</b></td>
-            <td class="content3"><b>{TR_CREATED_ON}</b></td>
-            <td class="content3" align="center"><b>{TR_ADMIN_CREATED_BY}</b></td>
-            <td colspan="2" align="center" class="content3"><b>{TR_ADMIN_OPTIONS}</b></td>
-          </tr>
-          <!-- BDP: admin_item -->
-          <tr>
-            <td width="25">&nbsp;</td>
-            <td class="{ADMIN_CLASS}">{ADMIN_USERNAME}</td>
-            <td class="{ADMIN_CLASS}" align="center">{ADMIN_CREATED_ON}</td>
-            <td class="{ADMIN_CLASS}" align="center">{ADMIN_CREATED_BY}</td>
-            <td width="100" class="{ADMIN_CLASS}" align="center">
-              <img src="{THEME_COLOR_PATH}/images/icons/edit.png" width="16" height="16" border="0" align="absmiddle" /> <a href="{URL_EDIT_ADMIN}" class="link">{TR_EDIT}</a>
-			</td>
-            <td width="100" class="{ADMIN_CLASS}" align="center">
-			  <!-- BDP: admin_delete_show -->
-              -
-              <!-- EDP: admin_delete_show -->
-              <!-- BDP: admin_delete_link -->
-              <img src="{THEME_COLOR_PATH}/images/icons/delete.png" width="16" height="16" border="0" align="absmiddle" /> <a href="#" onclick="action_delete('{URL_DELETE_ADMIN}', '{ADMIN_USERNAME}')" class="link">{TR_DELETE}</a>
-              <!-- EDP: admin_delete_link -->
-            </td>
-          </tr>
-          <!-- EDP: admin_item -->
-          <!-- EDP: admin_list -->
-        </table>
-      <!-- EDP: props_list -->
-    </td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="left"><table width="100%" cellpadding="5" cellspacing="5">
-	<tr>
-		<td width="25"><img src="{THEME_COLOR_PATH}/images/content/table_icon_users.png" width="25" height="25"></td>
-		<td colspan="2" class="title">{TR_RESELLERS}</td>
-	</tr>
-</table></td>
-    <td width="27" align="right">&nbsp;</td>
-  </tr>
-  <tr>
-    <td><table width="100%" cellpadding="5" cellspacing="5">
-      <!-- BDP: rsl_message -->
-      <tr>
-        <td width="25">&nbsp;</td>
-        <td colspan="5" class="title"><span class="message">{RSL_MESSAGE}</span></td>
-      </tr>
-      <!-- EDP: rsl_message -->
-      <!-- BDP: rsl_list -->
-      <tr>
-        <td width="25">&nbsp;</td>
-        <td class="content3"><b>{TR_RSL_USERNAME}</b></td>
-        <td width="150" align="center" class="content3"><b>{TR_CREATED_ON}</b></td>
-        <td width="150" align="center" class="content3"><b>{TR_RSL_CREATED_BY}</b></td>
-        <td colspan="3" align="center" class="content3"><b>{TR_RSL_OPTIONS}</b></td>
-      </tr>
-      <!-- BDP: rsl_item -->
-      <tr>
-        <td width="25">&nbsp;</td>
-        <td class="{RSL_CLASS}">{RSL_USERNAME} </td>
-        <td class="{RSL_CLASS}" align="center">{RESELLER_CREATED_ON}</td>
-        <td class="{RSL_CLASS}" align="center">{RSL_CREATED_BY}</td>
-        <td width="100" align="center" class="{RSL_CLASS}"><img src="{THEME_COLOR_PATH}/images/icons/details.png" width="16" height="16" border="0" align="absmiddle" /> <a href="{URL_CHANGE_INTERFACE}" class="link" title="{TR_CHANGE_USER_INTERFACE}">{GO_TO_USER_INTERFACE}</a></td>
-        <td width="100" align="center" class="{RSL_CLASS}"><img src="{THEME_COLOR_PATH}/images/icons/edit.png" width="16" height="16" border="0" align="absmiddle" /> <a href="{URL_EDIT_RSL}" class="link">{TR_EDIT}</a></td>
-        <td width="100" align="center" class="{RSL_CLASS}"><img src="{THEME_COLOR_PATH}/images/icons/delete.png" width="16" height="16" border="0" align="absmiddle" /> <a href="#" onclick="action_delete('{URL_DELETE_RSL}', '{RSL_USERNAME}')" class="link">{TR_DELETE}</a></td>
-      </tr>
-      <!-- EDP: rsl_item -->
-      <!-- EDP: rsl_list -->
-    </table>
-        <br /></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td align="left">
-<table width="100%" cellpadding="5" cellspacing="5">
-	<tr>
-		<td width="25"><img src="{THEME_COLOR_PATH}/images/content/table_icon_users.png" width="25" height="25"></td>
-		<td colspan="2" class="title">{TR_USERS}</td>
-	</tr>
-</table>
-	</td>
-    <td width="27" align="right">&nbsp;</td>
-  </tr>
-  <tr>
-    <td><form action="manage_users.php" method="post" name="search_user" id="search_user">
-      <table width="100%" cellpadding="5" cellspacing="5">
-        <tr>
-          <td width="25">&nbsp;</td>
-          <td colspan="7" class="title"><table border="0" cellspacing="0" cellpadding="0">
+
+            <!-- BDP: page_message -->
+            <div class="warning">{MESSAGE}</div>
+            <!-- EDP: page_message -->
+
+
+            <h2 class="administrators"><span>{TR_ADMINISTRATORS}</span></h2>
+
+            <!-- BDP: admin_message -->
+            <div class="warning">{ADMIN_MESSAGE}</div>
+            <!-- EDP: admin_message -->
+
+            <!-- BDP: props_list -->
+            <!-- BDP: admin_list -->
+            <table>
+                <tr>
+                    <th>{TR_ADMIN_USERNAME}</th>
+                    <th>{TR_CREATED_ON}</th>
+                    <th>{TR_ADMIN_CREATED_BY}</th>
+                    <th>{TR_ADMIN_OPTIONS}</th>
+                </tr>
+                <!-- BDP: admin_item -->
+                <tr>
+                    <td>{ADMIN_USERNAME}</td>
+                    <td>{ADMIN_CREATED_ON}</td>
+                    <td>{ADMIN_CREATED_BY}</td>
+                    <td>
+                        <a href="{URL_EDIT_ADMIN}" class="icon i_edit">{TR_EDIT}</a>
+                        <!-- BDP: admin_delete_show -->
+                        -
+                        <!-- EDP: admin_delete_show -->
+                        <!-- BDP: admin_delete_link -->
+                            <a href="#" class="icon i_edit" onclick="action_delete('{URL_DELETE_ADMIN}', '{ADMIN_USERNAME}')" class="link">{TR_DELETE}</a>
+                        <!-- EDP: admin_delete_link -->
+                    </td>
+                </tr>
+                <!-- EDP: admin_item -->
+            </table>
+            <!-- EDP: admin_list -->
+            <!-- EDP: props_list -->
+
+
+            <h2 class="users"><span>{TR_RESELLERS}</span></h2>
+
+            <!-- BDP: rsl_message -->
+            <div class="warning">{RSL_MESSAGE}</div>
+            <!-- EDP: rsl_message -->
+
+            <!-- BDP: rsl_list -->
+            <table>
             <tr>
-              <td><input name="search_for" type="text" class="textinput" value="{SEARCH_FOR}" style="width:140px" />
-                      <select name="search_common" class="textinput">
-                        <option value="domain_name" {M_DOMAIN_NAME_SELECTED}>{M_DOMAIN_NAME}</option>
-                        <option value="customer_id" {M_CUSTOMER_ID_SELECTED}>{M_CUSTOMER_ID}</option>
-                        <option value="lname" {M_LAST_NAME_SELECTED}>{M_LAST_NAME}</option>
-                        <option value="firm" {M_COMPANY_SELECTED}>{M_COMPANY}</option>
-                        <option value="city" {M_CITY_SELECTED}>{M_CITY}</option>
-                        <option value="country" {M_COUNTRY_SELECTED}>{M_COUNTRY}</option>
-                      </select>
-                      <select name="search_status" class="textinput">
-                        <option value="all" {M_ALL_SELECTED}>{M_ALL}</option>
-                        <option value="ok" {M_OK_SELECTED}>{M_OK}</option>
-                        <option value="disabled" {M_SUSPENDED_SELECTED}>{M_SUSPENDED}</option>
-                    </select></td>
-              <td><input name="Submit" type="submit" class="button" value="  {TR_SEARCH}  " /></td>
+                <th>{TR_RSL_USERNAME}</th>
+                <th>{TR_CREATED_ON}</th>
+                <th>{TR_RSL_CREATED_BY}</th>
+                <th>{TR_RSL_OPTIONS}</th>
             </tr>
-          </table>
-		  </td>
-          <td align="right"><input type="hidden" name="details" value="" />
-            <img src="{THEME_COLOR_PATH}/images/icons/show_alias.png" width="15" height="16" align="absmiddle" /> <a href="#" class="link" onclick="return sbmt(document.forms[0],'{SHOW_DETAILS}');">{TR_VIEW_DETAILS}</a>
-		  </td>
-        </tr>
-        <!-- BDP: usr_message -->
-        <tr>
-          <td width="25">&nbsp;</td>
-          <td colspan="7" class="title"><span class="message">{USR_MESSAGE}</span></td>
-        </tr>
-        <!-- EDP: usr_message -->
-        <!-- BDP: usr_list -->
-        <tr>
-          <td width="25">&nbsp;</td>
-          <td width="25" align="center" class="content3"><b>{TR_USER_STATUS}</b></td>
-          <td class="content3"><b>{TR_USR_USERNAME}</b></td>
-          <td width="100" align="center" class="content3"><b>{TR_CREATED_ON}</b></td>
-          <td width="100" align="center" class="content3"><b>{TR_USR_CREATED_BY}</b></td>
-          <td colspan="5" align="center" class="content3"><b>{TR_USR_OPTIONS}</b></td>
-        </tr>
-        <!-- BDP: usr_item -->
-        <tr>
-          <td width="25" align="center">&nbsp;</td>
-          <td class="{USR_CLASS}" align="center"><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="link"><img src="{THEME_COLOR_PATH}/images/icons/{STATUS_ICON}" width="16" height="16" border="0" /></a></td>
-          <td class="{USR_CLASS}"><a href="http://www.{USR_USERNAME}/" target="_blank" class="link"><img src="{THEME_COLOR_PATH}/images/icons/goto.png" width="16" height="16" border="0"/> {USR_USERNAME}</a></td>
-          <td class="{USR_CLASS}" align="center">{USER_CREATED_ON}</td>
-          <td class="{USR_CLASS}" align="center">{USR_CREATED_BY}</td>
-          <td width="100" align="center" class="{USR_CLASS}"><img src="{THEME_COLOR_PATH}/images/icons/identity.png" width="16" height="16" border="0" align="absmiddle" /> <a href="domain_details.php?domain_id={DOMAIN_ID}" class="link">{TR_DETAILS}</a></td>
-          <td width="100" align="center" class="{USR_CLASS}"><img src="{THEME_COLOR_PATH}/images/icons/details.png" width="16" height="16" border="0" align="absmiddle" /> <a href="{URL_CHANGE_INTERFACE}" class="link" title="{TR_CHANGE_USER_INTERFACE}">{GO_TO_USER_INTERFACE}</a></td>
-          <!-- BDP: edit_option -->
-	  <td width="100" align="center" class="{USR_CLASS}"><img src="{THEME_COLOR_PATH}/images/icons/edit.png" width="16" height="16" border="0" align="absmiddle" /> <a href="domain_edit.php?edit_id={DOMAIN_ID}" class="link">{TR_EDIT_DOMAIN}</a></td>
-          <!-- EDP: edit_option -->
-          <td width="100" align="center" class="{USR_CLASS}"><img src="{THEME_COLOR_PATH}/images/icons/users.gif" width="16" height="16" border="0" align="absmiddle" /> <a href="{URL_EDIT_USR}" class="link">{TR_EDIT_USR}</a></td>
-          <td width="100" align="center" class="{USR_CLASS}">
-		    <!-- BDP: usr_delete_show -->
-            -
-            <!-- EDP: usr_delete_show -->
-            <!-- BDP: usr_delete_link -->
-              <img src="{THEME_COLOR_PATH}/images/icons/delete.png" width="16" height="16" border="0" align="absmiddle" /> <a href="#" onclick="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')" class="link">{TR_DELETE}</a>
-            <!-- EDP: usr_delete_link -->
-          </td>
-        </tr>
-        <!-- BDP: user_details -->
-        <tr>
-          <td align="center">&nbsp;</td>
-          <td class="content4" align="center">&nbsp;</td>
-          <td colspan="7" class="content4">&nbsp;<a href="http://www.{ALIAS_DOMAIN}/" target="_blank" class="link"><img src="{THEME_COLOR_PATH}/images/icons/goto.png" width="16" height="16" border="0" align="absmiddle"/> {ALIAS_DOMAIN}</a>&nbsp;</td>
-        </tr>
-        <!-- EDP: user_details -->
-        <!-- EDP: usr_item -->
-        <!-- EDP: usr_list -->
-      </table>
-      <input type="hidden" name="uaction" value="go_search" />
-    </form>
-        <div align="right"><br />
-            <!-- BDP: scroll_prev_gray -->
-          <img src="{THEME_COLOR_PATH}/images/icons/flip/prev_gray.gif" width="20" height="20" border="0" />
-          <!-- EDP: scroll_prev_gray -->
-          <!-- BDP: scroll_prev -->
-          <a href="manage_users.php?psi={PREV_PSI}"><img src="{THEME_COLOR_PATH}/images/icons/flip/prev.gif" width="20" height="20" border="0" /></a>
-          <!-- EDP: scroll_prev -->
-          <!-- BDP: scroll_next_gray -->
-          &nbsp;<img src="{THEME_COLOR_PATH}/images/icons/flip/next_gray.gif" width="20" height="20" border="0" />
-          <!-- EDP: scroll_next_gray -->
-          <!-- BDP: scroll_next -->
-          &nbsp;<a href="manage_users.php?psi={NEXT_PSI}"><img src="{THEME_COLOR_PATH}/images/icons/flip/next.gif" width="20" height="20" border="0" /></a>
-          <!-- EDP: scroll_next -->
-      </div></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-</table></td>
-				</tr>
-			</table></td>
-	</tr>
-</table>
-</body>
+            <!-- BDP: rsl_item -->
+            <tr>
+                <td>{RSL_USERNAME}</td>
+                <td>{RESELLER_CREATED_ON}</td>
+                <td>{RSL_CREATED_BY}</td>
+                <td>
+                    <a class="icon i_details" href="{URL_CHANGE_INTERFACE}" title="{TR_CHANGE_USER_INTERFACE}">{GO_TO_USER_INTERFACE}</a>
+                    <a href="{URL_EDIT_RSL}" class="icon i_edit">{TR_EDIT}</a>
+                    <a href="#" class="icon i_delete" onclick="action_delete('{URL_DELETE_RSL}', '{RSL_USERNAME}')">{TR_DELETE}</a>
+                </td>
+            </tr>
+            <!-- EDP: rsl_item -->
+            </table>
+            <!-- EDP: rsl_list -->
+
+
+            <h2 class="users"><span>{TR_USERS}</span></h2>
+
+            <!-- BDP: usr_message -->
+            <div class="warning">{USR_MESSAGE}</div>
+            <!-- EDP: usr_message -->
+
+            <form action="manage_users.php" method="post" name="search_user" id="search_user">
+                <a class="icon i_show_alias" href="#" onclick="return sbmt(document.forms[0],'{SHOW_DETAILS}');">{TR_VIEW_DETAILS}</a>
+                <input name="search_for" type="text" value="{SEARCH_FOR}" />
+                <select name="search_common">
+                    <option value="domain_name" {M_DOMAIN_NAME_SELECTED}>{M_DOMAIN_NAME}</option>
+                    <option value="customer_id" {M_CUSTOMER_ID_SELECTED}>{M_CUSTOMER_ID}</option>
+                    <option value="lname" {M_LAST_NAME_SELECTED}>{M_LAST_NAME}</option>
+                    <option value="firm" {M_COMPANY_SELECTED}>{M_COMPANY}</option>
+                    <option value="city" {M_CITY_SELECTED}>{M_CITY}</option>
+                    <option value="country" {M_COUNTRY_SELECTED}>{M_COUNTRY}</option>
+                </select>
+                <select name="search_status">
+                    <option value="all" {M_ALL_SELECTED}>{M_ALL}</option>
+                    <option value="ok" {M_OK_SELECTED}>{M_OK}</option>
+                    <option value="disabled" {M_SUSPENDED_SELECTED}>{M_SUSPENDED}</option>
+                </select>
+                <input name="Submit" type="submit" value="{TR_SEARCH}" />
+                <input type="hidden" name="uaction" value="go_search" />
+            </form>
+
+            <!-- BDP: usr_list -->
+            <table>
+                <tr>
+                    <th>{TR_USER_STATUS}</th>
+                    <th>{TR_USR_USERNAME}</th>
+                    <th>{TR_CREATED_ON}</th>
+                    <th>{TR_USR_CREATED_BY}</th>
+                    <th>{TR_USR_OPTIONS}</th>
+                </tr>
+                <!-- BDP: usr_item -->
+                <tr>
+                    <td><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="icon i_{STATUS_ICON}">&nbsp;</a></td>
+                    <td><a href="http://www.{USR_USERNAME}/" target="_blank" class="icon i_goto">{USR_USERNAME}</a></td>
+                    <td>{USER_CREATED_ON}</td>
+                    <td>{USR_CREATED_BY}</td>
+                    <td>
+                        <a class="icon i_identity" href="domain_details.php?domain_id={DOMAIN_ID}">{TR_DETAILS}</a>
+                        <a class="icon i_details.png" href="{URL_CHANGE_INTERFACE}" title="{TR_CHANGE_USER_INTERFACE}">{GO_TO_USER_INTERFACE}</a>
+                        <!-- BDP: edit_option -->
+                            <a class="icon i_edit.png" href="domain_edit.php?edit_id={DOMAIN_ID}">{TR_EDIT_DOMAIN}</a>
+                        <!-- EDP: edit_option -->
+                            <a class="icon i_users" href="{URL_EDIT_USR}">{TR_EDIT_USR}</a>
+                        <!-- BDP: usr_delete_show -->
+                        
+                        <!-- EDP: usr_delete_show -->
+                        <!-- BDP: usr_delete_link -->
+                            <a class="icon i_delete" href="#" onclick="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')">{TR_DELETE}</a>
+                        <!-- EDP: usr_delete_link -->
+                    </td>
+                </tr>
+                <!-- BDP: user_details -->
+                <tr>
+                    <td colspan="5"><a href="http://www.{ALIAS_DOMAIN}/" target="_blank" class="icon i_goto">{ALIAS_DOMAIN}</a></td>
+                </tr>
+                <!-- EDP: user_details -->
+                <!-- EDP: usr_item -->
+            <!-- EDP: usr_list -->
+            </table>
+
+            <div class="paginator">
+                <!-- BDP: scroll_next_gray -->
+                    <a class="icon i_next_gray" href="#">&nbsp;</a>
+                <!-- EDP: scroll_next_gray -->
+                <!-- BDP: scroll_next -->
+                    <a class="icon i_next" href="manage_users.php?psi={NEXT_PSI}" title="next">next</a>
+                <!-- EDP: scroll_next -->
+                <!-- BDP: scroll_prev -->
+                    <a class="icon i_prev" href="manage_users.php?psi={PREV_PSI}" title="previous">previous</a>
+                <!-- EDP: scroll_prev -->
+                <!-- BDP: scroll_prev_gray -->
+                    <a class="icon i_prev_gray" href="#">&nbsp;</a>
+                <!-- EDP: scroll_prev_gray -->
+            </div>
+
+        </div>
+
+    </body>
 </html>
