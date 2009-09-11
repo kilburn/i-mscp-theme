@@ -1,6 +1,11 @@
+
+<!--- kilburn repasa esto -->
+<!--- no salen todos los campos pero estan en la tabla y el trafico-->
+
+
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
@@ -17,7 +22,6 @@
     </head>
 
     <body>
-
         <div class="header">
             {MAIN_MENU}
 
@@ -33,10 +37,13 @@
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
+                <!-- BDP: logged_from -->
+                <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+                <!-- EDP: logged_from -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="admin_log.php">{TR_DOMAIN_DETAILS}</a></li>
+                <li><a href="index.php">{TR_DOMAIN_DETAILS}</a></li>
             </ul>
         </div>
 
@@ -44,146 +51,128 @@
             {MENU}
         </div>
 
-
         <div class="body">
-
             <!-- BDP: page_message -->
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
+            <!-- BDP: msg_entry -->
+            <div class="warning">{VL_NEW_MSGS}</div>
+            <!-- EDP: msg_entry -->
+
 
             <h2 class="general"><span>{TR_DOMAIN_DETAILS}</span></h2>
 
-
             <table>
-                    <tr>
-                        <td><label for="domain_name">{TR_DOMAIN_NAME}</label></td>
-                        <td class="content"> {VL_DOMAIN_NAME}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_DOMAIN_IP}</label></td>
-                        <td class="content"> {VL_DOMAIN_IP}</td>
-                    </tr>
-
-                    <tr>
-                        <td><label for="domain_name">{TR_STATUS}</label></td>
-                        <td class="content"> {VL_STATUS}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_PHP_SUPP}</label></td>
-                        <td class="content"> {VL_PHP_SUPP}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_CGI_SUPP}</label></td>
-                        <td class="content"> {VL_CGI_SUPP}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_DNS_SUPP}</label></td>
-                        <td class="content"> {VL_DNS_SUPP}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_MYSQL_SUPP}</label></td>
-                        <td class="content"> {VL_MYSQL_SUPP}</td>
-                    </tr>
-
-                    <tr>
-                        
-                        <td valign="top" class="content"> {TR_TRAFFIC}</td>
-                        <td colspan="2" class="content"><table width="252" border="0" cellspacing="0" cellpadding="0">
-                                <tr>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_left_small.gif" width="13" height="20" alt="" /></td>
-                                    <td class="stats"><table border="0" cellspacing="0" cellpadding="0" align="left">
-                                            <tr>
-                                                <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_left.gif" width="7" height="13" alt="" /></td>
-                                                <td class="statsBar"><img src="{THEME_COLOR_PATH}/images/trans.gif" width="{VL_TRAFFIC_PERCENT}" height="1" alt="" /></td>
-                                                <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_right.gif" width="7" height="13" alt="" /></td>
-                                            </tr>
-                                        </table></td>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_right_small.gif" width="13" height="20" alt="" /></td>
-                                </tr>
-                            </table>
-                            <br />
-                            {VL_TRAFFIC_USED} / {VL_TRAFFIC_LIMIT}</td>
-                    </tr>
-                    <tr>
-                        <td width="25"><span class="content">{TR_DISK}</span></td>
-                         <td colspan="2" class="content"><table width="252" border="0" cellspacing="0" cellpadding="0">
-                                <tr>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_left_small.gif" width="13" height="20" alt="" /></td>
-                                    <td class="stats"><table border="0" cellspacing="0" cellpadding="0" align="left">
-                                            <tr>
-                                                <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_left.gif" width="7" height="13" alt="" /></td>
-                                                <td class="statsBar"><img src="{THEME_COLOR_PATH}/images/trans.gif" width="{VL_DISK_PERCENT}" height="1" alt="" /></td>
-                                                <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_right.gif" width="7" height="13" alt="" /></td>
-                                            </tr>
-                                        </table></td>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_right_small.gif" width="13" height="20" alt="" /></td>
-                                </tr>
-                            </table>
-                            <br />
-                            {VL_DISK_USED} / {VL_DISK_LIMIT}</td>
-                    </tr>
+            	<tr>
+            		<td>{TR_DOMAIN_NAME}</td>
+            		<td>{VL_DOMAIN_NAME}</td>
+            	</tr>
+				<!-- BDP: t_php_support -->
+            	<tr>
+            		<td>{TR_DOMAIN_IP}</td>
+            		<td>{VL_DOMAIN_IP}</td>
+            	</tr>
+				<!-- EDP: t_php_support -->
+				<!-- BDP: t_cgi_support -->
+            	<tr>
+            		<td>{TR_STATUS}</td>
+            		<td>{VL_STATUS}</td>
+            	</tr>
+				<!-- EDP: t_cgi_support -->
+				<!-- BDP: t_sql1_support -->
+            	<tr>
+            		<td>{TR_PHP_SUPP}</td>
+            		<td>{VL_PHP_SUPP}</td>
+            	</tr>
+				<!--EDP: t_sql1_support -->
+				<!-- BDP: t_sdm_support -->
+            	<tr>
+            		<td>{TR_CGI_SUPP}</td>
+            		<td>{VL_CGI_SUPP}</td>
+            	</tr>
+				<!--EDP: t_sdm_support -->
+				<!-- BDP: t_alias_support -->
+            	<tr>
+            		<td>{TR_DNS_SUPP}</td>
+            		<td>{VL_DNS_SUPP}</td>
+            	</tr>
+				<!--EDP: t_alias_support -->
+				<!-- BDP: t_mails_support -->
+            	<tr>
+            		<td>{TR_MYSQL_SUPP}</td>
+            		<td>{VL_MYSQL_SUPP}</td>
+                </tr>
             </table>
+
+
+            <h2 class="traffic"><span>{TR_TRAFFIC}</span></h2>
+            <!-- BDP: traff_warn -->
+            <div class="warning">{VL_TRAFFIC_PERCENT}</div>
+            <!-- EDP: traff_warn -->
+            <p>{TRAFFIC_USAGE_DATA}</p>
+            <div class="graph"><span style="width:{TRAFFIC_BARS}%">&nbsp;</span></div>
+
+            <h2 class="diskusage"><span>{TR_DISK}</span></h2>
+            <!-- BDP: disk_warn -->
+            <div class="warning">{VL_DISK_PERCENT}</div>
+            <!-- EDP: disk_warn -->
+            <p>{DISK_USAGE_DATA}</p>
+            <div class="graph"><span style="width:{DISK_BARS}%">&nbsp;</span></div>
             <table>
-                    <tr>
-                        
-                        <td width="200" class="content"><strong>{TR_FEATURE}</strong></td>
-                        <td width="100" class="content"><strong>{TR_USED}</strong></td>
-                        <td class="content"><strong>{TR_LIMIT}</strong></td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_MAIL_ACCOUNTS}</label></td>
-                        <td class="content"> {VL_MAIL_ACCOUNTS_USED}</td>
-                        <td class="content"> {VL_MAIL_ACCOUNTS_LIIT}</td>
-                    </tr>
+             <table>
+            	<tr>
+            		<td><strong>{TR_FEATURE}</strong></td>
+                    <td><strong>{TR_USED}</strong></td>
+                    <td><strong>{TR_LIMIT}</strong></td>
+            	</tr>
+				<!-- BDP: t_php_support -->
+            	<tr>
+            		<td>{TR_MAIL_ACCOUNTS}</td>
+                    <td>{VL_MAIL_ACCOUNTS_USED}</td>
+                    <td>{VL_MAIL_ACCOUNTS_LIIT}</td>
+            	</tr>
+				<!-- EDP: t_php_support -->
+				<!-- BDP: t_cgi_support -->
+            	<tr>
+            		<td>{TR_FTP_ACCOUNTS}</td>
+                    <td>{VL_FTP_ACCOUNTS_USED}</td>
+                    <td>{VL_FTP_ACCOUNTS_LIIT}</td>
+            	</tr>
+				<!-- EDP: t_cgi_support -->
+				<!-- BDP: t_sql1_support -->
+            	<tr>
+            		<td>{TR_SQL_DB_ACCOUNTS}</td>
+                    <td>{VL_SQL_DB_ACCOUNTS_USED}</td>
+                    <td>{VL_SQL_DB_ACCOUNTS_LIIT}</td>
+            	</tr>
+				<!--EDP: t_sql1_support -->
+				<!-- BDP: t_sdm_support -->
+                <tr>
+            		<td>{TR_SQL_USER_ACCOUNTS}</td>
+                    <td>{VL_SQL_USER_ACCOUNTS_USED}</td>
+                    <td>{VL_SQL_USER_ACCOUNTS_LIIT}</td>
+            	</tr>
+				<!--EDP: t_sql1_support -->
+				<!-- BDP: t_sdm_support -->
+            	<tr>
+            		<td>{TR_SUBDOM_ACCOUNTS}</td>
+                    <td>{VL_SUBDOM_ACCOUNTS_USED}</td>
+                    <td>{VL_SUBDOM_ACCOUNTS_LIIT}</td>
+            	</tr>
+				<!--EDP: t_sdm_support -->
+				<!-- BDP: t_alias_support -->
 
-                    <tr>
-                        <td><label for="domain_name">{TR_FTP_ACCOUNTS}</label></td>
-                        <td class="content"> {VL_FTP_ACCOUNTS_USED}</td>
-                        <td class="content"> {VL_FTP_ACCOUNTS_LIIT}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_SQL_DB_ACCOUNTS}</label></td>
-                        <td class="content"> {VL_SQL_DB_ACCOUNTS_USED}</td>
-                        <td class="content"> {VL_SQL_DB_ACCOUNTS_LIIT}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_SQL_USER_ACCOUNTS}</label></td>
-                        <td class="content"> {VL_SQL_USER_ACCOUNTS_USED}</td>
-                        <td class="content"> {VL_SQL_USER_ACCOUNTS_LIIT}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_SUBDOM_ACCOUNTS}</label></td>
-                        <td class="content"> {VL_SUBDOM_ACCOUNTS_USED}</td>
-                        <td class="content"> {VL_SUBDOM_ACCOUNTS_LIIT}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_SUBDOM_ACCOUNTS}</label></td>
-                        <td class="content"> {VL_SUBDOM_ACCOUNTS_USED}</td>
-                        <td class="content"> {VL_SUBDOM_ACCOUNTS_LIIT}</td>
-                    </tr>
-                    <tr>
-                        <td><label for="domain_name">{TR_DOMALIAS_ACCOUNTS}</label></td>
-                        <td class="content"> {VL_DOMALIAS_ACCOUNTS_USED}</td>
-                        <td class="content"> {VL_DOMALIAS_ACCOUNTS_LIIT}</td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="3"><form name="buttons" method="post" action="?">
-                                <input name="Submit" type="submit" class="button" onclick="MM_goToURL('parent','manage_users.php');return document.MM_returnValue" value="  {TR_BACK}  " />
-                                &nbsp;&nbsp;&nbsp;
-                            </form></td>
-                    </tr>
-                </table></td>
-            <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            </table></td>
-            </tr>
-            </table></td>
-            </tr>
+            	<tr>
+            		<td>{TR_DOMALIAS_ACCOUNTS}</td>
+                    <td>{VL_DOMALIAS_ACCOUNTS_USED}</td>
+                    <td>{VL_DOMALIAS_ACCOUNTS_LIIT}</td>
+                </tr>
             </table>
+        </div>
+
+        <div class="footer">
+            ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+        </div>
+
     </body>
 </html>
