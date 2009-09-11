@@ -48,95 +48,25 @@
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>
 
-    </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="body">
-            
+            <h2 class="doc"><span>{TR_SERVER_STATUS}</span></h2>
+            <!-- BDP: props_list -->
+            <table>
+                <tr>
+                    <th>{TR_HOST}</th>
+                    <th>{TR_SERVICE}</th>
+                    <th>{TR_STATUS}</th>
+                </tr>
+                <!-- BDP: service_status -->
+                <tr>
+                    <td class="{CLASS}">{HOST} (Port {PORT})</td>
+                    <td class="{CLASS}">{SERVICE}</td>
+                    <td class="{CLASS}">{STATUS}</td>
+                </tr>
+                <!-- EDP: service_status -->
+            </table>
+            <!-- EDP: props_list -->
+        </div>
 
-            <table width="100%" cellpadding="5" cellspacing="5">
-                          </td>
-                            <<h2 class="doc"><span>{TR_SERVER_STATUS}</span></h2>
-                          </tr>
-                      </table></td>
-                      <td width="27" align="right">&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td><!-- BDP: props_list -->
-                          <table width="100%" cellpadding="5" cellspacing="5">
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td width="230" class="content3"><strong>{TR_HOST}</strong></td>
-                              <td align="center" class="content3"><strong>{TR_SERVICE}</strong></td>
-                              <td align="center" class="content3"><strong>{TR_STATUS}</strong></td>
-                            </tr>
-                            <!-- BDP: service_status -->
-                            <tr class="hl">
-                              <td>&nbsp;</td>
-                              <td class="{CLASS}">{HOST} &nbsp;&nbsp;(Port {PORT})</td>
-                              <td class="{CLASS}">{SERVICE} </td>
-                              <td align="center" class="{CLASS}">{STATUS}</td>
-                            </tr>
-                            <!-- EDP: service_status -->
-                          </table>
-                        <!-- EDP: props_list -->
-                      </td>
-                      <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                    </tr>
-                  </table></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
-</body>
+    </body>
 </html>

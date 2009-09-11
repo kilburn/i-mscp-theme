@@ -30,7 +30,7 @@
         <div class="location">
             <div class="location-area icons-left">
                 <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
-        </div>
+            </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
@@ -50,45 +50,33 @@
 
             <h2 class="admin_lod"><span>{TR_ADMIN_LOG}</span></h2>
             <form name="admin_lod" method="post" action="admin_log.php">
-
-
-                <table width="100%" cellpadding="5" cellspacing="5">
-                    <tr>
-                        <td width="25">&nbsp;</td>
-                        <td width="200" class="content3"><b>{TR_DATE}</b></td>
-                        <td class="content3"><b>{TR_MESSAGE}</b></td>
-                    </tr>
-                    <!-- BDP: log_row -->
-                    <tr>
-                        <td width="25">&nbsp;</td>
-                        <td width="200" class="{ROW_CLASS}">{DATE}</td>
-                        <td class="{ROW_CLASS}">{MESSAGE}</td>
-                    </tr>
-                    <!-- EDP: log_row -->
-                </table>
                 <!-- BDP: clear_log -->
-                <table width="100%" border="0" cellspacing="5" cellpadding="5">
-                    <tr>
-                        <td width="80">&nbsp;</td>
-                        <td><label for="uaction_clear">{TR_CLEAR_LOG_MESSAGE}</label></td>
-                        <td><select name="uaction_clear" id="uaction_clear">
-                                <option value="0" selected="selected">{TR_CLEAR_LOG_EVERYTHING}</option>
-                                <option value="2">{TR_CLEAR_LOG_LAST2}</option>
-                                <option value="4">{TR_CLEAR_LOG_LAST4}</option>
-                                <option value="12">{TR_CLEAR_LOG_LAST12}</option>
-                                <option value="26">{TR_CLEAR_LOG_LAST26}</option>
-                                <option value="52">{TR_CLEAR_LOG_LAST52}</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
+                <label for="uaction_clear">{TR_CLEAR_LOG_MESSAGE}</label>
+                <select name="uaction_clear" id="uaction_clear">
+                    <option value="0" selected="selected">{TR_CLEAR_LOG_EVERYTHING}</option>
+                    <option value="2">{TR_CLEAR_LOG_LAST2}</option>
+                    <option value="4">{TR_CLEAR_LOG_LAST4}</option>
+                    <option value="12">{TR_CLEAR_LOG_LAST12}</option>
+                    <option value="26">{TR_CLEAR_LOG_LAST26}</option>
+                    <option value="52">{TR_CLEAR_LOG_LAST52}</option>
+                </select>
                 <!-- EDP: clear_log -->
-
-                <div class="buttons">
-                    <input name="Submit" type="submit" class="button" value="{TR_CLEAR_LOG}" />
-                    <input type="hidden" name="uaction" value="clear_log" />
-                </div>
+                <input name="Submit" type="submit" class="button" value="{TR_CLEAR_LOG}" />
+                <input type="hidden" name="uaction" value="clear_log" />
             </form>
+
+            <table>
+                <tr>
+                    <th>{TR_DATE}</th>
+                    <th>{TR_MESSAGE}</th>
+                </tr>
+                <!-- BDP: log_row -->
+                <tr>
+                    <td class="{ROW_CLASS}">{DATE}</td>
+                    <td class="{ROW_CLASS}">{MESSAGE}</td>
+                </tr>
+                <!-- EDP: log_row -->
+            </table>
 
         </div>
         <div class="footer">
