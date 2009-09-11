@@ -52,13 +52,11 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="reseller"><span>{TR_ADD_RESELLER}</span></h2>
-            <td valign="top"><form name="admin_add_reseller" method="post" action="reseller_add.php">
+            <h2 class="user"><span>{TR_ADD_RESELLER}</span></h2>
+            <form name="admin_add_reseller" method="post" action="reseller_add.php">
+                <fieldset>
+                    <legend>{TR_CORE_DATA}</legend>
                     <table>
-                        <tr>
-                            <th>{TR_ADDITIONAL_DATA}</th>
-                        </tr>
-
                         <tr>
                             <td><label for="username">{TR_USERNAME}</label></td>
                             <td><input type="text" name="username" id="username" value="{TR_USERNAME}" /></td>
@@ -88,7 +86,7 @@
                             <td><label for="nreseller_max_alias_cnt">{TR_MAX_ALIASES_COUNT}</label></td>
                             <td><input type="text" name="nreseller_max_alias_cnt" id="nreseller_max_alias_cnt" value="{MAX_ALIASES_COUNT}"/></td>
                         </tr>
-                        
+
                         <tr>
                             <td><label for="nreseller_max_mail_cnt">{TR_MAX_MAIL_USERS_COUNT}</label></td>
                             <td><input type="text" name="nreseller_max_mail_cnt" id="nreseller_max_mail_cnt" value="{MAX_MAIL_USERS_COUNT}"/></td>
@@ -109,108 +107,107 @@
                             <td><label for="nreseller_max_traffic">{TR_MAX_TRAFFIC_AMOUNT}</label></td>
                             <td><input type="text" name="nreseller_max_traffic" id="nreseller_max_traffic" value="{MAX_TRAFFIC_AMOUNT}"/></td>
                         </tr>
-                       <tr>
+                        <tr>
                             <td><label for="nreseller_max_disk">{TR_MAX_DISK_AMOUNT}</label></td>
                             <td><input type="text" name="nreseller_max_disk" id="nreseller_max_disk" value="{MAX_DISK_AMOUNT}"/></td>
                         </tr>
-                        
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td colspan="2"><table cellpadding="5" cellspacing="5" border="0" width="100%">
-                                    <tr>
-                                        <th>{TR_RESELLER_IPS}</th></td>
-                                    </tr>
-                                    <!-- BDP: rsl_ip_message -->
-                                    <!-- BDP: page_message -->
-                                    <div class="warning">{MESSAGE}</div>
-                                    <!-- EDP: page_message -->
-                                    <!-- EDP: rsl_ip_message -->
-                                    <!-- BDP: rsl_ip_list -->
-                                    <tr>
-                                        <td>{TR_RSL_IP_NUMBER}</td>
-                                        <td>{TR_RSL_IP_ASSIGN}</td>
-                                        <td>{TR_RSL_IP_LABEL}</td>
-                                        <td>{TR_RSL_IP_IP}</td>
-                                    </tr>
-                                    <!-- BDP: rsl_ip_item -->
-                                    <tr>
-                                        <td width="10%" align="center" class="{RSL_IP_CLASS}">{RSL_IP_NUMBER}</td>
-                                        <td width="20%" align="center" class="{RSL_IP_CLASS}"><input type="checkbox" name="{RSL_IP_CKB_NAME}" value="{RSL_IP_CKB_VALUE}" {RSL_IP_ITEM_ASSIGNED} /></td>
-                                        <td width="35%" class="{RSL_IP_CLASS}">{RSL_IP_LABEL}</td>
-                                        <td width="35%" class="{RSL_IP_CLASS}">{RSL_IP_IP}</td>
-                                    </tr>
-                                    <!-- EDP: rsl_ip_item -->
-                                    <!-- EDP: rsl_ip_list -->
-                                </table></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <th>{TR_ADDITIONAL_DATA}</th></td>
-                        </tr>
-                        <tr>
-
-                            <tr>
-                                <td><label for="customer_id">{TR_CUSTOMER_ID}</label></td>
-                                <td><input type="text" name="customer_id" id="customer_id" value="{CUSTOMER_ID}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="first_name">{TR_FIRST_NAME}</label></td>
-                                <td><input type="text" name="fname" id="fname" value="{FIRST_NAME}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="last_name">{TR_LAST_NAME}</label></td>
-                                <td><input type="text" name="lname" id="lname" value="{LAST_NAME}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="gender">{TR_GENDER}</label></td>
-                                <td><select id="gender" name="gender">
-                                <option value="M" {VL_MALE}>{TR_MALE}</option>
-                                <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
-                                <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
-                      </select>
-                      </td>
-                    <tr>
-                      <td><label for="firm">{TR_COMPANY}</label></td>
-                      <td><input type="text" name="firm" id="firm" value="{FIRM}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="street1">{TR_STREET_1}</label></td>
-                      <td><input type="text" name="street1" id="street1" value="{STREET_1}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="street2">{TR_STREET_2}</label></td>
-                      <td><input type="text" name="street2" id="street2" value="{STREET_2}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="zip_postal_code">{TR_ZIP_POSTAL_CODE}</label></td>
-                      <td><input type="text" name="zip" id="zip" value="{ZIP}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="city">{TR_CITY}</label></td>
-                      <td><input type="text" name="city" id="city" value="{CITY}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="state">{TR_STATE}</label></td>
-                      <td><input type="text" name="state" id="state" value="{STATE}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="country">{TR_COUNTRY}</label></td>
-                      <td><input type="text" name="country" id="country" value="{COUNTRY}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="email">{TR_EMAIL}</label></td>
-                      <td><input type="text" name="email" id="email" value="{EMAIL}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="phone">{TR_PHONE}</label></td>
-                      <td><input type="text" name="phone" id="phone" value="{PHONE}" /></td>
-                    </tr>
-                    <tr>
-                      <td><label for="fax">{TR_FAX}</label></td>
-                      <td><input type="text" name="fax" id="fax" value="{FAX}" /></td>
-                    </tr>
                     </table>
-                    <div class="buttons">
+                </fieldset>
+
+                <fieldset>
+                    <legend>{TR_RESELLER_IPS}</legend>
+                    <!-- BDP: rsl_ip_message -->
+                    <div class="warning">{MESSAGE}</div>
+                    <!-- EDP: rsl_ip_message -->
+
+                <!-- BDP: rsl_ip_list -->
+                    <table>
+                        <tr>
+                            <th>{TR_RSL_IP_NUMBER}</th>
+                            <th>{TR_RSL_IP_ASSIGN}</th>
+                            <th>{TR_RSL_IP_LABEL}</th>
+                            <th>{TR_RSL_IP_IP}</th>
+                        </tr>
+                        <!-- BDP: rsl_ip_item -->
+                        <tr>
+                            <td>{RSL_IP_NUMBER}</td>
+                            <td><input type="checkbox" id="{RSL_IP_CKB_NAME}" name="{RSL_IP_CKB_NAME}" value="{RSL_IP_CKB_VALUE}" {RSL_IP_ITEM_ASSIGNED} /></td>
+                            <td><label for="{RSL_IP_CKB_NAME}">{RSL_IP_LABEL}</label></td>
+                            <td>{RSL_IP_IP}</td>
+                        </tr>
+                        <!-- EDP: rsl_ip_item -->
+                    </table>
+                    <!-- EDP: rsl_ip_list -->
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>{TR_ADDITIONAL_DATA}</legend>
+                    <table>
+                        <tr>
+                            <td><label for="customer_id">{TR_CUSTOMER_ID}</label></td>
+                            <td><input type="text" name="customer_id" id="customer_id" value="{CUSTOMER_ID}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="first_name">{TR_FIRST_NAME}</label></td>
+                            <td><input type="text" name="fname" id="first_name" value="{FIRST_NAME}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="last_name">{TR_LAST_NAME}</label></td>
+                            <td><input type="text" name="lname" id="last_name" value="{LAST_NAME}"/></td>
+                        </tr>
+                        <tr>
+                        <td><label for="gender">{TR_GENDER}</label></td>
+                        <td><select id="gender" name="gender">
+                                <option value="M" {VL_MALE}>{TR_MALE}</option>
+                                <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
+                                <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
+                            </select>
+                        </td>
+                        <tr>
+                            <td><label for="firm">{TR_COMPANY}</label></td>
+                            <td><input type="text" name="firm" id="firm" value="{FIRM}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="street1">{TR_STREET_1}</label></td>
+                            <td><input type="text" name="street1" id="street1" value="{STREET_1}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="street2">{TR_STREET_2}</label></td>
+                            <td><input type="text" name="street2" id="street2" value="{STREET_2}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="zip_postal_code">{TR_ZIP_POSTAL_CODE}</label></td>
+                            <td><input type="text" name="zip" id="zip_postal_code" value="{ZIP}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">{TR_CITY}</label></td>
+                            <td><input type="text" name="city" id="city" value="{CITY}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">{TR_STATE}</label></td>
+                            <td><input type="text" name="state" id="state" value="{STATE}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="country">{TR_COUNTRY}</label></td>
+                            <td><input type="text" name="country" id="country" value="{COUNTRY}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">{TR_EMAIL}</label></td>
+                            <td><input type="text" name="email" id="email" value="{EMAIL}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">{TR_PHONE}</label></td>
+                            <td><input type="text" name="phone" id="phone" value="{PHONE}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fax">{TR_FAX}</label></td>
+                            <td><input type="text" name="fax" id="fax" value="{FAX}" /></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="buttons">
                     <input name="Submit" type="submit" class="button" value="{TR_ADD}" />
                     <input type="hidden" name="uaction" value="add_reseller" />
                 </div>
