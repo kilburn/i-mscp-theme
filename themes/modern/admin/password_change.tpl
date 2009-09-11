@@ -52,7 +52,7 @@
             <!-- EDP: page_message -->
 
             <h2 class="password"><span>{TR_CHANGE_PASSWORD}</span></h2>
-            <form action="#" method="post" name="search_user" id="search_user">
+            <form action="password_change.php" method="post" name="search_user" id="search_user">
 
                 <table>
                     <tr>
