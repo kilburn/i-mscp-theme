@@ -1,8 +1,3 @@
-
-<!--- kilburn repasa esto -->
-<!--- no salen todos los campos pero estan en la tabla y el trafico-->
-
-
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -33,7 +28,7 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
+                <h1 class="manage_users">{TR_MENU_MANAGE_USERS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
@@ -43,7 +38,8 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="index.php">{TR_DOMAIN_DETAILS}</a></li>
+                <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
+                <li><a>{TR_DOMAIN_DETAILS}</a></li>
             </ul>
         </div>
 
@@ -52,13 +48,6 @@
         </div>
 
         <div class="body">
-            <!-- BDP: page_message -->
-            <div class="warning">{MESSAGE}</div>
-            <!-- EDP: page_message -->
-            <!-- BDP: msg_entry -->
-            <div class="warning">{VL_NEW_MSGS}</div>
-            <!-- EDP: msg_entry -->
-
 
             <h2 class="general"><span>{TR_DOMAIN_DETAILS}</span></h2>
 
@@ -67,101 +56,78 @@
             		<td>{TR_DOMAIN_NAME}</td>
             		<td>{VL_DOMAIN_NAME}</td>
             	</tr>
-				<!-- BDP: t_php_support -->
             	<tr>
             		<td>{TR_DOMAIN_IP}</td>
             		<td>{VL_DOMAIN_IP}</td>
             	</tr>
-				<!-- EDP: t_php_support -->
-				<!-- BDP: t_cgi_support -->
             	<tr>
             		<td>{TR_STATUS}</td>
             		<td>{VL_STATUS}</td>
             	</tr>
-				<!-- EDP: t_cgi_support -->
-				<!-- BDP: t_sql1_support -->
             	<tr>
             		<td>{TR_PHP_SUPP}</td>
             		<td>{VL_PHP_SUPP}</td>
             	</tr>
-				<!--EDP: t_sql1_support -->
-				<!-- BDP: t_sdm_support -->
             	<tr>
             		<td>{TR_CGI_SUPP}</td>
             		<td>{VL_CGI_SUPP}</td>
             	</tr>
-				<!--EDP: t_sdm_support -->
-				<!-- BDP: t_alias_support -->
             	<tr>
             		<td>{TR_DNS_SUPP}</td>
             		<td>{VL_DNS_SUPP}</td>
             	</tr>
-				<!--EDP: t_alias_support -->
-				<!-- BDP: t_mails_support -->
             	<tr>
             		<td>{TR_MYSQL_SUPP}</td>
             		<td>{VL_MYSQL_SUPP}</td>
                 </tr>
-            </table>
+                <tr>
+                    <td>{TR_TRAFFIC}</td>
+                    <td>
+                        <div class="graph"><span style="width:{VL_TRAFFIC_PERCENT}%">&nbsp;</span></div>
+                        {VL_TRAFFIC_USED} / {VL_TRAFFIC_LIMIT}
+                    </td>
+                </tr>
+                <tr>
+                    <td>{TR_DISK}</td>
+                    <td>
+                        <div class="graph"><span style="width:{VL_DISK_PERCENT}%">&nbsp;</span></div>
+                        {VL_DISK_USED} / {VL_DISK_LIMIT}
+                    </td>
+                </tr>
+             </table>
 
 
-            <h2 class="traffic"><span>{TR_TRAFFIC}</span></h2>
-            <!-- BDP: traff_warn -->
-            <div class="warning">{VL_TRAFFIC_PERCENT}</div>
-            <!-- EDP: traff_warn -->
-            <p>{TRAFFIC_USAGE_DATA}</p>
-            <div class="graph"><span style="width:{TRAFFIC_BARS}%">&nbsp;</span></div>
-
-            <h2 class="diskusage"><span>{TR_DISK}</span></h2>
-            <!-- BDP: disk_warn -->
-            <div class="warning">{VL_DISK_PERCENT}</div>
-            <!-- EDP: disk_warn -->
-            <p>{DISK_USAGE_DATA}</p>
-            <div class="graph"><span style="width:{DISK_BARS}%">&nbsp;</span></div>
-            <table>
              <table>
             	<tr>
-            		<td><strong>{TR_FEATURE}</strong></td>
-                    <td><strong>{TR_USED}</strong></td>
-                    <td><strong>{TR_LIMIT}</strong></td>
+            		<th>{TR_FEATURE}</th>
+                    <th>{TR_USED}</th>
+                    <th>{TR_LIMIT}</th>
             	</tr>
-				<!-- BDP: t_php_support -->
             	<tr>
             		<td>{TR_MAIL_ACCOUNTS}</td>
                     <td>{VL_MAIL_ACCOUNTS_USED}</td>
                     <td>{VL_MAIL_ACCOUNTS_LIIT}</td>
             	</tr>
-				<!-- EDP: t_php_support -->
-				<!-- BDP: t_cgi_support -->
             	<tr>
             		<td>{TR_FTP_ACCOUNTS}</td>
                     <td>{VL_FTP_ACCOUNTS_USED}</td>
                     <td>{VL_FTP_ACCOUNTS_LIIT}</td>
             	</tr>
-				<!-- EDP: t_cgi_support -->
-				<!-- BDP: t_sql1_support -->
             	<tr>
             		<td>{TR_SQL_DB_ACCOUNTS}</td>
                     <td>{VL_SQL_DB_ACCOUNTS_USED}</td>
                     <td>{VL_SQL_DB_ACCOUNTS_LIIT}</td>
             	</tr>
-				<!--EDP: t_sql1_support -->
-				<!-- BDP: t_sdm_support -->
                 <tr>
             		<td>{TR_SQL_USER_ACCOUNTS}</td>
                     <td>{VL_SQL_USER_ACCOUNTS_USED}</td>
                     <td>{VL_SQL_USER_ACCOUNTS_LIIT}</td>
             	</tr>
-				<!--EDP: t_sql1_support -->
-				<!-- BDP: t_sdm_support -->
             	<tr>
             		<td>{TR_SUBDOM_ACCOUNTS}</td>
                     <td>{VL_SUBDOM_ACCOUNTS_USED}</td>
                     <td>{VL_SUBDOM_ACCOUNTS_LIIT}</td>
             	</tr>
-				<!--EDP: t_sdm_support -->
-				<!-- BDP: t_alias_support -->
-
             	<tr>
             		<td>{TR_DOMALIAS_ACCOUNTS}</td>
                     <td>{VL_DOMALIAS_ACCOUNTS_USED}</td>
