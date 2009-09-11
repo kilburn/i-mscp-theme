@@ -51,6 +51,8 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
+            <h2 class="settings"><span>{TR_CHANGE_PERSONAL_DATA}</span></h2>
+            
 			<form name="client_personal_change_frm" method="post" action="personal_change.php">
 			<fieldset>
 				<legend>{TR_CHANGE_PERSONAL_DATA}</legend>

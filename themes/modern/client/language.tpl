@@ -46,10 +46,14 @@
             {MENU}
         </div>
 
+
         <div class="body">
             <!-- BDP: page_message -->
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
+            
+	        <h2 class="multilanguage"><span>{TR_LANGUAGE}</span></h2>
+	        
 			<form name="client_language_frm" method="post" action="language.php">
 			<fieldset>
 				<legend>{TR_LANGUAGE}</legend>
