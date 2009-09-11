@@ -55,13 +55,9 @@
             <h2 class="general"><span>{TR_ADD_ADMIN}</span></h2>
             <td valign="top"><!-- BDP: props_list -->
                 <form name="admin_add_user" method="post" action="admin_add.php">
-                    <table width="100%" cellpadding="5" cellspacing="5">
-                        <tr>
-                            <td width="25">&nbsp;</td>
-                            <td colspan="2" class="content3"><b>{TR_CORE_DATA}</b></td>
-                        </tr>
-                       
-
+                    <fieldset>
+                    <legend>{TR_CORE_DATA}</legend>
+                    <table>
                         <tr>
                             <td><label for="username">{TR_USERNAME}</label></td>
                             <td><input type="text" name="username" id="username" value="{USERNAME}"/></td>
@@ -79,8 +75,11 @@
                             <td><input type="text" name="email" id="email" value="{EMAIL}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td colspan="2" class="content3"><b>{TR_ADDITIONAL_DATA}</b></td>
+                    </table>
+                    <p>&nbsp;</p>
+                    <fieldset>
+                        <legend>{TR_ADDITIONAL_DATA}</legend>
+                        <table>
                         </tr>
                         <tr>
                             <td><label for="first_name">{TR_FIRST_NAME}</label></td>
