@@ -176,11 +176,11 @@
                     <td>{USR_CREATED_BY}</td>
                     <td>
                         <a class="icon i_identity" href="domain_details.php?domain_id={DOMAIN_ID}">{TR_DETAILS}</a>
-                        <a class="icon i_details.png" href="{URL_CHANGE_INTERFACE}" title="{TR_CHANGE_USER_INTERFACE}">{GO_TO_USER_INTERFACE}</a>
+                        <a class="icon i_details" href="{URL_CHANGE_INTERFACE}" title="{TR_CHANGE_USER_INTERFACE}">{GO_TO_USER_INTERFACE}</a>
                         <!-- BDP: edit_option -->
-                            <a class="icon i_edit.png" href="domain_edit.php?edit_id={DOMAIN_ID}">{TR_EDIT_DOMAIN}</a>
+                            <a class="icon i_edit" href="domain_edit.php?edit_id={DOMAIN_ID}">{TR_EDIT_DOMAIN}</a>
                         <!-- EDP: edit_option -->
-                            <a class="icon i_users" href="{URL_EDIT_USR}">{TR_EDIT_USR}</a>
+                            <a class="icon i_user" href="{URL_EDIT_USR}">{TR_EDIT_USR}</a>
                         <!-- BDP: usr_delete_show -->
                         
                         <!-- EDP: usr_delete_show -->
