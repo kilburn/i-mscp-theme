@@ -567,7 +567,7 @@ div.graph span{
 	width : 0;
 }
 
-form fieldset table tbody td input,
-form fieldset table tbody td textarea{
+form table tbody td input,
+form table tbody td textarea{
 	width : 90%;
 }

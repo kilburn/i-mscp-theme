@@ -72,18 +72,13 @@
 			
 			<h2 class="doc">{TR_NEW_TICKET_REPLY}</h2>
 			<form name="question_frm" method="post" action="ticket_view.php?ticket_id={ID}">
-				<fieldset>
-					<legend>{TR_NEW_TICKET_REPLY}</legend>
-					<table>
-						<tbody>
-							<tr>
-								<td><label for="user_message">{TR_YOUR_MESSAGE}</label></td>
-								<td><textarea name="user_message" cols="80" rows="12"></textarea></td>
-							</tr>
-						</tbody>
-					</table>
-				</fieldset>
-				
+				<table>
+					<tbody>
+						<tr>
+							<td><textarea name="user_message" cols="80" rows="12"></textarea></td>
+						</tr>
+					</tbody>
+				</table>
 				
 				<div class="buttons">
                     <input name="button_reply" type="button" class="button" value="{TR_REPLY}" onclick="return sbmt(document.forms[0],'send_msg');" />
