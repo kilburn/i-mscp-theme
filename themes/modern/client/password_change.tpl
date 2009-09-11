@@ -28,7 +28,7 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="general">{TR_GENERAL_INFORMATION}</h1>
+                <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->

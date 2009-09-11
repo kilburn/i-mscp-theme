@@ -38,7 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="index.php">{TR_GENERAL_INFORMATION}</a></li>
+                <li><a href="index.php">{TR_MENU_OVERVIEW}</a></li>
             </ul>
         </div>
 
@@ -127,7 +127,7 @@
             <!-- EDP: disk_warn -->
             <p>{DISK_USAGE_DATA}</p>
             <div class="graph"><span style=" width:{DISK_BARS}%">&nbsp;</span></div>
-.
+
         </div>
 
         <div class="footer">
