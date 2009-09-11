@@ -53,7 +53,7 @@
             <!-- EDP: page_message -->
 
             <h2 class="user"><span>{TR_EDIT_RESELLER}</span></h2>
-            <form name="admin_add_reseller" method="post" action="reseller_add.php">
+            <form name="admin_edit_reseller" method="post" action="reseller_edit.php">
                 <fieldset>
                     <legend>{TR_CORE_DATA}</legend>
                     <table>
@@ -207,12 +207,13 @@
                 <div class="buttons">
                     <input name="Submit" type="submit" class="button" value="{TR_UPDATE}" />
                     <input type="checkbox" name="send_data" checked="checked" />
-                                    {TR_SEND_DATA}</td>
-                    <input type="hidden" name="uaction" value="update_reseller" />
+                    {TR_SEND_DATA}</td>
+                    <input type="hidden" name="uaction" value="update_reseller">
+                        <input type="hidden" name="edit_id" value="{EDIT_ID}">
+                            <input type="hidden" name="edit_username" value="{USERNAME}">>
 
             </form>
-        </div>
-
+            </div>
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>
