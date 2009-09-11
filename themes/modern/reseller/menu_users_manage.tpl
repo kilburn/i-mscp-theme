@@ -1,7 +1,8 @@
 <ul>
-    <li><a href="index.php">{TR_MENU_OVERVIEW}</a></li>
-    <li><a href="password_change.php">{TR_MENU_CHANGE_PASSWORD}</a></li>
-    <li><a href="personal_change.php">{TR_MENU_CHANGE_PERSONAL_DATA}</a></li>
-    <li><a href="language.php">{TR_MENU_LANGUAGE}</a></li>
-    <li><a href="settings_layout.php">{TR_MENU_LAYOUT_SETTINGS}</a></li>
+    <li><a href="users.php">{TR_MENU_OVERVIEW}</a></li>
+    <li><a href="user_add1.php">{TR_MENU_ADD_USER}</a></li>
+    <li><a href="alias.php">{TR_MENU_DOMAIN_ALIAS}</a></li>
+    <li><a href="settings_welcome_mail.php">{TR_MENU_E_MAIL_SETUP}</a></li>
+    <li><a href="settings_lostpassword.php">{TR_MENU_LOSTPW_EMAIL}</a></li>
+    <li><a href="circular.php">{TR_MENU_CIRCULAR}</a></li>
 </ul>
