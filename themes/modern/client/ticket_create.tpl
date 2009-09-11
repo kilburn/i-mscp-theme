@@ -62,8 +62,6 @@
 
 	        <h2 class="doc"><span>{TR_NEW_TICKET}</span></h2>
 			<form name="question_frm" method="post" action="ticket_create.php">
-				<fieldset>
-					<legend>{TR_NEW_TICKET}</legend>
 					<table>
 						<tbody>
 							<tr>
@@ -86,7 +84,6 @@
 							</tr>
 						</tbody>
 					</table>					
-				</fieldset>
 				
 				<div class="buttons">
 					<input name="Submit" type="submit" class="button" value="{TR_SEND_MESSAGE}" />
