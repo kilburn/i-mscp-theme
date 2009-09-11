@@ -38,6 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+                <li><a href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li>
                 <li><a href="personal_change.php">{TR_CHANGE_PERSONAL_DATA}</a></li>
             </ul>
         </div>
@@ -53,73 +54,71 @@
 
             <h2 class="settings"><span>{TR_CHANGE_PERSONAL_DATA}</span></h2>
             
-			<form name="client_personal_change_frm" method="post" action="personal_change.php">
-			<fieldset>
-				<legend>{TR_CHANGE_PERSONAL_DATA}</legend>
-				
-                   <table>
-                       <tr>
-                           <td><label for="fname">{TR_FIRST_NAME}</label></td>
-                           <td><input id="fname" name="fname" type="text" value="{FIRST_NAME}" /></td>
-                       </tr><tr>
-                           <td><label for="lname">{TR_LAST_NAME}</label></td>
-                           <td><input name="lname" id="lname" type="text" value="{LAST_NAME}" /></td>
-                       </tr><tr>
-                           <td><label for="gender">{TR_GENDER}</label></td>
-                           <td><select name="gender" id="gender" size="1">
-								<option value="M" {VL_MALE}>{TR_MALE}</option>
-                         		<option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
-								<option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
-							</select></td>
-                       </tr>
-                      <tr>
+            <form name="client_personal_change_frm" method="post" action="personal_change.php">
+                <table>
+                    <tr>
+                        <td><label for="fname">{TR_FIRST_NAME}</label></td>
+                        <td><input id="fname" name="fname" type="text" value="{FIRST_NAME}"/></td>
+                    </tr><tr>
+                        <td><label for="lname">{TR_LAST_NAME}</label></td>
+                        <td><input name="lname" id="lname" type="text" value="{LAST_NAME}"/></td>
+                    </tr><tr>
+                        <td><label for="gender">{TR_GENDER}</label></td>
+                        <td><select name="gender" id="gender" size="1">
+                                <option value="M" {VL_MALE}>{TR_MALE}</option>
+                                <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
+                                <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
+                        </select></td>
+                    </tr>
+                    <tr>
                         <td><label for="firm">{TR_COMPANY}</label></td>
-                        <td><input type="text" name="firm" id="firm" value="{FIRM}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="firm" id="firm" value="{FIRM}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="street1">{TR_STREET_1}</label></td>
-                        <td><input type="text" name="street1" id="street1" value="{STREET_1}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="street1" id="street1" value="{STREET_1}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="street2">{TR_STREET_2}</label></td>
-                        <td><input type="text" name="street2" id="street2" value="{STREET_2}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="street2" id="street2" value="{STREET_2}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="zip">{TR_ZIP_POSTAL_CODE}</label></td>
-                        <td><input type="text" name="zip" id="zip" value="{ZIP}" style="width:80px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="zip" id="zip" value="{ZIP}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="city">{TR_CITY}</label></td>
-                        <td><input type="text" name="city" id="city" value="{CITY}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="city" id="city" value="{CITY}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="city">{TR_STATE}</label></td>
-                        <td><input type="text" name="state" id="state" value="{STATE}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="state" id="state" value="{STATE}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="country">{TR_COUNTRY}</label></td>
-                        <td><input type="text" name="country" id="country" value="{COUNTRY}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="country" id="country" value="{COUNTRY}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="email1">{TR_EMAIL}</label></td>
-                        <td><input type="text" name="email" id="email1" value="{EMAIL}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="email" id="email1" value="{EMAIL}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="phone">{TR_PHONE}</label></td>
-                        <td><input type="text" name="phone" id="phone" value="{PHONE}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                      <tr>
+                        <td><input type="text" name="phone" id="phone" value="{PHONE}"/></td>
+                    </tr>
+                    <tr>
                         <td><label for="fax">{TR_FAX}</label></td>
-                        <td><input type="text" name="fax" id="fax" value="{FAX}" style="width:210px" class="textinput" /></td>
-                      </tr>
-                   </table>
-			</fieldset>
-			<div class="buttons">
-                   <input type="submit" name="Submit" value="{TR_UPDATE_DATA}" />
-			</div>
-			<input type="hidden" name="uaction" value="updt_data" />
-			</form>
-	        </div>
+                        <td><input type="text" name="fax" id="fax" value="{FAX}"/></td>
+                    </tr>
+                </table>
+
+                <div class="buttons">
+                    <input type="submit" name="Submit" value="{TR_UPDATE_DATA}" />
+                    <input type="hidden" name="uaction" value="updt_data" />
+                </div>
+
+            </form>
+        </div>
 
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}

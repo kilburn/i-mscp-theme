@@ -33,11 +33,12 @@
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <!-- BDP: logged_from -->
-                <li><a class="logout" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+                <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
                 <!-- EDP: logged_from -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+                <li><a href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li>
                 <li><a href="hosting_plan_update.php">{TR_MENU_UPDATE_HP}</a></li>
             </ul>
         </div>
@@ -56,7 +57,8 @@
 			<table>
                     <!-- BDP: hosting_plans -->
                     <tr>
-                      <td valign="top" class="{ITHEM}" style="white-space:normal"><strong>{HP_NAME}</strong><br />
+                      <td>
+                        <strong>{HP_NAME}</strong><br />
                         {HP_DESCRIPTION}<br />
                         <br />
                         {HP_DETAILS}<br />
@@ -64,7 +66,7 @@
                         <strong>{HP_COSTS}</strong></td>
                     </tr>
                     <tr>
-                      <td><a href="hosting_plan_update.php?{LINK}={ID}" class="icon i_purchasing">{TR_PURCHASE}</a></td>
+                      <td><a href="hosting_plan_update.php?{LINK}={ID}" class="icon i_details">{TR_PURCHASE}</a></td>
                     </tr>
                     <!-- EDP: hosting_plans -->
             </table>
