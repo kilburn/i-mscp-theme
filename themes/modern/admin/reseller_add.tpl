@@ -31,14 +31,15 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
+                <h1 class="manage_users">{TR_MENU_MANAGE_USERS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
-                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_MANAGE_USERS}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="index.php">{TR_ADD_RESELLER}</a></li>
+                <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
+                <li><a href="reseller_add.php">{TR_ADD_RESELLER}</a></li>
             </ul>
         </div>
 
@@ -120,7 +121,7 @@
                     <div class="warning">{MESSAGE}</div>
                     <!-- EDP: rsl_ip_message -->
 
-                <!-- BDP: rsl_ip_list -->
+                    <!-- BDP: rsl_ip_list -->
                     <table>
                         <tr>
                             <th>{TR_RSL_IP_NUMBER}</th>

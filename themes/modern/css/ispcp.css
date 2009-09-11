@@ -126,6 +126,10 @@ dd {
     cursor: pointer;
 }
 
+.buttons input[type="checkbox"] {
+    height: auto;
+}
+
 .icon {
     background: transparent url(../images/icons/icons_sprite.png) top left no-repeat;
     padding-left: 20px;
@@ -195,6 +199,23 @@ table .icon {
 
 .down {
     color: rgb(202,29,17);
+}
+
+.graph{
+    border: 1px solid rgb(223,223,223);
+	height : 1em;
+	width : 100%;
+}
+.graph span{
+	display : block;
+	background-color : #006;
+	width : 0;
+}
+
+form table tbody td input[type="text"],
+form table tbody td input[type="password"],
+form table tbody td textarea{
+	min-width : 200px;
 }
 
 /***********************************************************************************
@@ -553,21 +574,3 @@ legend, h3 {
 .i_users { background-position: 0 -3979px; }
 .i_webmailicon { background-position: 0 -4045px; }
 .i_webtools_big { background-position: 0 -4141px; }
-
-
-div.graph{
-    border: 1px solid rgb(223,223,223);
-	height : 1em;
-	width : 100%;
-}
-
-div.graph span{
-	display : block;
-	background-color : #006;
-	width : 0;
-}
-
-form table tbody td input,
-form table tbody td textarea{
-	width : 90%;
-}

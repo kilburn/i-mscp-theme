@@ -30,14 +30,15 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
+                <h1 class="manage_users">{TR_MENU_MANAGE_USERS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
-                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_MANAGE_USERS}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="index.php">{TR_ADD_ADMIN}</a></li>
+                <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
+                <li><a href="admin_add.php">{TR_MENU_ADD_ADMIN}</a></li>
             </ul>
         </div>
 
@@ -45,17 +46,16 @@
             {MENU}
         </div>
 
-        <div class="body"> 
-            
+        <div class="body">
+
             <!-- BDP: page_message -->
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-
             <h2 class="general"><span>{TR_ADD_ADMIN}</span></h2>
-            <td valign="top"><!-- BDP: props_list -->
-                <form name="admin_add_user" method="post" action="admin_add.php">
-                    <fieldset>
+            <form name="admin_add_user" method="post" action="admin_add.php">
+                <!-- BDP: props_list -->
+                <fieldset>
                     <legend>{TR_CORE_DATA}</legend>
                     <table>
                         <tr>
@@ -76,28 +76,28 @@
                         </tr>
                         <tr>
                     </table>
-                    <p>&nbsp;</p>
-                    <fieldset>
-                        <legend>{TR_ADDITIONAL_DATA}</legend>
-                        <table>
-                        </tr>
+                </fieldset>
+
+                <fieldset>
+                    <legend>{TR_ADDITIONAL_DATA}</legend>
+                    <table>
                         <tr>
                             <td><label for="first_name">{TR_FIRST_NAME}</label></td>
-                            <td><input type="text" name="fname" id="fname" value="{FIRST_NAME}"/></td>
+                            <td><input type="text" name="fname" id="first_name" value="{FIRST_NAME}"/></td>
                         </tr>
                         <tr>
                             <td><label for="last_name">{TR_LAST_NAME}</label></td>
-                            <td><input type="text" name="lname" id="lname" value="{LAST_NAME}"/></td>
+                            <td><input type="text" name="lname" id="last_name" value="{LAST_NAME}"/></td>
                         </tr>
                         <tr>
                             <td><label for="gender">{TR_GENDER}</label></td>
-                                                  <td><select id="gender" name="gender">
-                                                                     <option value="M" {VL_MALE}>{TR_MALE}</option>
-                                                                     <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
-                                                                     <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
-                                                          </select></td>
+                            <td><select id="gender" name="gender">
+                                    <option value="M" {VL_MALE}>{TR_MALE}</option>
+                                    <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
+                                    <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
+                                </select>
+                            </td>
                         </tr>
-
                         <tr>
                             <td><label for="company">{TR_COMPANY}</label></td>
                             <td><input type="text" name="firm" id="firm" value="{FIRM}"/></td>
@@ -106,7 +106,6 @@
                             <td><label for="street_1">{TR_STREET_1}</label></td>
                             <td><input type="text" name="street1" id="street1" value="{STREET_1}"/></td>
                         </tr>
-                        
                         <tr>
                             <td><label for="street_2">{TR_STREET_2}</label></td>
                             <td><input type="text" name="street2" id="street2" value="{STREET_2}"/></td>
@@ -140,11 +139,14 @@
                             <td><input type="text" name="fax" id="fax" value="{FAX}"/></td>
                         </tr>
                     </table>
-                    <div class="buttons">
-                        <input name="Submit" type="submit" class="button" value="{TR_ADD}" />
-                        <input type="hidden" name="uaction" value="add_user" />
-                    </div>
-                </form>
+                </fieldset>
+                <!-- EDP: props_list -->
+
+                <div class="buttons">
+                    <input name="Submit" type="submit" class="button" value="{TR_ADD}" />
+                    <input type="hidden" name="uaction" value="add_user" />
+                </div>
+            </form>
         </div>
 
         <div class="footer">

@@ -45,14 +45,14 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="general">{TR_ADMINISTRATORS}</h1>
+                <h1 class="manage_users">{TR_MENU_MANAGE_USERS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="manage_users.php">{TR_ADMINISTRATORS}</a></li>
+                <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
             </ul>
         </div>
 
@@ -90,10 +90,10 @@
                     <td>
                         <a href="{URL_EDIT_ADMIN}" class="icon i_edit">{TR_EDIT}</a>
                         <!-- BDP: admin_delete_show -->
-                        -
+
                         <!-- EDP: admin_delete_show -->
                         <!-- BDP: admin_delete_link -->
-                            <a href="#" class="icon i_edit" onclick="action_delete('{URL_DELETE_ADMIN}', '{ADMIN_USERNAME}')" class="link">{TR_DELETE}</a>
+                            <a href="#" class="icon i_delete" onclick="action_delete('{URL_DELETE_ADMIN}', '{ADMIN_USERNAME}')" class="link">{TR_DELETE}</a>
                         <!-- EDP: admin_delete_link -->
                     </td>
                 </tr>

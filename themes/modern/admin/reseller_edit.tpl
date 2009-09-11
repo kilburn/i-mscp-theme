@@ -31,14 +31,15 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
+                <h1 class="manage_users">{TR_MENU_MANAGE_USERS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
-                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_MANAGE_USERS}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="index.php">{TR_EDIT_RESELLER}</a></li>
+                <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
+                <li><a>{TR_EDIT_RESELLER}</a></li>
             </ul>
         </div>
 
@@ -58,13 +59,13 @@
                     <legend>{TR_CORE_DATA}</legend>
                     <table>
                         <td><label for="username">{TR_USERNAME}</label></td>
-                        <td class="content"> {USERNAME}</td>
-                        </tr>
+                        <td>{USERNAME}</td>
                         <tr>
                             <td><label for="password">{TR_PASSWORD}</label></td>
-                            <td><input type="password" name="pass" id="pass" value="{VAL_PASSWORD}"/></td>
-                            &nbsp;&nbsp;&nbsp;
-                            <td><input name="genpass" type="submit" class="button" value=" {TR_PASSWORD_GENERATE} " /></td>
+                            <td>
+                                <input type="password" name="pass" id="password" value="{VAL_PASSWORD}"/>
+                                <input name="genpass" type="submit" class="button" value=" {TR_PASSWORD_GENERATE} " />
+                            </td>
                         </tr>
                         <tr>
                             <td><label for="pass_rep">{TR_PASSWORD_REPEAT}</label></td>
@@ -158,62 +159,63 @@
                             <td><input type="text" name="lname" id="last_name" value="{LAST_NAME}"/></td>
                         </tr>
                         <tr>
-                            <td><label for="gender">{TR_GENDER}</label></td>
-                            <td><select id="gender" name="gender">
-                                    <option value="M" {VL_MALE}>{TR_MALE}</option>
-                                    <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
-                                    <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
-                                </select>
-                            </td>
-                            <tr>
-                                <td><label for="firm">{TR_COMPANY}</label></td>
-                                <td><input type="text" name="firm" id="firm" value="{FIRM}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="street1">{TR_STREET_1}</label></td>
-                                <td><input type="text" name="street1" id="street1" value="{STREET_1}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="street2">{TR_STREET_2}</label></td>
-                                <td><input type="text" name="street2" id="street2" value="{STREET_2}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="zip_postal_code">{TR_ZIP_POSTAL_CODE}</label></td>
-                                <td><input type="text" name="zip" id="zip_postal_code" value="{ZIP}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="city">{TR_CITY}</label></td>
-                                <td><input type="text" name="city" id="city" value="{CITY}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="state">{TR_STATE}</label></td>
-                                <td><input type="text" name="state" id="state" value="{STATE}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="country">{TR_COUNTRY}</label></td>
-                                <td><input type="text" name="country" id="country" value="{COUNTRY}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="phone">{TR_PHONE}</label></td>
-                                <td><input type="text" name="phone" id="phone" value="{PHONE}" /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="fax">{TR_FAX}</label></td>
-                                <td><input type="text" name="fax" id="fax" value="{FAX}" /></td>
-                            </tr>
+                        <td><label for="gender">{TR_GENDER}</label></td>
+                        <td><select id="gender" name="gender">
+                                <option value="M" {VL_MALE}>{TR_MALE}</option>
+                                <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
+                                <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
+                            </select>
+                        </td>
+                        <tr>
+                            <td><label for="firm">{TR_COMPANY}</label></td>
+                            <td><input type="text" name="firm" id="firm" value="{FIRM}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="street1">{TR_STREET_1}</label></td>
+                            <td><input type="text" name="street1" id="street1" value="{STREET_1}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="street2">{TR_STREET_2}</label></td>
+                            <td><input type="text" name="street2" id="street2" value="{STREET_2}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="zip_postal_code">{TR_ZIP_POSTAL_CODE}</label></td>
+                            <td><input type="text" name="zip" id="zip_postal_code" value="{ZIP}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">{TR_CITY}</label></td>
+                            <td><input type="text" name="city" id="city" value="{CITY}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">{TR_STATE}</label></td>
+                            <td><input type="text" name="state" id="state" value="{STATE}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="country">{TR_COUNTRY}</label></td>
+                            <td><input type="text" name="country" id="country" value="{COUNTRY}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">{TR_PHONE}</label></td>
+                            <td><input type="text" name="phone" id="phone" value="{PHONE}" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fax">{TR_FAX}</label></td>
+                            <td><input type="text" name="fax" id="fax" value="{FAX}" /></td>
+                        </tr>
                     </table>
                 </fieldset>
 
                 <div class="buttons">
                     <input name="Submit" type="submit" class="button" value="{TR_UPDATE}" />
-                    <input type="checkbox" name="send_data" checked="checked" />
-                    {TR_SEND_DATA}</td>
-                    <input type="hidden" name="uaction" value="update_reseller" />
-                        <input type="hidden" name="edit_id" value="{EDIT_ID}"/>
-                            <input type="hidden" name="edit_username" value="{USERNAME}" />
+                    <input id="send_data" type="checkbox" name="send_data" checked="checked" />
+                    <label for="send_data">{TR_SEND_DATA}</label>
 
+                    <input type="hidden" name="uaction" value="update_reseller" />
+                    <input type="hidden" name="edit_id" value="{EDIT_ID}"/>
+                    <input type="hidden" name="edit_username" value="{USERNAME}" />
+                </div>
             </form>
-            </div>
+        </div>
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>
