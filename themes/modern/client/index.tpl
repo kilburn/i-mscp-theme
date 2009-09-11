@@ -68,13 +68,13 @@
             		<td>{TR_PHP_SUPPORT}</td>
             		<td>{PHP_SUPPORT}</td>
             	</tr>
-				<!--EDP: t_php_support -->
+				<!-- EDP: t_php_support -->
 				<!-- BDP: t_cgi_support -->
             	<tr>
             		<td>{TR_CGI_SUPPORT}</td>
             		<td>{CGI_SUPPORT}</td>
             	</tr>
-				<!--EDP: t_cgi_support -->
+				<!-- EDP: t_cgi_support -->
 				<!-- BDP: t_sql1_support -->
             	<tr>
             		<td>{TR_MYSQL_SUPPORT}</td>
@@ -121,7 +121,6 @@
             <!-- EDP: traff_warn -->
             <p>{TRAFFIC_USAGE_DATA}</p>
             <div class="graph"><span style=" width:{TRAFFIC_BARS}%">&nbsp;</span></div>
-
             
             <h2 class="disk"><span>{TR_DISK_USAGE}</span></h2>
             <!-- BDP: disk_warn -->
@@ -129,7 +128,7 @@
             <!-- EDP: disk_warn -->
             <p>{DISK_USAGE_DATA}</p>
             <div class="graph"><span style=" width:{DISK_BARS}%">&nbsp;</span></div>
-
+.
         </div>
 
         <div class="footer">
