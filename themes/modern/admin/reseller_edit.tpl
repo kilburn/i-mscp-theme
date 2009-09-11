@@ -208,9 +208,9 @@
                     <input name="Submit" type="submit" class="button" value="{TR_UPDATE}" />
                     <input type="checkbox" name="send_data" checked="checked" />
                     {TR_SEND_DATA}</td>
-                    <input type="hidden" name="uaction" value="update_reseller">
-                        <input type="hidden" name="edit_id" value="{EDIT_ID}">
-                            <input type="hidden" name="edit_username" value="{USERNAME}">>
+                    <input type="hidden" name="uaction" value="update_reseller" />
+                        <input type="hidden" name="edit_id" value="{EDIT_ID}"/>
+                            <input type="hidden" name="edit_username" value="{USERNAME}" />
 
             </form>
             </div>
