@@ -33,6 +33,9 @@
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
+                <!-- BDP: logged_from -->
+                <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+                <!-- EDP: logged_from -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
@@ -51,13 +54,9 @@
             <!-- EDP: page_message -->
             <!-- BDP: msg_entry -->
             <div class="warning">{TR_NEW_MSGS}</div>
-            <!-- EDP: msg_entry -->
-            <!-- BDP: update_message -->
-            
+            <!-- EDP: msg_entry -->            
 
-            <h2 class="general"><span>{YOU_ARE_LOGGED_AS}</span></h2>
-
-
+            <h2 class="general"><span>{GENERAL_INFO}</span></h2>
             <!-- BDP: props_list -->
             <table>
                 <tr>
@@ -107,15 +106,18 @@
             </table>
 
             <!-- BDP: traff_warn -->
-            <div class="warning">{TR_TRAFFIC_USAGE}</div>
+            <div class="warning">{TR_TRAFFIC_WARNING}</div>
             <!-- EDP: traff_warn -->
-            <h2 class="traffic"><span>{TRAFFIC_USAGE_DATA}</span></h2>
+            <h2 class="traffic"><span>{TR_TRAFFIC_USAGE}</span></h2>
+            {TRAFFIC_USAGE_DATA}
+            <div class="graph"><span style="width:{TRAFFIC_PERCENT}%">&nbsp;</span></div>
             
-
-            <p>{TR_TRAFFIC_USAGE}
-            </p><h2 class="disk"><span>{DISK_USAGE_DATA}</span></h2>
-
-            <div style="background: #006; width:{BAR_VALUE}%">&nbsp;</div>
+            <!-- BDP: traff_warn -->
+            <div class="warning">{TR_DISK_WARNING}</div>
+            <!-- EDP: traff_warn -->
+            <h2 class="diskusage"><span>{TR_DISK_USAGE}</span></h2>
+            {DISK_USAGE_DATA}
+            <div class="graph"><span style="width:{DISK_PERCENT}%">&nbsp;</span></div>
 
         </div>
 

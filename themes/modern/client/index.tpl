@@ -118,15 +118,15 @@
             <!-- BDP: traff_warn -->
             <div class="warning">{TR_TRAFFIC_WARNING}</div>
             <!-- EDP: traff_warn -->
-            <p>{TRAFFIC_USAGE_DATA}</p>
-            <div class="graph"><span style="width:{TRAFFIC_BARS}%">&nbsp;</span></div>
+            {TRAFFIC_USAGE_DATA}
+            <div class="graph"><span style="width:{TRAFFIC_PERCENT}%">&nbsp;</span></div>
             
             <h2 class="diskusage"><span>{TR_DISK_USAGE}</span></h2>
             <!-- BDP: disk_warn -->
             <div class="warning">{TR_DISK_WARNING}</div>
             <!-- EDP: disk_warn -->
-            <p>{DISK_USAGE_DATA}</p>
-            <div class="graph"><span style="width:{DISK_BARS}%">&nbsp;</span></div>
+            {DISK_USAGE_DATA}
+            <div class="graph"><span style="width:{DISK_PERCENT}%">&nbsp;</span></div>
 
         </div>
 
