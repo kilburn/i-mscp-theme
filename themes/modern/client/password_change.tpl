@@ -38,6 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+                <li><a href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li>
                 <li><a href="password_change.php">{TR_CHANGE_PASSWORD}</a></li>
             </ul>
         </div>
@@ -54,26 +55,22 @@
             <h2 class="password"><span>{TR_CHANGE_PASSWORD}</span></h2>
 
 			<form name="client_change_pass_frm" method="post" action="password_change.php">
-				<fieldset>
-					<legend>{TR_CHANGE_PASSWORD}</legend>
-					
-                    <table>
-                        <tr>
-                            <td><label for="curr_pass">{TR_CURR_PASSWORD}</label></td>
-                            <td><input id="curr_pass" name="curr_pass" type="password" value="" /></td>
-                        </tr><tr>
-                            <td><label for="pass">{TR_PASSWORD}</label></td>
-                            <td><input name="pass" id="pass" type="password" value="" /></td>
-                        </tr><tr>
-                            <td><label for="pass_rep">{TR_PASSWORD_REPEAT}</label></td>
-                            <td><input name="pass_rep" id="pass_rep" type="password" value="" /></td>
-                        </tr>
-                    </table>
-				</fieldset>
-				<div class="buttons">
+                <table>
+                    <tr>
+                        <td><label for="curr_pass">{TR_CURR_PASSWORD}</label></td>
+                        <td><input id="curr_pass" name="curr_pass" type="password" value="" /></td>
+                    </tr><tr>
+                        <td><label for="pass">{TR_PASSWORD}</label></td>
+                        <td><input name="pass" id="pass" type="password" value="" /></td>
+                    </tr><tr>
+                        <td><label for="pass_rep">{TR_PASSWORD_REPEAT}</label></td>
+                        <td><input name="pass_rep" id="pass_rep" type="password" value="" /></td>
+                    </tr>
+                </table>
+                <div class="buttons">
                     <input type="submit" name="Submit" value="{TR_UPDATE_PASSWORD}" />
-				</div>
-				<input type="hidden" name="uaction" value="updt_pass" />
+                    <input type="hidden" name="uaction" value="updt_pass" />
+                </div>
 			</form>
         </div>
 

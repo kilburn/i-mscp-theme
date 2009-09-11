@@ -33,12 +33,12 @@
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <!-- BDP: logged_from -->
-                <li><a class="logout" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+                <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
                 <!-- EDP: logged_from -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="index.php">{TR_MENU_OVERVIEW}</a></li>
+                <li><a href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li>
             </ul>
         </div>
 
@@ -55,7 +55,7 @@
             <!-- EDP: msg_entry -->
             
 
-            <h2 class="general"><span>{YOU_ARE_LOGGED_AS}</span></h2>
+            <h2 class="general"><span>{TR_GENERAL_INFORMATION}</span></h2>
             
             <table>
             	<tr>
@@ -119,14 +119,14 @@
             <div class="warning">{TR_TRAFFIC_WARNING}</div>
             <!-- EDP: traff_warn -->
             <p>{TRAFFIC_USAGE_DATA}</p>
-            <div class="graph"><span style=" width:{TRAFFIC_BARS}%">&nbsp;</span></div>
+            <div class="graph"><span style="width:{TRAFFIC_BARS}%">&nbsp;</span></div>
             
-            <h2 class="disk"><span>{TR_DISK_USAGE}</span></h2>
+            <h2 class="diskusage"><span>{TR_DISK_USAGE}</span></h2>
             <!-- BDP: disk_warn -->
             <div class="warning">{TR_DISK_WARNING}</div>
             <!-- EDP: disk_warn -->
             <p>{DISK_USAGE_DATA}</p>
-            <div class="graph"><span style=" width:{DISK_BARS}%">&nbsp;</span></div>
+            <div class="graph"><span style="width:{DISK_BARS}%">&nbsp;</span></div>
 
         </div>
 

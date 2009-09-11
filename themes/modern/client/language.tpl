@@ -38,6 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+                <li><a href="index.php">{TR_MENU_GENERAL_INFORMATION}</a></li>
                 <li><a href="language.php">{TR_LANGUAGE}</a></li>
             </ul>
         </div>
@@ -55,24 +56,21 @@
 	        <h2 class="multilanguage"><span>{TR_LANGUAGE}</span></h2>
 	        
 			<form name="client_language_frm" method="post" action="language.php">
-			<fieldset>
-				<legend>{TR_LANGUAGE}</legend>
-				
-                   <table>
-                      <tr>
+                <table>
+                    <tr>
                         <td><label for="def_language">{TR_CHOOSE_DEFAULT_LANGUAGE}</label></td>
                         <td><select name="def_language" id="def_language">
                             <!-- BDP: def_language -->
                             <option value="{LANG_VALUE}" {LANG_SELECTED}>{LANG_NAME}</option>
                             <!-- EDP: def_language -->
                         </select></td>
-                      </tr>
-                   </table>
-			</fieldset>
-			<div class="buttons">
+                    </tr>
+                </table>
+			
+                <div class="buttons">
                    <input type="submit" name="Submit" value="{TR_SAVE}" />
-			</div>
-			<input type="hidden" name="uaction" value="save_lang" />
+                   <input type="hidden" name="uaction" value="save_lang" />
+                </div>
 			</form>
         </div>
 
