@@ -38,7 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="index.php">{TR_CHANGE_PASSWORD}</a></li>
+                <li><a href="password_change.php">{TR_CHANGE_PASSWORD}</a></li>
             </ul>
         </div>
 

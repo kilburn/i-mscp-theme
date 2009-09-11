@@ -53,7 +53,6 @@
             <!-- BDP: msg_entry -->
             <div class="warning">{TR_NEW_MSGS}</div>
             <!-- EDP: msg_entry -->
-            <!-- BDP: update_message -->
             
 
             <h2 class="general"><span>{YOU_ARE_LOGGED_AS}</span></h2>
