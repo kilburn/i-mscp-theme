@@ -52,95 +52,73 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
+            <h2 class="reseller"><span>{TR_ADD_RESELLER}</span></h2>
             <td valign="top"><form name="admin_add_reseller" method="post" action="reseller_add.php">
-                    <table width="750" cellpadding="5" cellspacing="5">
+                    <table>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td colspan="2" class="content3"><b>{TR_CORE_DATA}</b></td>
+                            <th>{TR_ADDITIONAL_DATA}</th>
+                        </tr>
+
+                        <tr>
+                            <td><label for="username">{TR_USERNAME}</label></td>
+                            <td><input type="text" name="username" id="username" value="{TR_USERNAME}" /></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td width="200" class="content2">{TR_USERNAME}</td>
-                            <td class="content"><input type="text" name="username" value="{USERNAME}" style="width:210px" class="textinput" />
-                            </td>
+                            <td><label for="pass">{TR_PASSWORD}</label></td>
+                            <td><input type="password" name="pass" id="pass" value="{GENPAS}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td width="200" class="content2">{TR_PASSWORD}</td>
-                            <td class="content"><input type="password" name="pass" value="{GENPAS}" style="width:210px" class="textinput" />
-                            </td>
+                            <td><label for="pass_rep">{TR_PASSWORD_REPEAT}</label></td>
+                            <td><input type="password" name="pass_rep" id="pass_rep" value="{GENPAS}"/></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="email">{TR_EMAIL}</label></td>
+                            <td><input type="text" name="email" id="email" value="{EMAIL}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td width="200" class="content2">{TR_PASSWORD_REPEAT}</td>
-                            <td class="content"><input type="password" name="pass_rep" value="{GENPAS}" style="width:210px" class="textinput" />
-                            </td>
+                            <td><label for="nreseller_max_domain_cnt">{TR_MAX_DOMAIN_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_domain_cnt" id="nreseller_max_domain_cnt" value="{MAX_DOMAIN_COUNT}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td width="200" class="content2">{TR_EMAIL}</td>
-                            <td class="content"><input type="text" name="email" value="{EMAIL}" style="width:210px" class="textinput" />
-                            </td>
+                            <td><label for="nreseller_max_subdomain_cnt">{TR_MAX_SUBDOMAIN_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_subdomain_cnt" id="nreseller_max_subdomain_cnt" value="{MAX_SUBDOMAIN_COUNT}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_DOMAIN_COUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_domain_cnt" value="{MAX_DOMAIN_COUNT}" style="width:140px" class="textinput" />
-                            </td>
+                            <td><label for="nreseller_max_alias_cnt">{TR_MAX_ALIASES_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_alias_cnt" id="nreseller_max_alias_cnt" value="{MAX_ALIASES_COUNT}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><label for="nreseller_max_mail_cnt">{TR_MAX_MAIL_USERS_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_mail_cnt" id="nreseller_max_mail_cnt" value="{MAX_MAIL_USERS_COUNT}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_SUBDOMAIN_COUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_subdomain_cnt" value="{MAX_SUBDOMAIN_COUNT}" style="width:140px" class="textinput" />
-                            </td>
+                            <td><label for="nreseller_max_ftp_cnt">{TR_MAX_FTP_USERS_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_ftp_cnt" id="nreseller_max_ftp_cnt" value="{MAX_FTP_USERS_COUNT}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_ALIASES_COUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_alias_cnt" value="{MAX_ALIASES_COUNT}" style="width:140px" class="textinput" />
-                            </td>
+                            <td><label for="nreseller_max_sql_db_cnt">{TR_MAX_SQLDB_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_sql_db_cnt" id="nreseller_max_sql_db_cnt" value="{MAX_SQLDB_COUNT}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_MAIL_USERS_COUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_mail_cnt" value="{MAX_MAIL_USERS_COUNT}" style="width:140px" class="textinput" />
-                            </td>
+                            <td><label for="nreseller_max_sql_user_cnt">{TR_MAX_SQL_USERS_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_sql_user_cnt" id="nreseller_max_sql_user_cnt" value="{MAX_SQL_USERS_COUNT}"/></td>
                         </tr>
                         <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_FTP_USERS_COUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_ftp_cnt" value="{MAX_FTP_USERS_COUNT}" style="width:140px" class="textinput" />
-                            </td>
+                            <td><label for="nreseller_max_traffic">{TR_MAX_TRAFFIC_AMOUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_traffic" id="nreseller_max_traffic" value="{MAX_TRAFFIC_AMOUNT}"/></td>
                         </tr>
-                        <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_SQLDB_COUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_sql_db_cnt" value="{MAX_SQLDB_COUNT}" style="width:140px" class="textinput" />
-                            </td>
+                       <tr>
+                            <td><label for="nreseller_max_disk">{TR_MAX_DISK_AMOUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_disk" id="nreseller_max_disk" value="{MAX_DISK_AMOUNT}"/></td>
                         </tr>
-                        <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_SQL_USERS_COUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_sql_user_cnt" value="{MAX_SQL_USERS_COUNT}" style="width:140px" class="textinput" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_TRAFFIC_AMOUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_traffic" value="{MAX_TRAFFIC_AMOUNT}" style="width:140px" class="textinput" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="25">&nbsp;</td>
-                            <td class="content2" width="200">{TR_MAX_DISK_AMOUNT}</td>
-                            <td class="content"><input type="text" name="nreseller_max_disk" value="{MAX_DISK_AMOUNT}" style="width:140px" class="textinput" />
-                            </td>
-                        </tr>
+                        
                         <tr>
                             <td>&nbsp;</td>
                             <td colspan="2"><table cellpadding="5" cellspacing="5" border="0" width="100%">
                                     <tr>
-                                        <td colspan="4" class="content3"><strong>{TR_RESELLER_IPS}</strong></td>
+                                        <th>{TR_RESELLER_IPS}</th></td>
                                     </tr>
                                     <!-- BDP: rsl_ip_message -->
                                     <!-- BDP: page_message -->
@@ -149,10 +127,10 @@
                                     <!-- EDP: rsl_ip_message -->
                                     <!-- BDP: rsl_ip_list -->
                                     <tr>
-                                        <td width="10%" align="center" class="content3">{TR_RSL_IP_NUMBER}</td>
-                                        <td width="20%" align="center" class="content3">{TR_RSL_IP_ASSIGN}</td>
-                                        <td width="35%" class="content3">{TR_RSL_IP_LABEL}</td>
-                                        <td width="35%" class="content3">{TR_RSL_IP_IP}</td>
+                                        <td>{TR_RSL_IP_NUMBER}</td>
+                                        <td>{TR_RSL_IP_ASSIGN}</td>
+                                        <td>{TR_RSL_IP_LABEL}</td>
+                                        <td>{TR_RSL_IP_IP}</td>
                                     </tr>
                                     <!-- BDP: rsl_ip_item -->
                                     <tr>
@@ -167,7 +145,7 @@
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td colspan="2" class="content3"><b>{TR_ADDITIONAL_DATA}</b></td>
+                            <th>{TR_ADDITIONAL_DATA}</th></td>
                         </tr>
                         <tr>
 
@@ -185,51 +163,51 @@
                             </tr>
                             <tr>
                                 <td><label for="gender">{TR_GENDER}</label></td>
-                                                      <td><select id="gender" name="gender">
-                                                                         <option value="M" {VL_MALE}>{TR_MALE}</option>
-                                 <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
-                                 <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
+                                <td><select id="gender" name="gender">
+                                <option value="M" {VL_MALE}>{TR_MALE}</option>
+                                <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
+                                <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
                       </select>
                       </td>
                     <tr>
                       <td><label for="firm">{TR_COMPANY}</label></td>
-                      <td><input type="text" name="firm" ide="firm" value="{FIRM}" /></td>
+                      <td><input type="text" name="firm" id="firm" value="{FIRM}" /></td>
                     </tr>
                     <tr>
                       <td><label for="street1">{TR_STREET_1}</label></td>
-                      <td><input type="text" name="street1" ide="street1" value="{STREET_1}" /></td>
+                      <td><input type="text" name="street1" id="street1" value="{STREET_1}" /></td>
                     </tr>
                     <tr>
                       <td><label for="street2">{TR_STREET_2}</label></td>
-                      <td><input type="text" name="street2" ide="street2" value="{STREET_2}" /></td>
+                      <td><input type="text" name="street2" id="street2" value="{STREET_2}" /></td>
                     </tr>
                     <tr>
                       <td><label for="zip_postal_code">{TR_ZIP_POSTAL_CODE}</label></td>
-                      <td><input type="text" name="zip" ide="zip" value="{ZIP}" /></td>
+                      <td><input type="text" name="zip" id="zip" value="{ZIP}" /></td>
                     </tr>
                     <tr>
                       <td><label for="city">{TR_CITY}</label></td>
-                      <td><input type="text" name="city" ide="city" value="{CITY}" /></td>
+                      <td><input type="text" name="city" id="city" value="{CITY}" /></td>
                     </tr>
                     <tr>
                       <td><label for="state">{TR_STATE}</label></td>
-                      <td><input type="text" name="state" ide="state" value="{STATE}" /></td>
+                      <td><input type="text" name="state" id="state" value="{STATE}" /></td>
                     </tr>
                     <tr>
                       <td><label for="country">{TR_COUNTRY}</label></td>
-                      <td><input type="text" name="country" ide="country" value="{COUNTRY}" /></td>
+                      <td><input type="text" name="country" id="country" value="{COUNTRY}" /></td>
                     </tr>
                     <tr>
                       <td><label for="email">{TR_EMAIL}</label></td>
-                      <td><input type="text" name="email" ide="email" value="{EMAIL}" /></td>
+                      <td><input type="text" name="email" id="email" value="{EMAIL}" /></td>
                     </tr>
                     <tr>
                       <td><label for="phone">{TR_PHONE}</label></td>
-                      <td><input type="text" name="phone" ide="phone" value="{PHONE}" /></td>
+                      <td><input type="text" name="phone" id="phone" value="{PHONE}" /></td>
                     </tr>
                     <tr>
                       <td><label for="fax">{TR_FAX}</label></td>
-                      <td><input type="text" name="fax" ide="fax" value="{FAX}" /></td>
+                      <td><input type="text" name="fax" id="fax" value="{FAX}" /></td>
                     </tr>
                     </table>
                     <div class="buttons">
