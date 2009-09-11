@@ -1,168 +1,170 @@
+
+
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
-<html xmlns="http://www.w3.org/1999/xhtml"><?xml version="1.0" encoding="{THEME_CHARSET}" ?>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
-        <head>
-            <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
-            <meta http-equiv="X-UA-Compatible" content="IE=8" />
-            <title>{TR_ADMIN_EDIT_RESELLER_PAGE_TITLE}</title>
-            <meta name="robots" content="nofollow, noindex" />
-            <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
-            <!--[if IE 6]>
-            <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
-            <script type="text/javascript">
-                DD_belatedPNG.fix('*');
-            </script>
-            <![endif]-->
-        </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>{TR_ADMIN_ADD_RESELLER_PAGE_TITLE}</title>
+        <meta name="robots" content="nofollow, noindex" />
+        <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+        <!--[if IE 6]>
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix('*');
+        </script>
+        <![endif]-->
+    </head>
 
-        <body>
+    <body>
 
-            <div class="header">
-                {MAIN_MENU}
+        <div class="header">
+            {MAIN_MENU}
 
-                <div class="logo">
-                    <img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
-                    <img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
-                </div>
+            <div class="logo">
+                <img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
+                <img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
             </div>
+        </div>
 
-            <div class="location">
-                <div class="location-area icons-left">
-                    <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
-                </div>
-                <ul class="location-menu">
-                    <!-- <li><a class="help" href="#">Help</a></li> -->
-                    <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
-                </ul>
-                <ul class="path">
-                    <li><a href="reseller_edit.php">{TR_EDIT_RESELLER}</a></li>
-                </ul>
+        <div class="location">
+            <div class="location-area icons-left">
+                <h1 class="general">{TR_MENU_GENERAL_INFORMATION}</h1>
             </div>
+            <ul class="location-menu">
+                <!-- <li><a class="help" href="#">Help</a></li> -->
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+            </ul>
+            <ul class="path">
+                <li><a href="index.php">{TR_EDIT_RESELLER}</a></li>
+            </ul>
+        </div>
 
-            <div class="left_menu">
-                {MENU}
-            </div>
+        <div class="left_menu">
+            {MENU}
+        </div>
 
-            <div class="body">
+        <div class="body">
 
-                <!-- BDP: page_message -->
-                <div class="warning">{MESSAGE}</div>
-                <!-- EDP: page_message -->
-                <h2 class="general"><span>{TR_EDIT_RESELLER}</span></h2>
+            <!-- BDP: page_message -->
+            <div class="warning">{MESSAGE}</div>
+            <!-- EDP: page_message -->
 
-                <form name="admin_edit_reseller" method="post" action="reseller_edit.php"> 
-                    <fieldset>
-                        <legend>{TR_CORE_DATA}</legend
-                        <table><tr>
-                                <td><label for="username">{TR_USERNAME}</label></td>
-                                <td class="content"> {USERNAME}</td>
-                            </tr>
-                            <tr>
-                                <td><label for="password">{TR_PASSWORD}</label></td>
-                                <td><input type="password" name="pass" id="pass" value="{VAL_PASSWORD}"/></td>
-                                &nbsp;&nbsp;&nbsp;
-                                <td><input name="genpass" type="submit" class="button" value=" {TR_PASSWORD_GENERATE} " /></td>
-                            </tr>
-                            <tr>
-                                <td><label for="pass_rep">{TR_PASSWORD_REPEAT}</label></td>
-                                <td><input type="password" name="pass" id="pass_rep" value="{VAL_PASSWORD}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="email">{TR_EMAIL}</label></td>
-                                <td><input type="text" name="email" id="email" value="{EMAIL}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_domain_cnt">{TR_MAX_DOMAIN_COUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_domain_cnt" id="nreseller_max_domain_cnt" value="{MAX_DOMAIN_COUNT}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_subdomain_cnt">{TR_MAX_SUBDOMAIN_COUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_subdomain_cnt" id="nreseller_max_subdomain_cnt" value="{MAX_SUBDOMAIN_COUNT}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_alias_cnt">{TR_MAX_ALIASES_COUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_alias_cnt" id="nreseller_max_alias_cnt" value="{MAX_ALIASES_COUNT}"/></td>
-                            </tr>
+            <h2 class="user"><span>{TR_EDIT_RESELLER}</span></h2>
+            <form name="admin_add_reseller" method="post" action="reseller_add.php">
+                <fieldset>
+                    <legend>{TR_CORE_DATA}</legend>
+                    <table>
+                        <td><label for="username">{TR_USERNAME}</label></td>
+                        <td class="content"> {USERNAME}</td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">{TR_PASSWORD}</label></td>
+                            <td><input type="password" name="pass" id="pass" value="{VAL_PASSWORD}"/></td>
+                            &nbsp;&nbsp;&nbsp;
+                            <td><input name="genpass" type="submit" class="button" value=" {TR_PASSWORD_GENERATE} " /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pass_rep">{TR_PASSWORD_REPEAT}</label></td>
+                            <td><input type="password" name="pass" id="pass_rep" value="{VAL_PASSWORD}"/></td>
+                        </tr>
 
-                            <tr>
-                                <td><label for="nreseller_max_mail_cnt">{TR_MAX_MAIL_USERS_COUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_mail_cnt" id="nreseller_max_mail_cnt" value="{MAX_MAIL_USERS_COUNT}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_ftp_cnt">{TR_MAX_FTP_USERS_COUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_ftp_cnt" id="nreseller_max_ftp_cnt" value="{MAX_FTP_USERS_COUNT}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_sql_db_cnt">{TR_MAX_SQLDB_COUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_sql_db_cnt" id="nreseller_max_sql_db_cnt" value="{MAX_SQLDB_COUNT}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_sql_user_cnt">{TR_MAX_SQL_USERS_COUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_sql_user_cnt" id="nreseller_max_sql_user_cnt" value="{MAX_SQL_USERS_COUNT}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_traffic">{TR_MAX_TRAFFIC_AMOUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_traffic" id="nreseller_max_traffic" value="{MAX_TRAFFIC_AMOUNT}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="nreseller_max_disk">{TR_MAX_DISK_AMOUNT}</label></td>
-                                <td><input type="text" name="nreseller_max_disk" id="nreseller_max_disk" value="{MAX_DISK_AMOUNT}"/></td>
-                            </tr>
-                        </table>
-                    </fieldset>
+                        <tr>
+                            <td><label for="email">{TR_EMAIL}</label></td>
+                            <td><input type="text" name="email" id="email" value="{EMAIL}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_domain_cnt">{TR_MAX_DOMAIN_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_domain_cnt" id="nreseller_max_domain_cnt" value="{MAX_DOMAIN_COUNT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_subdomain_cnt">{TR_MAX_SUBDOMAIN_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_subdomain_cnt" id="nreseller_max_subdomain_cnt" value="{MAX_SUBDOMAIN_COUNT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_alias_cnt">{TR_MAX_ALIASES_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_alias_cnt" id="nreseller_max_alias_cnt" value="{MAX_ALIASES_COUNT}"/></td>
+                        </tr>
 
-                    <fieldset>
-                        <legend>{TR_RESELLER_IPS}</legend>
-                        <!-- BDP: rsl_ip_message -->
-                        <div class="warning">{MESSAGE}</div>
-                        <!-- EDP: rsl_ip_message -->
+                        <tr>
+                            <td><label for="nreseller_max_mail_cnt">{TR_MAX_MAIL_USERS_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_mail_cnt" id="nreseller_max_mail_cnt" value="{MAX_MAIL_USERS_COUNT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_ftp_cnt">{TR_MAX_FTP_USERS_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_ftp_cnt" id="nreseller_max_ftp_cnt" value="{MAX_FTP_USERS_COUNT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_sql_db_cnt">{TR_MAX_SQLDB_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_sql_db_cnt" id="nreseller_max_sql_db_cnt" value="{MAX_SQLDB_COUNT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_sql_user_cnt">{TR_MAX_SQL_USERS_COUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_sql_user_cnt" id="nreseller_max_sql_user_cnt" value="{MAX_SQL_USERS_COUNT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_traffic">{TR_MAX_TRAFFIC_AMOUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_traffic" id="nreseller_max_traffic" value="{MAX_TRAFFIC_AMOUNT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="nreseller_max_disk">{TR_MAX_DISK_AMOUNT}</label></td>
+                            <td><input type="text" name="nreseller_max_disk" id="nreseller_max_disk" value="{MAX_DISK_AMOUNT}"/></td>
+                        </tr>
+                    </table>
+                </fieldset>
 
-                        <!-- BDP: rsl_ip_list -->
-                        <table>
-                            <tr>
-                                <th>{TR_RSL_IP_NUMBER}</th>
-                                <th>{TR_RSL_IP_ASSIGN}</th>
-                                <th>{TR_RSL_IP_LABEL}</th>
-                                <th>{TR_RSL_IP_IP}</th>
-                            </tr>
-                            <!-- BDP: rsl_ip_item -->
-                            <tr>
-                                <td>{RSL_IP_NUMBER}</td>
-                                <td><input type="checkbox" id="{RSL_IP_CKB_NAME}" name="{RSL_IP_CKB_NAME}" value="{RSL_IP_CKB_VALUE}" {RSL_IP_ITEM_ASSIGNED} /></td>
-                                <td><label for="{RSL_IP_CKB_NAME}">{RSL_IP_LABEL}</label></td>
-                                <td>{RSL_IP_IP}</td>
-                            </tr>
-                            <!-- EDP: rsl_ip_item -->
-                        </table>
-                        <!-- EDP: rsl_ip_list -->
-                    </fieldset>
+                <fieldset>
+                    <legend>{TR_RESELLER_IPS}</legend>
+                    <!-- BDP: rsl_ip_message -->
+                    <div class="warning">{MESSAGE}</div>
+                    <!-- EDP: rsl_ip_message -->
+
+                    <!-- BDP: rsl_ip_list -->
+                    <table>
+                        <tr>
+                            <th>{TR_RSL_IP_NUMBER}</th>
+                            <th>{TR_RSL_IP_ASSIGN}</th>
+                            <th>{TR_RSL_IP_LABEL}</th>
+                            <th>{TR_RSL_IP_IP}</th>
+                        </tr>
+                        <!-- BDP: rsl_ip_item -->
+                        <tr>
+                            <td>{RSL_IP_NUMBER}</td>
+                            <td><input type="checkbox" id="{RSL_IP_CKB_NAME}" name="{RSL_IP_CKB_NAME}" value="{RSL_IP_CKB_VALUE}" {RSL_IP_ITEM_ASSIGNED} /></td>
+                            <td><label for="{RSL_IP_CKB_NAME}">{RSL_IP_LABEL}</label></td>
+                            <td>{RSL_IP_IP}</td>
+                        </tr>
+                        <!-- EDP: rsl_ip_item -->
+                    </table>
+                    <!-- EDP: rsl_ip_list -->
+                </fieldset>
 
 
-                    <fieldset>
-                        <legend>{TR_ADDITIONAL_DATA}</legend>
-                        <table>
-                            <tr>
-                                <td><label for="customer_id">{TR_CUSTOMER_ID}</label></td>
-                                <td><input type="text" name="customer_id" id="customer_id" value="{CUSTOMER_ID}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="first_name">{TR_FIRST_NAME}</label></td>
-                                <td><input type="text" name="fname" id="first_name" value="{FIRST_NAME}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="last_name">{TR_LAST_NAME}</label></td>
-                                <td><input type="text" name="lname" id="last_name" value="{LAST_NAME}"/></td>
-                            </tr>
-                            <tr>
-                                <td><label for="gender">{TR_GENDER}</label></td>
-                                <td><select id="gender" name="gender">
-                                        <option value="M" {VL_MALE}>{TR_MALE}</option>
-                                        <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
-                                        <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
-                                    </select>
-                                </td>
+                <fieldset>
+                    <legend>{TR_ADDITIONAL_DATA}</legend>
+                    <table>
+                        <tr>
+                            <td><label for="customer_id">{TR_CUSTOMER_ID}</label></td>
+                            <td><input type="text" name="customer_id" id="customer_id" value="{CUSTOMER_ID}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="first_name">{TR_FIRST_NAME}</label></td>
+                            <td><input type="text" name="fname" id="first_name" value="{FIRST_NAME}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="last_name">{TR_LAST_NAME}</label></td>
+                            <td><input type="text" name="lname" id="last_name" value="{LAST_NAME}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">{TR_GENDER}</label></td>
+                            <td><select id="gender" name="gender">
+                                    <option value="M" {VL_MALE}>{TR_MALE}</option>
+                                    <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
+                                    <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
+                                </select>
+                            </td>
                             <tr>
                                 <td><label for="firm">{TR_COMPANY}</label></td>
                                 <td><input type="text" name="firm" id="firm" value="{FIRM}" /></td>
@@ -199,26 +201,20 @@
                                 <td><label for="fax">{TR_FAX}</label></td>
                                 <td><input type="text" name="fax" id="fax" value="{FAX}" /></td>
                             </tr>
-                        </table>
-                    </fieldset>
+                    </table>
+                </fieldset>
 
-                    <div class="buttons">
-                        <td colspan="2"><input name="Submit" type="submit" class="button" value="  {TR_UPDATE}  " />
-                            &nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" name="send_data" checked="checked" />
-                            {TR_SEND_DATA}</td>
-                        </tr>
-                        </table>
-                        <input type="hidden" name="uaction" value="edit_user" />
-                        <input type="hidden" name="edit_id" value="{EDIT_ID}" />
-                        <input type="hidden" name="edit_username" value="{USERNAME}" />
-                    </div>
-                </form>
-            </div>
+                <div class="buttons">
+                    <input name="Submit" type="submit" class="button" value="{TR_UPDATE}" />
+                    <input type="checkbox" name="send_data" checked="checked" />
+                                    {TR_SEND_DATA}</td>
+                    <input type="hidden" name="uaction" value="update_reseller" />
 
-            <div class="footer">
-                ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
-            </div>
-        </table>
+            </form>
+        </div>
+
+        <div class="footer">
+            ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+        </div>
     </body>
 </html>
