@@ -386,6 +386,7 @@ table .icon {
 .body tr:nth-child(odd) {
     background: #eee;
 }
+.body tfoot td,
 .body th {
     background: #000 url(../images/background/top_bar_bg.jpg) repeat-x;
     white-space: nowrap;
@@ -549,3 +550,16 @@ legend, h3 {
 .i_users { background-position: 0 -3979px; }
 .i_webmailicon { background-position: 0 -4045px; }
 .i_webtools_big { background-position: 0 -4141px; }
+
+
+div.graph{
+    border: 1px solid rgb(223,223,223);
+	height : 1em;
+	width : 100%;
+}
+
+div.graph span{
+	display : block;
+	background-color : #006;
+	width : 0;
+}
