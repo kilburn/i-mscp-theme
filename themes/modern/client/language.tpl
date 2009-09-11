@@ -74,7 +74,7 @@
 			</div>
 			<input type="hidden" name="uaction" value="save_lang" />
 			</form>
-	        </div>
+        </div>
 
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}

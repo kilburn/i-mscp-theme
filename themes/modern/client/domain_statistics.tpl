@@ -38,7 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="domain_statictics.php">{TR_MENU_OVERVIEW}</a></li>
+                <li><a href="domain_statistics.php">{TR_MENU_OVERVIEW}</a></li>
             </ul>
         </div>
 
