@@ -1,94 +1,99 @@
-<?xml version="1.0" encoding="{THEME_CHARSET}" ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>{TR_ADMIN_MANAGE_RESELLER_OWNERS_PAGE_TITLE}</title>
-<meta name="robots" content="nofollow, noindex" />
-<meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{THEME_COLOR_PATH}/css/ispcp.js"></script>
-</head>
+<!--- kilburn bueno, mas o menos, no se si el codigo del checkbox lo he puesto bien y el boton de mover macho parece que esta encriptado no hay quien lo mueva, lo he metido-->
+<!--- dentro de la misma tabla del selector y le he dado unos espacios en blanco al estilo compadre, no se si sera lo correcto-->
 
-<body onload="MM_preloadImages('{THEME_COLOR_PATH}/images/icons/database_a.gif','{THEME_COLOR_PATH}/images/icons/hosting_plans_a.gif','{THEME_COLOR_PATH}/images/icons/domains_a.gif','{THEME_COLOR_PATH}/images/icons/general_a.gif' ,'{THEME_COLOR_PATH}/images/icons/manage_users_a.gif','{THEME_COLOR_PATH}/images/icons/webtools_a.gif','{THEME_COLOR_PATH}/images/icons/statistics_a.gif','{THEME_COLOR_PATH}/images/icons/support_a.gif')">
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:100%;padding:0;margin:0 auto;">
-<tr>
-<td align="left" valign="top" style="vertical-align: top; width: 195px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_left.jpg" width="195" height="56" border="0" alt="ispCP Logogram" /></td>
-<td style="height: 56px; width:100%; background-color: #0f0f0f"><img src="{THEME_COLOR_PATH}/images/top/top_left_bg.jpg" width="582" height="56" border="0" alt="" /></td>
-<td style="width: 73px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_right.jpg" width="73" height="56" border="0" alt="" /></td>
-</tr>
-	<tr>
-		<td style="width: 195px; vertical-align: top;">{MENU}</td>
-	    <td colspan="2" style="vertical-align: top;"><table style="width: 100%; padding:0;margin:0;" cellspacing="0">
-				<tr style="height:95px;">
-				  <td style="padding-left:30px; width: 100%; background-image: url({THEME_COLOR_PATH}/images/top/middle_bg.jpg);">{MAIN_MENU}</td>
-					<td style="padding:0;margin:0;text-align: right; width: 73px;vertical-align: top;"><img src="{THEME_COLOR_PATH}/images/top/middle_right.jpg" width="73" height="95" border="0" alt="" /></td>
-				</tr>
-				<tr>
-				  <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td align="left"><table width="100%" cellpadding="5" cellspacing="5">
-                          <tr>
-                            <td width="25"><img src="{THEME_COLOR_PATH}/images/content/table_icon_users2.png" width="25" height="25" alt="" /></td>
-                            <td colspan="2" class="title">{TR_RESELLER_ASSIGNMENT}</td>
-                          </tr>
-                      </table></td>
-                      <td width="27" align="right">&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td valign="top"><form action="manage_reseller_owners.php" method="post" name="admin_reseller_assignment" id="admin_reseller_assignment">
-                          <table width="100%" cellpadding="5" cellspacing="5">
-                            <!-- BDP: page_message -->
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td colspan="4" class="title"><span class="message">{MESSAGE}</span></td>
-                            </tr>
-                            <!-- EDP: page_message -->
-                            <!-- BDP: reseller_list -->
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td class="content3" width="50" align="center"><b>{TR_NUMBER}</b></td>
-                              <td class="content3" width="80" align="center"><b>{TR_MARK}</b></td>
-                              <td class="content3" width="200"><b>{TR_RESELLER_NAME}</b></td>
-                              <td class="content3"><b>{TR_OWNER}</b></td>
-                            </tr>
-                            <!-- BDP: reseller_item -->
-                            <tr class="hl">
-                              <td width="25" align="center">&nbsp;</td>
-                              <td class="{RSL_CLASS}" width="50" align="center">{NUMBER}</td>
-                              <td class="{RSL_CLASS}" width="80" align="center"><input type="checkbox" name="{CKB_NAME}" />
-                              </td>
-                              <td class="{RSL_CLASS}" width="200">{RESELLER_NAME}</td>
-                              <td class="{RSL_CLASS}">{OWNER}</td>
-                            </tr>
-                            <!-- EDP: reseller_item -->
-                            <!-- EDP: reseller_list -->
-                            <tr>
-                              <td colspan="4" align="right">{TR_TO_ADMIN}
+
+<?xml version="1.0" encoding="{THEME_CHARSET}" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>{TR_ADMIN_MANAGE_RESELLER_OWNERS_PAGE_TITLE}</title>
+        <meta name="robots" content="nofollow, noindex" />
+        <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+        <!--[if IE 6]>
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix('*');
+        </script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="header">
+            {MAIN_MENU}
+
+            <div class="logo">
+                <img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
+                <img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="location-area icons-left">
+                <h1 class="manage_users">{TR_MENU_MANAGE_USERS}</h1>
+            </div>
+            <ul class="location-menu">
+                <!-- <li><a class="help" href="#">Help</a></li> -->
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+            </ul>
+            <ul class="path">
+                <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
+                <li><a>{TR_RESELLER_ASSIGNMENT}</a></li>
+            </ul>
+        </div>
+
+        <div class="left_menu">
+            {MENU}
+        </div>
+
+        <div class="body">
+
+            <h2 class="general"><span>{TR_RESELLER_ASSIGNMENT}</span></h2>
+            <form action="manage_reseller_owners.php" method="post" name="admin_reseller_assignment" id="admin_reseller_assignment">
+                    <table>
+                        <!-- DBP: reseller_item -->
+                        <tr>
+                            <th>{TR_NUMBER}</th>
+                            <th>{TR_MARK}</th>
+                            <th>{TR_RESELLER_NAME}</th>
+                            <th>{TR_OWNER}</th>
+                        </tr>
+                        <tr>
+                         <!-- BDP: reseller_list -->
+                            <td>{NUMBER}</td>
+                            <td class="{RSL_CLASS}" width="80" align="left"><input type="checkbox" name="{CKB_NAME}" /></td>
+                            <td>{RESELLER_NAME}</td>
+                            <td>{OWNER}</td>
+                        </tr>                                          
+                        <!-- EDP: reseller_item -->
+                        <!-- EDP: reseller_list -->
+                        <tr>
+                            <td colspan="3" align="left">{TR_TO_ADMIN}
                                 <!-- BDP: select_admin -->
-                                  <select name="dest_admin">
+                                <select name="dest_admin">
                                     <!-- BDP: select_admin_option -->
                                     <option {SELECTED} value="{VALUE}">{OPTION}</option>
                                     <!-- EDP: select_admin_option -->
-                                  </select>
-                                  <!-- EDP: select_admin -->
-                              </td>
-                              <td><input name="Submit" type="submit" class="button" value="{TR_MOVE}" />
-                              </td>
-                            </tr>
-                          </table>
-                        <input type="hidden" name="uaction" value="reseller_owner" />
-                      </form></td>
-                      <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                    </tr>
-                  </table></td>
-				</tr>
-			</table></td>
-	</tr>
-</table>
-</body>
+                                </select>
+                              <!-- EDP: select_admin -->
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input name="Submit" type="submit" class="button" value="{TR_MOVE}" /></td>
+                     <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    </form></td>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            </table></td>
+            <div class="footer">
+                ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+            </div>
+
+    </body>
 </html>
