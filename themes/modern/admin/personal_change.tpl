@@ -52,7 +52,6 @@
 
             <h2 class="doc"><span>{TR_PERSONAL_DATA}</span></h2>
             <form action="personal_change.php" method="post" name="client_change_personal_frm">
-
                 <table>
                     <tr>
                       <td><label for="first_name">{TR_FIRST_NAME}</label></td>
@@ -70,45 +69,46 @@
                                  <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option> 
                       </select>
                       </td>
+                    </tr>
                     <tr>
                       <td><label for="firm">{TR_COMPANY}</label></td>
-                      <td><input type="text" name="firm" ide="firm" value="{FIRM}" /></td>
+                      <td><input type="text" name="firm" id="firm" value="{FIRM}"/></td>
                     </tr>
                     <tr>
                       <td><label for="street1">{TR_STREET_1}</label></td>
-                      <td><input type="text" name="street1" ide="street1" value="{STREET_1}" /></td>
+                      <td><input type="text" name="street1" id="street1" value="{STREET_1}" /></td>
                     </tr>
                     <tr>
                       <td><label for="street2">{TR_STREET_2}</label></td>
-                      <td><input type="text" name="street2" ide="street2" value="{STREET_2}" /></td>
+                      <td><input type="text" name="street2" id="street2" value="{STREET_2}" /></td>
                     </tr>
                     <tr>
                       <td><label for="zip_postal_code">{TR_ZIP_POSTAL_CODE}</label></td>
-                      <td><input type="text" name="zip" ide="zip" value="{ZIP}" /></td>
+                      <td><input type="text" name="zip" id="zip" value="{ZIP}" /></td>
                     </tr>
                     <tr>
                       <td><label for="city">{TR_CITY}</label></td>
-                      <td><input type="text" name="city" ide="city" value="{CITY}" /></td>
+                      <td><input type="text" name="city" id="city" value="{CITY}" /></td>
                     </tr>
                     <tr>
                       <td><label for="state">{TR_STATE}</label></td>
-                      <td><input type="text" name="state" ide="state" value="{STATE}" /></td>
+                      <td><input type="text" name="state" id="state" value="{STATE}" /></td>
                     </tr>
                     <tr>
                       <td><label for="country">{TR_COUNTRY}</label></td>
-                      <td><input type="text" name="country" ide="country" value="{COUNTRY}" /></td>
+                      <td><input type="text" name="country" id="country" value="{COUNTRY}" /></td>
                     </tr>
                     <tr>
                       <td><label for="email">{TR_EMAIL}</label></td>
-                      <td><input type="text" name="email" ide="email" value="{EMAIL}" /></td>
+                      <td><input type="text" name="email" id="email" value="{EMAIL}" /></td>
                     </tr>
                     <tr>
                       <td><label for="phone">{TR_PHONE}</label></td>
-                      <td><input type="text" name="phone" ide="phone" value="{PHONE}" /></td>
+                      <td><input type="text" name="phone" id="phone" value="{PHONE}" /></td>
                     </tr>
                     <tr>
                       <td><label for="fax">{TR_FAX}</label></td>
-                      <td><input type="text" name="fax" ide="fax" value="{FAX}" /></td>
+                      <td><input type="text" name="fax" id="fax" value="{FAX}" /></td>
                     </tr>
                 </table>
                 
