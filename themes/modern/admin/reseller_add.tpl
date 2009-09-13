@@ -60,7 +60,7 @@
                     <table>
                         <tr>
                             <td><label for="username">{TR_USERNAME}</label></td>
-                            <td><input type="text" name="username" id="username" value="{TR_USERNAME}" /></td>
+                            <td><input type="text" name="username" id="username" value="{USERNAME}" /></td>
                         </tr>
                         <tr>
                             <td><label for="pass">{TR_PASSWORD}</label></td>
@@ -192,10 +192,6 @@
                         <tr>
                             <td><label for="country">{TR_COUNTRY}</label></td>
                             <td><input type="text" name="country" id="country" value="{COUNTRY}" /></td>
-                        </tr>
-                        <tr>
-                            <td><label for="email">{TR_EMAIL}</label></td>
-                            <td><input type="text" name="email" id="email" value="{EMAIL}" /></td>
                         </tr>
                         <tr>
                             <td><label for="phone">{TR_PHONE}</label></td>

@@ -1,10 +1,6 @@
-<!--- kilburn bueno, mas o menos, no se si el codigo del checkbox lo he puesto bien y el boton de mover macho parece que esta encriptado no hay quien lo mueva, lo he metido-->
-<!--- dentro de la misma tabla del selector y le he dado unos espacios en blanco al estilo compadre, no se si sera lo correcto-->
-
-
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
@@ -40,7 +36,7 @@
             </ul>
             <ul class="path">
                 <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
-                <li><a>{TR_RESELLER_ASSIGNMENT}</a></li>
+                <li><a href="manage_reseller_owners.php">{TR_RESELLER_ASSIGNMENT}</a></li>
             </ul>
         </div>
 
@@ -50,50 +46,49 @@
 
         <div class="body">
 
-            <h2 class="general"><span>{TR_RESELLER_ASSIGNMENT}</span></h2>
-            <form action="manage_reseller_owners.php" method="post" name="admin_reseller_assignment" id="admin_reseller_assignment">
-                    <table>
-                        <!-- DBP: reseller_item -->
-                        <tr>
-                            <th>{TR_NUMBER}</th>
-                            <th>{TR_MARK}</th>
-                            <th>{TR_RESELLER_NAME}</th>
-                            <th>{TR_OWNER}</th>
-                        </tr>
-                        <tr>
-                         <!-- BDP: reseller_list -->
-                            <td>{NUMBER}</td>
-                            <td class="{RSL_CLASS}" width="80" align="left"><input type="checkbox" name="{CKB_NAME}" /></td>
-                            <td>{RESELLER_NAME}</td>
-                            <td>{OWNER}</td>
-                        </tr>                                          
-                        <!-- EDP: reseller_item -->
-                        <!-- EDP: reseller_list -->
-                        <tr>
-                            <td colspan="3" align="left">{TR_TO_ADMIN}
-                                <!-- BDP: select_admin -->
-                                <select name="dest_admin">
-                                    <!-- BDP: select_admin_option -->
-                                    <option {SELECTED} value="{VALUE}">{OPTION}</option>
-                                    <!-- EDP: select_admin_option -->
-                                </select>
-                              <!-- EDP: select_admin -->
-                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input name="Submit" type="submit" class="button" value="{TR_MOVE}" /></td>
-                     <td>&nbsp;</td>
-                        </tr>
-                    </table>
-                    </form></td>
-            <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            </table></td>
-            <div class="footer">
-                ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
-            </div>
+            <!-- BDP: page_message -->
+            <div class="warning">{MESSAGE}</div>
+            <!-- EDP: page_message -->
 
+            <h2 class="users2"><span>{TR_RESELLER_ASSIGNMENT}</span></h2>
+            <form action="manage_reseller_owners.php" method="post" name="admin_reseller_assignment" id="admin_reseller_assignment">
+   
+                <!-- BDP: reseller_list -->
+                <table>
+                    <tr>
+                        <th>{TR_NUMBER}</th>
+                        <th>{TR_MARK}</th>
+                        <th>{TR_RESELLER_NAME}</th>
+                        <th>{TR_OWNER}</th>
+                    </tr>
+                    <!-- BDP: reseller_item -->
+                    <tr>
+                        <td>{NUMBER}</td>
+                        <td><input type="checkbox" name="{CKB_NAME}" /></td>
+                        <td>{RESELLER_NAME}</td>
+                        <td>{OWNER}</td>
+                    </tr>
+                    <!-- EDP: reseller_item -->
+                </table>
+                <!-- EDP: reseller_list -->
+
+                <div class="buttons">
+                    {TR_TO_ADMIN}
+                    <!-- BDP: select_admin -->
+                        <select name="dest_admin">
+                        <!-- BDP: select_admin_option -->
+                            <option {SELECTED} value="{VALUE}">{OPTION}</option>
+                        <!-- EDP: select_admin_option -->
+                        </select>
+                    <!-- EDP: select_admin -->
+                    <input name="Submit" type="submit" value="{TR_MOVE}" />
+                    <input type="hidden" name="uaction" value="reseller_owner" />
+                </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+        </div>
     </body>
 </html>

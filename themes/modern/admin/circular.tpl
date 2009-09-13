@@ -1,4 +1,3 @@
-<!--- kilburn aqui 2 cosas, no consigo las opciones de envio y el texto del mensaje no se si las etiquetas son validas -->
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -37,7 +36,7 @@
             </ul>
             <ul class="path">
                 <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
-                <li><a>{TR_CIRCULAR}</a></li>
+                <li><a href="circular.php">{TR_CIRCULAR}</a></li>
             </ul>
         </div>
 
@@ -50,50 +49,54 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="general"><span>{TR_CIRCULAR}</span></h2>
+            <h2 class="email"><span>{TR_CIRCULAR}</span></h2>
             <form name="admin_email_setup" method="post" action="circular.php">
                 <fieldset>
                     <legend>{TR_CORE_DATA}</legend>
+
+                    <table>
+                        <tr>
+                            <td><label for="rcpt_to">{TR_SEND_TO}</label></td>
+                            <td><select id="rcpt_to" name="rcpt_to">
+                                    <option value="usrs">{TR_ALL_USERS}</option>
+                                    <option value="rsls">{TR_ALL_RESELLERS}</option>
+                                    <option value="usrs_rslrs">{TR_ALL_USERS_AND_RESELLERS}</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="msg_subject">{TR_MESSAGE_SUBJECT}</label></td>
+                            <td><input type="text" name="msg_subject" id="msg_subject" value="{MESSAGE_SUBJECT}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="msg_text">{TR_MESSAGE_TEXT}</label></td>
+                            <td><textarea name="msg_text" cols="80" rows="20">{MESSAGE_TEXT}</textarea></td>
+                        </tr>
+                    </table>
                 </fieldset>
 
-                <table>
-                    <tr>
-                        <td><label for="rcpt_to">{TR_SEND_TO}</label></td>
-                        <td><select id="rcpt_to" name="rcpt_to">
-                                <option value="usrs"{TR_ALL_USERS}</option>
-                                <option value="rsls"{{TR_ALL_RESELLERS}</option>
-                                <option value="usrs_rslrs"{TR_ALL_USERS_AND_RESELLERS}</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="msg_subject">{TR_MESSAGE_SUBJECT}</label></td>
-                        <td><input type="text" name="msg_subject" id="msg_subject" value="{MESSAGE_SUBJECT}"/></td>
-                    </tr>
-                    <tr>
-                        <td><label for="msg_text" style="width:200px; vertical-align:top;">{TR_MESSAGE_TEXT}</label></td>
-                        <td class="content"><textarea name="msg_text" style="width:80%" class="textinput2" cols="80" rows="20">{MESSAGE_TEXT}</textarea></td>
-                    </tr>                   
-                </table>
                 <fieldset>
                     <legend>{TR_ADDITIONAL_DATA}</legend>
+                
+                    <table>
+                        <tr>
+                            <td><label for="sender_email">{TR_SENDER_EMAIL}</label></td>
+                            <td><input type="text" name="sender_email" id="sender_email" value="{SENDER_EMAIL}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="sender_name">{TR_SENDER_NAME}</label></td>
+                            <td><input type="text" name="sender_name" id="sender_name" value="{SENDER_NAME}"/></td>
+                        </tr>
+                    </table>
                 </fieldset>
-                <table>
-                    <tr>
-                        <td><label for="sender_email">{TR_SENDER_EMAIL}</label></td>
-                        <td><input type="text" name="sender_email" id="sender_email" value="{SENDER_EMAIL}"/></td>
-                    </tr>
-                    <tr>
-                        <td><label for="sender_name">{TR_SENDER_NAME}</label></td>
-                        <td><input type="text" name="sender_name" id="sender_name" value="{SENDER_NAME}"/></td>
-                    </tr>
-                    <tr>
-                        <td><input name="Submit" type="submit" class="button" value="{TR_SEND_MESSAGE}" /></td>
-                    </tr>
-                </table>
-                <input type="hidden" name="uaction" value="send_circular" />
+
+                <div class="buttons">
+                    <input name="Submit" type="submit" class="button" value="{TR_SEND_MESSAGE}" />
+                    <input type="hidden" name="uaction" value="send_circular" />
+                </div>
             </form>
         </div>
+        
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>
