@@ -1,203 +1,159 @@
+<!-- kilburn no responde VL_MAIL en el formulario y no atino con el campop de generar la contraseña automatica y es estado -->
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>{TR_ADD_USER_PAGE_TITLE}</title>
-<meta name="robots" content="nofollow, noindex" />
-<meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{THEME_COLOR_PATH}/css/ispcp.js"></script>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>{TR_ADD_USER_PAGE_TITLE}</title>
+        <meta name="robots" content="nofollow, noindex" />
+        <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+        <!--[if IE 6]>
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix('*');
+        </script>
+        <![endif]-->
+    </head>
 
-<body onload="MM_preloadImages('{THEME_COLOR_PATH}/images/icons/database_a.gif','{THEME_COLOR_PATH}/images/icons/hosting_plans_a.gif','{THEME_COLOR_PATH}/images/icons/domains_a.gif','{THEME_COLOR_PATH}/images/icons/general_a.gif' ,'{THEME_COLOR_PATH}/images/icons/manage_users_a.gif','{THEME_COLOR_PATH}/images/icons/webtools_a.gif','{THEME_COLOR_PATH}/images/icons/statistics_a.gif','{THEME_COLOR_PATH}/images/icons/support_a.gif')">
-<!-- BDP: logged_from --><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td height="20" nowrap="nowrap" class="backButton">&nbsp;&nbsp;&nbsp;<a href="change_user_interface.php?action=go_back"><img src="{THEME_COLOR_PATH}/images/icons/close_interface.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" /></a> {YOU_ARE_LOGGED_AS}</td>
-      </tr>
-    </table>
-	<!-- EDP: logged_from -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:100%;padding:0;margin:0 auto;">
-<tr>
-<td align="left" valign="top" style="vertical-align: top; width: 195px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_left.jpg" width="195" height="56" border="0" alt="ispCP Logogram" /></td>
-<td style="height: 56px; width:100%; background-color: #0f0f0f"><img src="{THEME_COLOR_PATH}/images/top/top_left_bg.jpg" width="582" height="56" border="0" alt="" /></td>
-<td style="width: 73px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_right.jpg" width="73" height="56" border="0" alt="" /></td>
-</tr>
-	<tr>
-		<td style="width: 195px; vertical-align: top;">{MENU}</td>
-	    <td colspan="2" style="vertical-align: top;"><table style="width: 100%; padding:0;margin:0;" cellspacing="0">
-          <tr style="height:95px;">
-            <td style="padding-left:30px; width: 100%; background-image: url({THEME_COLOR_PATH}/images/top/middle_bg.jpg);">{MAIN_MENU}</td>
-            <td style="padding:0;margin:0;text-align: right; width: 73px;vertical-align: top;"><img src="{THEME_COLOR_PATH}/images/top/middle_right.jpg" width="73" height="95" border="0" alt="" /></td>
-          </tr>
-          <tr>
-            <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td align="left"><table width="100%" cellpadding="5" cellspacing="5">
-                    <tr>
-                      <td width="25"><img src="{THEME_COLOR_PATH}/images/content/table_icon_user.png" width="25" height="25" alt="" /></td>
-                      <td colspan="2" class="title">{TR_ADD_USER}</td>
-                    </tr>
-                </table></td>
-                <td width="27" align="right">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top"><!-- BDP: add_user -->
-                    <form name="reseller_add_users_first_frm" method="post" action="user_add3.php">
-                      <input type="hidden" name="uaction" value="user_add3_nxt" />
-                      <table width="100%" cellpadding="5" cellspacing="5">
-                        <!-- BDP: page_message -->
+    <body>
+
+        <div class="header">
+            {MAIN_MENU}
+
+            <div class="logo">
+                <img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
+                <img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="location-area icons-left">
+                <h1 class="manage_users">{TR_MENU_MANAGE_USERS}</h1>
+            </div>
+            <ul class="location-menu">
+                <!-- <li><a class="help" href="#">Help</a></li> -->
+                <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+            </ul>
+            <ul class="path">
+                <li><a href="manage_users.php">{TR_ADD_USER}</a></li>
+            </ul>
+        </div>
+
+        <div class="left_menu">
+            {MENU}
+        </div>
+
+        <div class="body">
+            <!-- BDP: page_message -->
+            <div class="warning">{MESSAGE}</div>
+            <!-- EDP: page_message -->
+
+            <h2 class="general"><span>{TR_ADD_USER}</span></h2>
+            <!-- BDP: add_user -->
+            <form name="reseller_add_users_first_frm" method="post" action="user_add3.php">
+                <input type="hidden" name="uaction" value="user_add3_nxt" /></td>
+                <fieldset>
+                    <legend>{TR_CORE_DATA}</legend>
+
+                    <table>
+                        <td><label for="username">{TR_USERNAME}</label></td>
+                        <td>{VL_USERNAME}</td>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td colspan="2" class="title"><span class="message">{MESSAGE}</span></td>
-                        </tr>
-                        <!-- EDP: page_message -->
-                        <tr>
-                          <td width="25">&nbsp;</td>
-                          <td colspan="2" class="content3"><b>{TR_CORE_DATA}</b></td>
-                        </tr>
-                        <tr>
-                          <td width="25">&nbsp;</td>
-                          <td class="content2" width="200">{TR_USERNAME}</td>
-                          <td class="content">{VL_USERNAME}</td>
-                        </tr>
-                        <tr>
-                          <td width="25">&nbsp;</td>
-                          <td class="content2" width="200">{TR_PASSWORD}</td>
-                          <td class="content"><input type="password" name="userpassword" value="{VL_USR_PASS}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="password">{TR_PASSWORD}</label></td>
+                            <td>
+                                <input type="password" name="pass" id="password" value="{VL_USR_PASS}"/>
+                                <input name="genpass" type="submit" class="button" value=" {VL_PASSWORD_GENERATE} " />
+                            </td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td class="content2" width="200">{TR_REP_PASSWORD}</td>
-                          <td class="content"><input type="password" name="userpassword_repeat" value="{VL_USR_PASS}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="pass_rep">{TR_REP_PASSWORD}</label></td>
+                            <td><input type="password" name="pass" id="pass_rep" value="{VL_USR_PASS}"/></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td class="content2" width="200">{TR_DMN_IP}</td>
-                          <td class="content"><select name="domain_ip">
-                              <!-- BDP: ip_entry -->
-                              <option value="{IP_VALUE}" {IP_SELECTED}>{IP_NUM}&nbsp;({IP_NAME})</option>
-                              <!-- EDP: ip_entry -->
-                            </select>
-                          </td>
+                            <td>
+                                {TR_DMN_IP}
+                            </td>
+                            <td><select id="domain_ip"name="domain_ip">
+                                    <!-- BDP: ip_entry -->
+                                    <option value="{IP_VALUE}" {IP_SELECTED}>{IP_NUM}&nbsp;({IP_NAME})</option>
+                                    <!-- EDP: ip_entry -->
+                                </select>
+                            </td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td class="content2" width="200">{TR_USREMAIL}</td>
-                          <td class="content"><input type="text" name="useremail" value="{VL_MAIL}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="useremail">{TR_USREMAIL}</label></td>
+                            <td><input type="useremail" name="useremail" id="useremail" value="{VL_MAIL}"/></td>
                         </tr>
                         <tr>
-                          <td>&nbsp;</td>
-                          <td class="content2">{TR_ADD_ALIASES}</td>
-                          <td class="content"><input name="add_alias" type="checkbox" id="add_alias" value="on" /></td>
+                            <td>
+                                {TR_ADD_ALIASES}
+                            </td>
+                            <td><input name="add_alias" type="checkbox" id="add_alias" value="on" /></td>
+                        </tr>
+                        <td><strong>{TR_ADDITIONAL_DATA}</strong></td>
+                        <tr>
+                            <td><label for="useruid">{TR_CUSTOMER_ID}</label></td>
+                            <td><input type="text" name="useruid" id="useruid" value="{VL_USR_ID}"/></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td colspan="2" class="content3"><b>{TR_ADDITIONAL_DATA}</b></td>
+                            <td><label for="userfname">{TR_FIRSTNAME}</label></td>
+                            <td><input type="text" name="userfname" id="userfname" value="{VL_USR_NAME}"/></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_CUSTOMER_ID}</td>
-                          <td class="content"><input type="text" name="useruid" value="{VL_USR_ID}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="userlname">{TR_LASTNAME}</label></td>
+                            <td><input type="text" name="userlname" id="userlname" value="{VL_LAST_USRNAME}"/></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_FIRSTNAME}</td>
-                          <td class="content"><input type="text" name="userfname" value="{VL_USR_NAME}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="gender">{TR_GENDER}</label></td>
+                            <td><select id="gender" name="gender">
+                                    <option value="M" {VL_MALE}>{TR_MALE}</option>
+                                    <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
+                                    <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_LASTNAME}</td>
-                          <td class="content"><input type="text" name="userlname" value="{VL_LAST_USRNAME}" style="width:210px" class="textinput" /></td>
+                            <td><label for="userfirm">{TR_COMPANY}</label></td>
+                            <td><input type="text" name="userfirm" id="userfirm" value="{VL_USR_FIRM}" /></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_GENDER}</td>
-                          <td class="content">
-                            <select name="gender" size="1">
-                               <option value="M" {VL_MALE}>{TR_MALE}</option>
-                               <option value="F" {VL_FEMALE}>{TR_FEMALE}</option>
-                               <option value="U" {VL_UNKNOWN}>{TR_UNKNOWN}</option>
-                            </select>
-                          </td>
+                            <td><label for="userstreet1">{TR_STREET1}</label></td>
+                            <td><input type="text" name="userstreet1" id="userstreet1" value="{VL_STREET1}" /></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_COMPANY}</td>
-                          <td class="content"><input type="text" name="userfirm" value="{VL_USR_FIRM}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="userzip">{TR_POST_CODE}</label></td>
+                            <td><input type="text" name="userzip" id="userzip" value="{VL_USR_POSTCODE}" /></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_STREET1}</td>
-                          <td class="content"><input type="text" name="userstreet1" value="{VL_STREET1}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="usercity">{TR_CITY}</label></td>
+                            <td><input type="text" name="usercity" id="usercity" value="{VL_USRCITY}" /></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_STREET2}</td>
-                          <td class="content"><input type="text" name="userstreet2" value="{VL_STREET2}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="useratate">{TR_STATE}</label></td>
+                            <td><input type="text" name="userstate" id="userstate" value="{VL_USRSTATE}" /></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_POST_CODE}</td>
-                          <td class="content"><input type="text" name="userzip" value="{VL_USR_POSTCODE}" style="width:80px" class="textinput" />
-                          </td>
+                            <td><label for="usercountry">{TR_COUNTRY}</label></td>
+                            <td><input type="text" name="usercountry" id="usercountry" value="{VL_COUNTRY}" /></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_CITY}</td>
-                          <td class="content"><input type="text" name="usercity" value="{VL_USRCITY}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="userphone">{TR_PHONE}</label></td>
+                            <td><input type="text" name="userphone" id="userphone" value="{VL_PHONE}" /></td>
                         </tr>
                         <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_STATE_PROVINCE}</td>
-                          <td class="content"><input type="text" name="userstate" value="{VL_USRSTATE}" style="width:210px" class="textinput" />
-                          </td>
+                            <td><label for="userphone">{TR_PHONE}</label></td>
+                            <td><input type="text" name="userphone" id="userphone" value="{VL_PHONE}" /></td>
                         </tr>
-                        <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_COUNTRY}</td>
-                          <td class="content"><input type="text" name="usercountry" value="{VL_COUNTRY}" style="width:210px" class="textinput" />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_PHONE}</td>
-                          <td class="content"><input type="text" name="userphone" value="{VL_PHONE}" style="width:210px" class="textinput" />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="25">&nbsp;</td>
-                          <td width="200" class="content2">{TR_FAX}</td>
-                          <td class="content"><input type="text" name="userfax" value="{VL_FAX}" style="width:210px" class="textinput" />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>&nbsp;</td>
-                          <td colspan="2"><input name="Submit" type="submit" class="button" value="  {TR_BTN_ADD_USER}  " /></td>
-                        </tr>
-                      </table>
-                    </form>
-                  <!-- EDP: add_user -->
-                </td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-            </table></td>
-          </tr>
-        </table></td>
-	</tr>
-</table>
-</body>
+                        <td><input name="Submit" type="submit" class="button" value="  {TR_BTN_ADD_USER}  " /></td>
+                    </table>
+            </form>
+            <!-- EDP: add_user -->
+        </div>
+            <div class="footer">
+                ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+            </div>
+    </body>
 </html>
