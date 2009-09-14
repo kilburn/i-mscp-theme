@@ -111,7 +111,7 @@
                         <a class="icon i_identity" href="domain_details.php?domain_id={DOMAIN_ID}">{TR_DETAILS}</a>
                         <a class="icon i_details" href="change_user_interface.php?to_id={USER_ID}">{CHANGE_INTERFACE}</a>
                         <!-- BDP: edit_option -->
-                        <a class="icon i_edit" href="domain_edit.php?edit_id={DOMAIN_ID}">{TR_EDIT_USER}</a>
+                        <a class="icon i_edit" href="user_edit.php?edit_id={USER_ID}">{TR_EDIT_USER}</a>
                         <a class="icon i_user" href="domain_edit.php?edit_id={DOMAIN_ID}">{TR_EDIT_DOMAIN}</a>
                         <a class="icon i_stats" href="domain_statistics.php?month={VL_MONTH}&year={VL_YEAR}&domain_id={DOMAIN_ID}">{TR_STAT}</a>
                         <!-- EDP: edit_option -->
