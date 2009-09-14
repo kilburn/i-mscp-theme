@@ -11,7 +11,7 @@
         <li><a class="ftp" href="ftp_accounts.php">{TR_MENU_FTP_ACCOUNTS}</a></li>
 		<!-- EDP: isactive_ftp -->
 		<!-- BDP: isactive_sql -->
-        <li><a class="sql_manage" href="sql_manage.php">{TR_MENU_MANAGE_SQL}</a></li>
+        <li><a class="database" href="sql_manage.php">{TR_MENU_MANAGE_SQL}</a></li>
 		<!-- EDP: isactive_sql -->
         <li><a class="webtools" href="webtools.php">{TR_MENU_WEBTOOLS}</a></li>
         <li><a class="statistics" href="domain_statistics.php">{TR_MENU_DOMAIN_STATISTICS}</a></li>
