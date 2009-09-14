@@ -36,7 +36,7 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="general">{TR_MENU_QUESTIONS_AND_COMMENTS}</h1>
+                <h1 class="support">{TR_MENU_QUESTIONS_AND_COMMENTS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
