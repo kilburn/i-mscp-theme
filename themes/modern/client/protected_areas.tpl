@@ -46,7 +46,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="{SUPPORT_SYSTEM_PATH}">{TR_HTACCESS}</a></li>
+                <li><a href="protected_areas.php">{TR_HTACCESS}</a></li>
             </ul>
         </div>
 
