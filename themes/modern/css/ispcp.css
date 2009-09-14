@@ -140,6 +140,11 @@ dd {
     margin: 0 5px;
     float: right;
 }
+.icon.big{
+		line-height : 44px;
+		height : 44px;
+		padding-left : 48px;
+}
 .icon:first-child {
     margin-right: 0;
 }

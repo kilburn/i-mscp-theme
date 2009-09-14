@@ -60,7 +60,7 @@
 			<a href="protected_user_manage.php">{TR_HTACCESS_USER}</a>
 			<p>{TR_HTACCESS_USER}</p>            
 
-			<a class="i_errordocsicon" href="error_pages.php">{TR_ERROR_PAGES}</a>
+			<a href="error_pages.php">{TR_ERROR_PAGES}</a>
 			<p>{TR_ERROR_PAGES_TEXT}</p>            
 
 			<a href="backup.php">{TR_BACKUP}</a>
