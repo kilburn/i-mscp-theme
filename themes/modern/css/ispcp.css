@@ -582,3 +582,15 @@ legend, h3 {
 .i_users { background-position: 0 -3979px; }
 .i_webmailicon { background-position: 0 -4045px; }
 .i_webtools_big { background-position: 0 -4141px; }
+
+div.tooltip{
+	background-color:#ffffe0;
+	border: 1px #000000 solid;
+	display:none;
+	margin:5px;
+	padding:5px;
+	font-size:11px;
+	width:200px;
+	position:absolute;
+	z-index : 100;
+}

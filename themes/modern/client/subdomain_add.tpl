@@ -1,109 +1,108 @@
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>{TR_CLIENT_ADD_SUBDOMAIN_PAGE_TITLE}</title>
-<meta name="robots" content="nofollow, noindex" />
-<meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{THEME_COLOR_PATH}/css/ispcp.js"></script>
-<script type="text/javascript">
-<!--
-function makeUser() {
-	var subname  = document.forms[0].elements['subdomain_name'].value;
-	subname = subname.toLowerCase();
-	document.forms[0].elements['subdomain_mnt_pt'].value = "/" + subname;
-}
-//-->
-</script>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>{TR_CLIENT_ADD_SUBDOMAIN_PAGE_TITLE}</title>
+        <meta name="robots" content="nofollow, noindex" />
+        <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/ispcp.js"></script>
+        <!--[if IE 6]>
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix('*');
+        </script>
+        <![endif]-->
+		<script type="text/javascript">
+		/* <![CDATA[ */
+		function makeUser() {
+			var subname  = document.forms[0].elements['subdomain_name'].value;
+			subname = subname.toLowerCase();
+			document.forms[0].elements['subdomain_mnt_pt'].value = "/" + subname;
+		}
+		/* ]]> */
+		</script>
+    </head>
+    <body>
+        <div class="header">
+            {MAIN_MENU}
 
-<body onload="MM_preloadImages('{THEME_COLOR_PATH}/images/icons/database_a.gif','{THEME_COLOR_PATH}/images/icons/domains_a.gif','{THEME_COLOR_PATH}/images/icons/ftp_a.gif','{THEME_COLOR_PATH}/images/icons/general_a.gif' ,'{THEME_COLOR_PATH}/images/icons/email_a.gif','{THEME_COLOR_PATH}/images/icons/webtools_a.gif','{THEME_COLOR_PATH}/images/icons/statistics_a.gif','{THEME_COLOR_PATH}/images/icons/support_a.gif','{THEME_COLOR_PATH}/images/icons/custom_link_a.gif')">
-<!-- BDP: logged_from --><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td height="20" nowrap="nowrap" class="backButton">&nbsp;&nbsp;&nbsp;<a href="change_user_interface.php?action=go_back"><img src="{THEME_COLOR_PATH}/images/icons/close_interface.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" /></a> {YOU_ARE_LOGGED_AS}</td>
-      </tr>
-    </table>
-	<!-- EDP: logged_from -->
-<!-- ToolTip -->
-<div id="dmn_help" style="background-color:#ffffe0;border: 1px #000000 solid;display:none;margin:5px;padding:5px;font-size:9pt;font-family:Verdana, sans-serif;color:#000000;width:200px;position:absolute;">{TR_DMN_HELP}</div>
-<!-- ToolTip end -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:100%;padding:0;margin:0 auto;">
-<tr>
-<td align="left" valign="top" style="vertical-align: top; width: 195px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_left.jpg" width="195" height="56" border="0" alt="ispCP Logogram" /></td>
-<td style="height: 56px; width:100%; background-color: #0f0f0f"><img src="{THEME_COLOR_PATH}/images/top/top_left_bg.jpg" width="582" height="56" border="0" alt="" /></td>
-<td style="width: 73px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_right.jpg" width="73" height="56" border="0" alt="" /></td>
-</tr>
-	<tr>
-		<td style="width: 195px; vertical-align: top;">{MENU}</td>
-	    <td colspan="2" style="vertical-align: top;"><table style="width: 100%; padding:0;margin:0;" cellspacing="0">
-          <tr style="height:95px;">
-            <td style="padding-left:30px; width: 100%; background-image: url({THEME_COLOR_PATH}/images/top/middle_bg.jpg);">{MAIN_MENU}</td>
-            <td style="padding:0;margin:0;text-align: right; width: 73px;vertical-align: top;"><img src="{THEME_COLOR_PATH}/images/top/middle_right.jpg" width="73" height="95" border="0" alt="" /></td>
-          </tr>
-          <tr>
-            <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td align="left"><table width="100%" cellpadding="5" cellspacing="5">
-                    <tr>
-                      <td width="25"><img src="{THEME_COLOR_PATH}/images/content/table_icon_domains.png" width="25" height="25" alt="" /></td>
-                      <td colspan="2" class="title">{TR_ADD_SUBDOMAIN}</td>
-                    </tr>
-                </table></td>
-                <td width="27" align="right">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="40">&nbsp;</td>
-                      <td valign="top"><form name="client_add_subdomain_frm" method="post" action="subdomain_add.php">
-                          <table width="100%" cellspacing="5">
-                            <!-- BDP: page_message -->
-                            <tr>
-                              <td colspan="2" class="title"><span class="message">{MESSAGE}</span></td>
-                            </tr>
-                            <!-- EDP: page_message -->
-                            <tr>
-                              <td width="250" class="content2">
-							   <label for="subdomain_name">{TR_SUBDOMAIN_NAME}</label> <img src="{THEME_COLOR_PATH}/images/icons/help.png" width="16" height="16" alt="" onmouseover="showTip('dmn_help', event)" onmouseout="hideTip('dmn_help')" />
-							  </td>
-                              <td class="content"><input type="text" name="subdomain_name" id="subdomain_name" value="{SUBDOMAIN_NAME}" style="width:170px" class="textinput" onblur="makeUser();" />
-                                <input type="radio" name="dmn_type" value="dmn" {SUB_DMN_CHECKED}" />{DOMAIN_NAME}
-                                <!-- BDP: to_alias_domain -->
-                                <input type="radio" name="dmn_type" value="als" {SUB_ALS_CHECKED}" />
-                                <select name="als_id">
-                                    <!-- BDP: als_list -->
-                                    <option value="{ALS_ID}" {ALS_SELECTED}>.{ALS_NAME}</option>
-                                    <!-- EDP: als_list -->
-                                </select>
-                                <!-- EDP: to_alias_domain -->
-                                </td>
-                            </tr>
-                            <tr>
-                              <td width="250" class="content2"><label for="subdomain_mnt_pt">{TR_DIR_TREE_SUBDOMAIN_MOUNT_POINT}</label></td>
-                              <td class="content"><input type="text" name="subdomain_mnt_pt" id="subdomain_mnt_pt" value="{SUBDOMAIN_MOUNT_POINT}" style="width:170px" class="textinput" /></td>
-                            </tr>
-                            <tr>
-                              <td colspan="2">&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td colspan="2"><input name="Submit" type="submit" class="button" value="{TR_ADD}" />
-                                  <input type="hidden" name="uaction" value="add_subd" /></td>
-                            </tr>
-                          </table></form></td>
-                    </tr>
-                </table></td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-            </table></td>
-          </tr>
-        </table></td>
-	</tr>
-</table>
-</body>
+            <div class="logo">
+                <img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
+                <img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="location-area icons-left">
+                <h1 class="domains">{TR_MENU_MANAGE_DOMAINS}</h1>
+            </div>
+            <ul class="location-menu">
+                <!-- <li><a class="help" href="#">Help</a></li> -->
+                <!-- BDP: logged_from -->
+                <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+                <!-- EDP: logged_from -->
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+            </ul>
+            <ul class="path">
+                <li><a href="subdomain_add.php">{TR_MENU_ADD_SUBDOMAIN}</a></li>
+            </ul>
+        </div>
+
+        <div class="left_menu">
+            {MENU}
+        </div>
+
+        <div class="body">
+        	<div id="fwd_help" class="tooltip">{TR_DMN_HELP}</div>
+        	
+            <!-- BDP: page_message -->
+	            <div class="warning">{MESSAGE}</div>
+            <!-- EDP: page_message -->
+
+            <h2 class="domains"><span>{TR_ADD_SUBDOMAIN}</span></h2>
+            <form name="client_add_subdomain_frm" method="post" action="subdomain_add.php">
+            	<table>
+            		<tr>
+            			<td>
+            				<label for="subdomain_name">{TR_SUBDOMAIN_NAME}</label>
+            				<span class="icon i_help" onmouseover="showTip('fwd_help', event)" onmouseout="hideTip('fwd_help')" >Help</span>
+            			</td>
+            			<td>
+            				<input type="text" name="subdomain_name" id="subdomain_name" value="{SUBDOMAIN_NAME}"  onblur="makeUser();" />
+            			</td>
+            			<td>
+            				<input type="radio" name="dmn_type" value="dmn" {SUB_DMN_CHECKED}" />{DOMAIN_NAME}
+            				<!-- BDP: to_alias_domain -->
+            					<br />
+            					<input type="radio" name="dmn_type" value="als" {SUB_ALS_CHECKED}" />
+            					<select name="als_id">
+            						<!-- BDP: als_list -->
+            							<option value="{ALS_ID}" {ALS_SELECTED}>.{ALS_NAME}</option>
+            						<!-- EDP: als_list -->
+            					</select>
+            				<!-- EDP: to_alias_domain -->
+            			</td>
+            		</tr>
+            		<tr>
+            			<td><label for="subdomain_mnt_pt">{TR_DIR_TREE_SUBDOMAIN_MOUNT_POINT}</label></td>
+            			<td><input type="text" name="subdomain_mnt_pt" id="subdomain_mnt_pt" value="{SUBDOMAIN_MOUNT_POINT}" /></td>
+            		</tr>
+            	</table>
+            	
+            	<div class="buttons">
+            		<input name="Submit" type="submit" class="button" value="{TR_ADD}" />	
+            	</div>
+            	
+            	<input type="hidden" name="uaction" value="add_subd" />
+            </form>
+        </div>
+
+        <div class="footer">
+            ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+        </div>
+
+    </body>
 </html>
