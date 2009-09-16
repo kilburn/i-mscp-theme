@@ -36,7 +36,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">                
-                <li><a href="admin_add.php">{TR_UPDATES_TITLE}</a></li>
+                <li><a href="ispcp_updates.php">{TR_UPDATES_TITLE}</a></li>
             </ul>
         </div>
 
