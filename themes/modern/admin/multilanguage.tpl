@@ -1,132 +1,129 @@
-<?xml version="1.0" encoding="{THEME_CHARSET}" ?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>{TR_ADMIN_I18N_PAGE_TITLE}</title>
-<meta name="robots" content="nofollow, noindex" />
-<meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="{THEME_COLOR_PATH}/css/ispcp.js"></script>
-<script type="text/javascript">
-<!--
-function action_delete(url, language) {
-	if (!confirm(sprintf("{TR_MESSAGE_DELETE}", language)))
-		return false;
-	location = url;
-}
-//-->
-</script>
-</head>
+<-- Kilburn aqui no se de donde sacar las imagenes de las banderas ni lo de exportar dejo los originales-->
 
-<body onload="MM_preloadImages('{THEME_COLOR_PATH}/images/icons/database_a.gif','{THEME_COLOR_PATH}/images/icons/hosting_plans_a.gif','{THEME_COLOR_PATH}/images/icons/domains_a.gif','{THEME_COLOR_PATH}/images/icons/general_a.gif' ,'{THEME_COLOR_PATH}/images/icons/manage_users_a.gif','{THEME_COLOR_PATH}/images/icons/webtools_a.gif','{THEME_COLOR_PATH}/images/icons/statistics_a.gif','{THEME_COLOR_PATH}/images/icons/support_a.gif')">
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:100%;padding:0;margin:0 auto;">
-<tr>
-<td align="left" valign="top" style="vertical-align: top; width: 195px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_left.jpg" width="195" height="56" border="0" alt="ispCP Logogram" /></td>
-<td style="height: 56px; width:100%; background-color: #0f0f0f"><img src="{THEME_COLOR_PATH}/images/top/top_left_bg.jpg" width="582" height="56" border="0" alt="" /></td>
-<td style="width: 73px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_right.jpg" width="73" height="56" border="0" alt="" /></td>
-</tr>
-	<tr>
-		<td style="width: 195px; vertical-align: top;">{MENU}</td>
-	    <td colspan="2" style="vertical-align: top;"><table style="width: 100%; padding:0;margin:0;" cellspacing="0">
-				<tr style="height:95px;">
-				  <td style="padding-left:30px; width: 100%; background-image: url({THEME_COLOR_PATH}/images/top/middle_bg.jpg);">{MAIN_MENU}</td>
-					<td style="padding:0;margin:0;text-align: right; width: 73px;vertical-align: top;"><img src="{THEME_COLOR_PATH}/images/top/middle_right.jpg" width="73" height="95" border="0" alt="" /></td>
-				</tr>
-				<tr>
-				  <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td align="left"><table width="100%" cellpadding="5" cellspacing="5">
-                          <tr>
-                            <td width="25"><img src="{THEME_COLOR_PATH}/images/content/table_icon_multilanguage.png" width="25" height="25" alt="" /></td>
-                            <td colspan="2" class="title">{TR_MULTILANGUAGE}</td>
-                          </tr>
-                      </table></td>
-                      <td width="27" align="right">&nbsp;</td>
+<?xml version="1.0" encoding="{THEME_CHARSET}" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>{TR_ADMIN_I18N_PAGE_TITLE}</title>
+        <meta name="robots" content="nofollow, noindex" />
+        <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/css/ispcp.js"></script>
+
+        <!--[if IE 6]>
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
+        <script type="text/javascript">
+            DD_belatedPNG.fix('*');
+        </script>
+        <![endif]-->
+        <script type="text/javascript">
+            <!--
+            function action_delete(url, language) {
+                if (!confirm(sprintf("{TR_MESSAGE_DELETE}", language)))
+                    return false;
+                location = url;
+            }
+            //-->
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            {MAIN_MENU}
+
+            <div class="logo">
+                <img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
+                <img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="location-area icons-left">
+                <h1 class="manage_users">{TR_MENU_SETTINGS}</h1>
+            </div>
+            <ul class="location-menu">
+                <!-- <li><a class="help" href="#">Help</a></li> -->
+                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+            </ul>
+            <ul class="path">
+                <li><a href="settings.php">{TR_MULTILANGUAGE}</a></li>
+            </ul>
+        </div>
+
+        <div class="left_menu">
+            {MENU}
+        </div>
+
+        <div class="body">
+            <!-- BDP: page_message -->
+            <div class="warning">{MESSAGE}</div>
+            <!-- EDP: page_message -->
+
+            <h2 class="general"><span>{TR_MULTILANGUAGE}</span></h2>
+            <form action="multilanguage.php" method="post" enctype="multipart/form-data" name="set_layout" id="set_layout">
+                <table>
+                    <tr>                        
+                        <td><b>{TR_INSTALLED_LANGUAGES}</b></td>
                     </tr>
                     <tr>
-                      <td valign="top"><form action="multilanguage.php" method="post" enctype="multipart/form-data" name="set_layout" id="set_layout">
-                          <table width="100%" cellpadding="5" cellspacing="5">
-                            <!-- BDP: page_message -->
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td colspan="6" class="title"><span class="message">{MESSAGE}</span></td>
-                            </tr>
-                            <!-- EDP: page_message -->
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td colspan="6" class="content3"><b>{TR_INSTALLED_LANGUAGES}</b></td>
-                            </tr>
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td class="content2"><strong>{TR_LANGUAGE}</strong></td>
-                              <td class="content2"><strong>{TR_MESSAGES}</strong></td>
-                              <td class="content2"><strong>{TR_LANG_REV}</strong></td>
-                              <td class="content2" width="80" align="center"><strong>{TR_DEFAULT}</strong></td>
-                              <td width="100" colspan="2" align="center" class="content2"><strong>{TR_ACTION}</strong></td>
-                            </tr>
-                            <!-- BDP: lang_row -->
-                            <tr class="hl">
-                              <td width="25" nowrap="nowrap">&nbsp;</td>
-                              <td class="{LANG_CLASS}" nowrap="nowrap"><img src="{THEME_COLOR_PATH}/images/icons/locale.png" width="16" height="16" style="vertical-align:middle" alt="" /> {LANGUAGE}</td>
-                              <td class="{LANG_CLASS}" nowrap="nowrap">{MESSAGES}</td>
-                              <td class="{LANG_CLASS}" nowrap="nowrap">{LANGUAGE_REVISION}</td>
-                              <td class="{LANG_CLASS}" width="80" nowrap="nowrap" align="center"><!-- BDP: lang_def -->
-                                {DEFAULT}
-                                <!-- EDP: lang_def -->
-                <!-- BDP: lang_radio -->
-                <input type="radio" name="default_language" value="{LANG_VALUE}" />
-                <!-- EDP: lang_radio -->
-                              </td>
-                              <td class="{LANG_CLASS}" width="100" nowrap="nowrap"><img src="{THEME_COLOR_PATH}/images/icons/details.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" /> <a href="{URL_EXPORT}" class="link" target="_blank">{TR_EXPORT}</a> </td>
-                              <td class="{LANG_CLASS}" width="100" nowrap="nowrap"><img src="{THEME_COLOR_PATH}/images/icons/delete.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" />
-                                <!-- BDP: lang_delete_show -->
-                                {TR_UNINSTALL} <!--{LANGUAGE}-->
-                                <!-- EDP: lang_delete_show -->
-                                <!-- BDP: lang_delete_link -->
-                                <a href="#" onclick="action_delete('{URL_DELETE}', '{LANGUAGE}')" class="link">{TR_UNINSTALL}</a>
-                                <!-- EDP: lang_delete_link --></td>
-                            </tr>
-                            <!-- EDP: lang_row -->
-                          </table>
-                        <table width="100%" cellspacing="5" cellpadding="5">
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td><span class="{LANG_CLASS}">
-                                  <input name="Button" type="button" class="button" value="  {TR_SAVE}  " onclick="return sbmt(document.forms[0],'change_language');" /></span></td>
-                            </tr>
-                        </table>
-                        <br />
-                          <br />
-                          <br />
-                          <table width="100%" cellpadding="5" cellspacing="5">
-                            <tr>
-                              <td width="25">&nbsp;</td>
-                              <td colspan="2" class="content3"><b>{TR_INSTALL_NEW_LANGUAGE}</b></td>
-                            </tr>
-                            <tr>
-                              <td width="25" nowrap="nowrap">&nbsp;</td>
-                              <td width="230" class="content2" nowrap="nowrap">{TR_LANGUAGE_FILE}</td>
-                              <td nowrap="nowrap" class="content"><input type="file" name="lang_file" class="textinput" size="60" />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="25" nowrap="nowrap">&nbsp;</td>
-                              <td colspan="2" nowrap="nowrap"><input name="Button" type="button" class="button" value="  {TR_INSTALL}  " onclick="return sbmt(document.forms[0],'upload_language');" /></td>
-                            </tr>
-                          </table>
-                        <input type="hidden" name="uaction" value="" />
-                      </form></td>
-                      <td>&nbsp;</td>
+                        <td width="25">&nbsp;</td>
+                        <td><strong>{TR_LANGUAGE}</strong></td>
+                        <td><strong>{TR_MESSAGES}</strong></td>
+                        <td><strong>{TR_LANG_REV}</strong></td>
+                        <td><strong>{TR_DEFAULT}</strong></td>
+                        <td colspan="2" align="center"><strong>{TR_ACTION}</strong></td>
+                    </tr>
+                    <!-- BDP: lang_row -->                    
+                    <td width="25">&nbsp;</td>
+                    <td><img src="{THEME_COLOR_PATH}/images/icons/locale.png" width="16" height="16" style="vertical-align:middle" alt="" /> {LANGUAGE}</td>
+                    <td>{MESSAGES}</td>
+                    <td>{LANGUAGE_REVISION}</td>
+                    <td width="80" align="center"><!-- BDP: lang_def -->
+                        {DEFAULT}
+                        <!-- EDP: lang_def -->
+                        <!-- BDP: lang_radio -->
+                        <input type="radio" name="default_language" value="{LANG_VALUE}" />
+                        <!-- EDP: lang_radio -->
+                    </td>
+                    <td width="100"><img src="{THEME_COLOR_PATH}/images/icons/details.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" /> <a href="{URL_EXPORT}" class="link" target="_blank">{TR_EXPORT}</a> </td>
+                    <td width="100"><img src="{THEME_COLOR_PATH}/images/icons/delete.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" />
+                        <!-- BDP: lang_delete_show -->
+                        {TR_UNINSTALL} <!--{LANGUAGE}-->
+                        <!-- EDP: lang_delete_show -->
+                        <!-- BDP: lang_delete_link -->
+                        <a href="#" onclick="action_delete('{URL_DELETE}', '{LANGUAGE}')" class="link">{TR_UNINSTALL}</a>
+                        <!-- EDP: lang_delete_link --></td>
+                    </tr>
+                    <!-- EDP: lang_row -->
+                </table>
+                <br />
+
+                <input name="Button" type="button" class="button" value="  {TR_SAVE}  " onclick="return sbmt(document.forms[0],'change_language');" /></span></td>
+                </tr>
+                </table>
+                <br />
+                <br />
+                <br />
+                <table>
+                    <tr>                        
+                        <td><b>{TR_INSTALL_NEW_LANGUAGE}</b></td>
                     </tr>
                     <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
+                        <td width="25">&nbsp;</td>
+                        <td width="230">{TR_LANGUAGE_FILE}</td>
+                        <td><input type="file" name="lang_file" class="textinput" size="60" /></td>
                     </tr>
-                  </table></td>
-				</tr>
-			</table></td>
-	</tr>
-</table>
-</body>
+                </table>
+                <br />
+                <tr>
+                    <td><input name="Button" type="button" class="button" value="  {TR_INSTALL}  " onclick="return sbmt(document.forms[0],'upload_language');" /></td>
+                </tr>
+                <input type="hidden" name="uaction" value="" />
+            </form>
+            <div class="footer">
+                ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+            </div>
+    </body>
 </html>
