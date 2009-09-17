@@ -604,3 +604,7 @@ div.tooltip{
 	position:absolute;
 	z-index : 100;
 }
+.icon.i_help{
+	width : 0;
+	overflow : hidden;
+}
