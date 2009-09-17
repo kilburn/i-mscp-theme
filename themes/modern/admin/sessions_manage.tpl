@@ -37,7 +37,7 @@
             </ul>
             <ul class="path">
                 <li><a href="manage_users.php">{TR_MENU_MANAGE_USERS}</a></li>
-                <li><a href="admin_add.php">{TR_MANAGE_USER_SESSIONS}</a></li>
+                <li><a href="sessions_manage.php">{TR_MANAGE_USER_SESSIONS}</a></li>
             </ul>
         </div>
 
@@ -51,7 +51,7 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="general"><span>{TR_MANAGE_USER_SESSIONS}</span></h2>
+            <h2 class="users2"><span>{TR_MANAGE_USER_SESSIONS}</span></h2>
             <table>
                 <tr>
                     <th>{TR_USERNAME}</th>
@@ -62,10 +62,10 @@
                 <tr>
                     <td>{ADMIN_USERNAME}</td>
                     <td>{LOGIN_TIME}</td>
-                    <td><a href="{KILL_LINK}" class="icon i_delete" class="link">{TR_DELETE}</a></td>
+                    <td><a href="{KILL_LINK}" class="icon i_delete">{TR_DELETE}</a></td>
                 </tr>
                 <!-- EDP: user_session -->
-            </table></td>
+            </table>
         </div>
 
         <div class="footer">

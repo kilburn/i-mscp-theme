@@ -436,14 +436,26 @@ form table tbody td textarea{
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
-.body th a{
-	color : #fff;
-}
 .body th:first-child {
     border-left: 1px solid #000;
 }
 .body th:last-child {
     border-right: 1px solid #000;
+}
+.description th {
+    background: transparent;
+    color: #000;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.description th:first-child {
+    border-left: 1px solid #dfdfdf;
+}
+.description th:last-child {
+    border-right: 1px solid #dfdfdf;
+}
+.body th a{
+	color : #fff;
 }
 .body td {
     padding: 5px;

@@ -51,7 +51,7 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="general"><span>{TR_EDIT_ADMIN}</span></h2>
+            <h2 class="user"><span>{TR_EDIT_ADMIN}</span></h2>
             <form name="admin_edit_user" method="post" action="admin_edit.php">
                 <fieldset>
                     <legend>{TR_CORE_DATA}</legend>

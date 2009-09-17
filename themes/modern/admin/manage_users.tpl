@@ -88,7 +88,7 @@
                     <td>{ADMIN_CREATED_ON}</td>
                     <td>{ADMIN_CREATED_BY}</td>
                     <td>
-                        <a href="{URL_EDIT_ADMIN}" class="icon i_edit">{TR_EDIT}</a>
+                        <a href="{URL_EDIT_ADMIN}" class="icon i_user">{TR_EDIT}</a>
                         <!-- BDP: admin_delete_show -->
 
                         <!-- EDP: admin_delete_show -->
@@ -124,7 +124,7 @@
                 <td>{RSL_CREATED_BY}</td>
                 <td>
                     <a class="icon i_details" href="{URL_CHANGE_INTERFACE}" title="{TR_CHANGE_USER_INTERFACE}">{GO_TO_USER_INTERFACE}</a>
-                    <a href="{URL_EDIT_RSL}" class="icon i_edit">{TR_EDIT}</a>
+                    <a href="{URL_EDIT_RSL}" class="icon i_user">{TR_EDIT}</a>
                     <a href="#" class="icon i_delete" onclick="action_delete('{URL_DELETE_RSL}', '{RSL_USERNAME}')">{TR_DELETE}</a>
                 </td>
             </tr>

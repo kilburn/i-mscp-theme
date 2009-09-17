@@ -29,13 +29,14 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="system_info.php">{TR_MENU_SYSTEM_TOOLS}</h1>
+                <h1 class="webtools">{TR_MENU_SYSTEM_TOOLS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
-            <ul class="path">                
+            <ul class="path">
+                <li><a href="system_info.php">{TR_MENU_SYSTEM_TOOLS}</a></li>
                 <li><a href="ispcp_updates.php">{TR_UPDATES_TITLE}</a></li>
             </ul>
         </div>
@@ -45,30 +46,27 @@
         </div>
 
         <div class="body">
+
             <!-- BDP: page_message -->
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
-            <h2 class="general"><span>{TR_UPDATES_TITLE}</span></h2>
-            <td><table>
-                <!-- BDP: props_list -->
-                    <tr>                        
-                        <td><b>{TR_AVAILABLE_UPDATES}</b></td>
-                        <!-- BDP: update_infos -->
-                    </tr>
-                        <tr>                           
-                            <td>{TR_UPDATE}</td>
-                            <td>{UPDATE}</td>
-                        </tr>
-                        <tr>                            
-                            <td>{TR_INFOS}</td>
-                            <td>{INFOS}</td>
-                        </tr>
-                        <!-- EDP: update_infos -->
-                </table>
-                <br />
-                <!-- EDP: props_list -->
-            </td>
-            </div>
+
+            <h2 class="update"><span>{TR_UPDATES_TITLE}</span></h2>
+            <!-- BDP: props_list -->
+            <table class="description">
+                <tr>
+                    <th>{TR_UPDATE}</th>
+                    <td>{UPDATE}</td>
+                </tr>
+                <!-- BDP: update_infos -->
+                <tr>
+                    <th>{TR_INFOS}</th>
+                    <td>{INFOS}</td>
+                </tr>
+                <!-- EDP: update_infos -->
+            </table>
+            <!-- EDP: props_list -->
+        </div>
 
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}

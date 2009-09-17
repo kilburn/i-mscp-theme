@@ -29,13 +29,14 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="system_info.php">{TR_MENU_SYSTEM_TOOLS}</h1>
+                <h1 class="webtools">{TR_MENU_SYSTEM_TOOLS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+                <li><a href="system_info.php">{TR_MENU_SYSTEM_TOOLS}</a></li>
                 <li><a href="settings_maintenance_mode.php">{TR_MAINTENANCEMODE}</a></li>
             </ul>
         </div>
@@ -50,36 +51,29 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="general"><span>{TR_MAINTENANCEMODE}</span></h2>
+            <h2 class="maintenancemode"><span>{TR_MAINTENANCEMODE}</span></h2>
             <form action="settings_maintenance_mode.php" method="post" name="maintenancemode_frm" id="maintenancemode_frm">
                 <table>
                     <tr>
-                        <td>
-                            <td<strong>{TR_MESSAGE_TEMPLATE_INFO}</strong></td>
-                        </td>
+                        <td><label for="maintenancemode_message">{TR_MESSAGE}</label></td>
+                        <td><textarea name="maintenancemode_message" id="maintenancemode_message" cols="80" rows="30">{MESSAGE_VALUE}</textarea></td>
                     </tr>
                     <tr>
-                        <td>&nbsp;</td>
-                        <td width="200"><label for="maintenancemode_message">{TR_MESSAGE}</label></td>
-                        <td><textarea name="maintenancemode_message" id="maintenancemode_message" style="width:80%" class="textinput2" cols="80" rows="30">{MESSAGE_VALUE}</textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
                         <td><label for="maintenancemode">{TR_MAINTENANCEMODE}</label></td>
                         <td><select name="maintenancemode" id="maintenancemode">
                                 <option value="0" {SELECTED_OFF}>{TR_DISABLED}</option>
                                 <option value="1" {SELECTED_ON}>{TR_ENABLED}</option>
-                            </select></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td colspan="2"><input type="hidden" name="uaction" value="apply" />
-                            <input name="Submit" type="submit" class="button" value="{TR_APPLY_CHANGES}" /></td>
+                        </select></td>
                     </tr>
                 </table>
+                <div class="buttons">
+                    <input name="Submit" type="submit" value="{TR_APPLY_CHANGES}" />
+                    <input type="hidden" name="uaction" value="apply" />
+                </div>
             </form>
-             </div>
+            <div class="info">{TR_MESSAGE_TEMPLATE_INFO}</div>
+        </div>
+
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>

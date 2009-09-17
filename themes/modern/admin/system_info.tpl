@@ -29,14 +29,14 @@
 
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="system_info.php">{TR_MENU_SYSTEM_TOOLS}</h1>
+                <h1 class="webtools">{TR_MENU_SYSTEM_TOOLS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-
+                <li><a href="system_info.php">{TR_MENU_SYSTEM_TOOLS}</a></li>
             </ul>
         </div>
 
@@ -45,55 +45,55 @@
         </div>
 
         <div class="body">
-            <h2 class="general"><span>{TR_SYSTEM_INFO}</span></h2>
-            <td><!-- BDP: props_list -->
-                <td><table>
-                    <tr>                        
-                        <td width="200"><b>{TR_KERNEL}</b></td>
-                        <td>{KERNEL}</td>
-                    </tr>
-                    <tr>                        
-                        <td width="200"><b>{TR_UPTIME}</b></td>
-                        <td>{UPTIME}</td>
-                    </tr>
-                    <tr>                        
-                        <td width="200"><b>{TR_LOAD}</b></td>
-                        <td>{LOAD}</td>
-                    </tr>
-                </table></td>
-            </td>
-            <!-- EDP: props_list -->
-            <h2 class="general"><span>{TR_CPU_SYSTEM_INFO}</span></h2>
-            <table width="100%" cellpadding="5" cellspacing="5">
+            <h2 class="tools"><span>{TR_SYSTEM_INFO}</span></h2>
+            <!-- BDP: props_list -->
+            <table class="description">
                 <tr>
-                    <td width="200"><b>{TR_CPU_MODEL}</b></td>
+                    <th>{TR_KERNEL}</th>
+                    <td>{KERNEL}</td>
+                </tr>
+                <tr>
+                    <th>{TR_UPTIME}</th>
+                    <td>{UPTIME}</td>
+                </tr>
+                <tr>
+                    <th>{TR_LOAD}</th>
+                    <td>{LOAD}</td>
+                </tr>
+            </table>
+
+            <!-- EDP: props_list -->
+            <h2 class="tools"><span>{TR_CPU_SYSTEM_INFO}</span></h2>
+            <table class="description">
+                <tr>
+                    <th>{TR_CPU_MODEL}</th>
                     <td>{CPU_MODEL}</td>
                 </tr>
                 <tr>
-                    <td width="200"><b>{TR_CPU_COUNT}</b></td>
+                    <th>{TR_CPU_COUNT}</th>
                     <td>{CPU_COUNT}</td>
                 </tr>
                 <tr>
-                    <td width="200"><b>{TR_CPU_MHZ}</b></td>
+                    <th>{TR_CPU_MHZ}</th>
                     <td>{CPU_MHZ}</td>
                 </tr>
                 <tr>
-
-                    <td width="200"><b>{TR_CPU_CACHE}</b></td>
+                    <th>{TR_CPU_CACHE}</th>
                     <td>{CPU_CACHE}</td>
                 </tr>
-                <tr>                    
-                    <td width="200"><b>{TR_CPU_BOGOMIPS}</b></td>
+                <tr>
+                    <th>{TR_CPU_BOGOMIPS}</th>
                     <td>{CPU_BOGOMIPS}</td>
                 </tr>
             </table>
-            <h2 class="general"><span>{TR_MEMRY_SYSTEM_INFO}</span></h2>
-            <td><table>
-                <tr>                    
-                    <td><b>{TR_RAM}</b></td>
-                    <td><b>{TR_TOTAL}</b></td>
-                    <td><b>{TR_USED}</b></td>
-                    <td><b>{TR_FREE}</b></td>
+
+            <h2 class="tools"><span>{TR_MEMRY_SYSTEM_INFO}</span></h2>
+            <table>
+                <tr>
+                    <th>{TR_RAM}</th>
+                    <th>{TR_TOTAL}</th>
+                    <th>{TR_USED}</th>
+                    <th>{TR_FREE}</th>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -102,10 +102,10 @@
                     <td>{RAM_FREE}</td>
                 </tr>
                 <tr>
-                    <td><b>{TR_SWAP}</b></td>
-                    <td><b>{TR_TOTAL}</b></td>
-                    <td><b>{TR_USED}</b></td>
-                    <td><b>{TR_FREE}</b></td>
+                    <th>{TR_SWAP}</th>
+                    <th>{TR_TOTAL}</th>
+                    <th>{TR_USED}</th>
+                    <th>{TR_FREE}</th>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -113,33 +113,34 @@
                     <td>{SWAP_USED}</td>
                     <td>{SWAP_FREE}</td>
                 </tr>
-            </table></td>
-           <h2 class="general"><span>{TR_FILE_SYSTEM_INFO}</span></h2>
-                    <td><table>
-                            <!-- BDP: disk_list -->
-                            <tr>                                
-                                <td><b>{TR_MOUNT}</b></td>
-                                <td><b>{TR_TYPE}</b></td>
-                                <td><b>{TR_PARTITION}</b></td>
-                                <td><b>{TR_PERCENT}</b></td>
-                                <td><b>{TR_FREE}</b></td>
-                                <td><b>{TR_USED}</b></td>
-                                <td><b>{TR_SIZE}</b></td>
-                            </tr>
-                            <!-- BDP: disk_list_item -->
-                            <tr>                               
-                                <td>{MOUNT}</td>
-                                <td>{TYPE}</td>
-                                <td>{PARTITION}</td>
-                                <td>{PERCENT} %</td>
-                                <td>{FREE}</td>
-                                <td>{USED}</td>
-                                <td>{SIZE}</td>
-                            </tr>
-                            <!-- EDP: disk_list_item -->
-                            <!-- EDP: disk_list -->
-                        </table></td>
-   </div>
+            </table>
+
+            <h2 class="tools"><span>{TR_FILE_SYSTEM_INFO}</span></h2>
+            <!-- BDP: disk_list -->
+            <table>
+                <tr>
+                    <th>{TR_MOUNT}</th>
+                    <th>{TR_TYPE}</th>
+                    <th>{TR_PARTITION}</th>
+                    <th>{TR_PERCENT}</th>
+                    <th>{TR_FREE}</th>
+                    <th>{TR_USED}</th>
+                    <th>{TR_SIZE}</th>
+                </tr>
+                <!-- BDP: disk_list_item -->
+                <tr>
+                    <td>{MOUNT}</td>
+                    <td>{TYPE}</td>
+                    <td>{PARTITION}</td>
+                    <td>{PERCENT} %</td>
+                    <td>{FREE}</td>
+                    <td>{USED}</td>
+                    <td>{SIZE}</td>
+                </tr>
+                <!-- EDP: disk_list_item -->
+            </table>
+            <!-- EDP: disk_list -->
+        </div>
 
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}

@@ -51,7 +51,7 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="general"><span>{TR_ADD_ADMIN}</span></h2>
+            <h2 class="user"><span>{TR_ADD_ADMIN}</span></h2>
             <form name="admin_add_user" method="post" action="admin_add.php">
                 <!-- BDP: props_list -->
                 <fieldset>

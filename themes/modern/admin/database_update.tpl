@@ -25,56 +25,55 @@
         </div>
         <div class="location">
             <div class="location-area icons-left">
-                <h1 class="database_update.php">{TR_MENU_SYSTEM_TOOLS}</h1>
+                <h1 class="webtools">{TR_MENU_SYSTEM_TOOLS}</h1>
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
-            <ul class="path">                                
+            <ul class="path">
+                <li><a href="system_info.php">{TR_MENU_SYSTEM_TOOLS}</a></li>
+                <li><a href="database_update.php">{TR_UPDATES_TITLE}</a></li>
             </ul>
         </div>
         <div class="left_menu">
             {MENU}
         </div>
+
         <div class="body">
             <!-- BDP: page_message -->
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="general"><span>{TR_AVAILABLE_UPDATES}</span></h2>
+            <!-- BDP: database_update_message -->
+            <div class="warning">{TR_UPDATE_MESSAGE}</div>
+            <!-- EDP: database_update_message -->
+
+            <h2 class="update"><span>{TR_UPDATES_TITLE}</span></h2>
             <!-- BDP: props_list -->
-            <table>
-                <tr>
-                    <td><b>{TR_AVAILABLE_UPDATES}</b></td>
-                </tr>
-                <!-- BDP: database_update_message -->                
-                <div class="warning">{TR_UPDATE_MESSAGE}</div>               
-                <!-- EDP: database_update_message -->
+            <form name='database_update' action='database_update.php' method='POST' enctype='application/x-www-form-urlencoded'>
                 <!-- BDP: database_update_infos -->
-                <tr>
-                    <td width="25">&nbsp;</td>
-                    <td width="200" class="content2">{TR_UPDATE}</td>
-                    <td class="content">{UPDATE}</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td class="content2">{TR_INFOS}</td>
-                    <td class="content">{INFOS}</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <form name='database_update' action='database_update.php' method='POST' enctype='application/x-www-form-urlencoded'>
-                        <input type='hidden' name='execute' id='execute' value='true' />
-                        <td>&nbsp;</td>
-                        <td align='left'><input type='submit' name='submit' value='{TR_EXECUTE_UPDATE}' /></td>
-                    </form>
-                </tr>
+                <table class="description">
+                    <tr>
+                        <th>{TR_UPDATE}</th>
+                        <td>{UPDATE}</td>
+                    </tr>
+                    <tr>
+                        <th>{TR_INFOS}</th>
+                        <td>{INFOS}</td>
+                    </tr>
+                    
+                </table>
+
+                <div class="buttons">
+                    <input type="hidden" name="execute" id='execute' value="true" />
+                    <input type="submit" name="submit" value="{TR_EXECUTE_UPDATE}" />
+                </div>
                 <!-- EDP: database_update_infos -->
-            </table>
-            <br />
+            </form>
             <!-- EDP: props_list -->
-            </div>
+        </div>
+        
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>
