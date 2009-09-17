@@ -5,7 +5,7 @@
         <!-- BDP: hosting_plans -->
         <li><a class="hosting_plans" href="hosting_plan.php">{TR_MENU_HOSTING_PLANS}</a></li>
         <!-- EDP: hosting_plans -->
-        <li><a class="orders" href="orders.php">{TR_MENU_ORDERS}</a></li>
+        <li><a class="purchasing" href="orders.php">{TR_MENU_ORDERS}</a></li>
         <li><a class="statistics" href="user_statistics.php">{TR_MENU_DOMAIN_STATISTICS}</a></li>
         <!-- BDP: isactive_support -->
         <li><a class="settings" href="ticket_system.php">{TR_MENU_QUESTIONS_AND_COMMENTS}</a></li>

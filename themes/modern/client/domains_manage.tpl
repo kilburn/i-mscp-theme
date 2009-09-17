@@ -87,7 +87,7 @@
 	            					<a href="{ALS_EDIT_LINK}" class="icon i_edit" title="{ALS_EDIT}">{ALS_EDIT}</a>
 	            				</td>
 	            			</tr>
-	            		<!-- BDP: als_item -->
+	            		<!-- EDP: als_item -->
 	            	</tbody>
 	            </table>
             <!-- EDP: als_list -->

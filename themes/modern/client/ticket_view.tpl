@@ -40,6 +40,7 @@
             </ul>
             <ul class="path">
                 <li><a href="{SUPPORT_SYSTEM_PATH}">{TR_OPEN_TICKETS}</a></li>
+                <li>{TR_VIEW_SUPPORT_TICKET}</li>
             </ul>
         </div>
 

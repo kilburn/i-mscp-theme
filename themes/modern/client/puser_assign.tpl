@@ -40,6 +40,7 @@
             </ul>
             <ul class="path">
                 <li><a href="protected_user_manage.php">{TR_HTACCESS_USER}</a></li>
+                <li>{TR_USER_ASSIGN}</li>
             </ul>
         </div>
 

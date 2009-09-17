@@ -72,7 +72,7 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <form action="manage_users.php" method="post" name="search_user" id="search_user">
+            <form action="users.php" method="post" name="search_user" id="search_user">
                 <a class="icon i_show_alias" href="#" onclick="return sbmt(document.forms[0],'{SHOW_DETAILS}');">{TR_VIEW_DETAILS}</a>
                 <input name="search_for" type="text" value="{SEARCH_FOR}" />
                 <select name="search_common">
@@ -91,8 +91,9 @@
                 <input name="Submit" type="submit" value="{TR_SEARCH}" />
                 <input type="hidden" name="uaction" value="go_search" />
             </form>
-            <!-- BDP: usr_list -->
+            <!-- BDP: users_list -->
             <table>
+                <thead>
                 <tr>
                     <th>{TR_USER_STATUS}</th>
                     <th>{TR_USERNAME}</th>
@@ -100,7 +101,9 @@
                     <th>{TR_DISK_USAGE}</th>
                     <th>{TR_ACTION}</th>
                 </tr>
-                <!-- BDP: usr_item -->
+                </thead>
+                <tbody>
+                <!-- BDP: user_entry -->
                 <tr>
                     <td><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="icon i_{STATUS_ICON}">{STATUS_ICON}</a></td>
                     <td><a href="http://www.{USR_USERNAME}/" target="_blank" class="icon i_goto">{NAME}</a></td>
@@ -127,9 +130,10 @@
                     <td colspan="5"><a href="http://www.{ALIAS_DOMAIN}/" target="_blank" class="icon i_goto">{ALIAS_DOMAIN}</a></td>
                 </tr>
                 <!-- EDP: user_details -->
-                <!-- EDP: usr_item -->
-                <!-- EDP: usr_list -->
+                <!-- EDP: user_entry -->
+                </tbody>
             </table>
+            <!-- EDP: users_list -->
 
             <div class="paginator">
                 <!-- BDP: scroll_next_gray -->

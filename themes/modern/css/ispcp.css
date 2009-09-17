@@ -210,11 +210,21 @@ table .icon {
     border: 1px solid rgb(223,223,223);
 	height : 1em;
 	width : 100%;
+	position : relative;
 }
 .graph span{
 	display : block;
 	background-color : #006;
 	width : 0;
+}
+.graph strong{
+	display : block;
+	position : absolute;
+	left: 0;
+	top: 0;
+	color : #999;
+	width : 100%;
+	text-align : center;
 }
 
 form table tbody td input[type="text"],
@@ -593,4 +603,8 @@ div.tooltip{
 	width:200px;
 	position:absolute;
 	z-index : 100;
+}
+.icon.i_help{
+	width : 0;
+	overflow : hidden;
 }

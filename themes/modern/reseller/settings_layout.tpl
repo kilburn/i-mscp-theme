@@ -51,31 +51,26 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
             <h2 class="multilanguage"><span>{TR_LAYOUT_SETTINGS}</span></h2>
+            
             <form enctype="multipart/form-data" name="set_layout" method="post" action="settings_layout.php">
+            	<fieldset>
+            		<legend>{TR_UPLOAD_LOGO}</legend>
+            	</fieldset>
                 <table>
-                    <tr>
-                       
-                        <td colspan="2" class="content3"><strong>{TR_UPLOAD_LOGO}</strong></td>
+                	<tr>
+                		<td></td>
+                		<td><img src="{OWN_LOGO}" alt="reseller logo" /></td>
+                	</tr>
+                	<tr>
+                        <td ><label for="logo_file">{TR_LOGO_FILE}</label></td>
+                        <td><input type="file" name="logo_file" /></td>
                     </tr>
-                    <tr>
-                        <td width="40" nowrap="nowrap">&nbsp;</td>
-                        <td width="200" class="content2" nowrap="nowrap">{TR_LOGO_FILE}</td>
-                        <td><input type="file" name="logo_file" size="40" /></td>
-                    </tr>
-                    <tr>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>                     
-                        <td nowrap="nowrap">
-                            <input name="upload_logo" type="submit" class="button" value=" {TR_UPLOAD} " />
-                            <input name="delete_logo" type="submit" class="button" value=" {TR_REMOVE} " />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" nowrap="nowrap"><img src="{OWN_LOGO}" alt="reseller logo" /></td>
-                    </tr>
-                </table>
+				</table>
+				<div class="buttons">
+					<input name="upload_logo" type="submit" value="{TR_UPLOAD}" />
+					<input name="delete_logo" type="submit"  value="{TR_REMOVE}" />
+				</div>
             </form>
-                <!-- end of content -->
         </div>
     </body>
 </html>

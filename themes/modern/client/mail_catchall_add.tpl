@@ -52,6 +52,7 @@
             </ul>
             <ul class="path">
                 <li><a href="mail_catchall.php">{TR_MENU_CATCH_ALL_MAIL}</a></li>
+                <li>{TR_CREATE_CATCHALL_MAIL_ACCOUNT}</li>
             </ul>
         </div>
 

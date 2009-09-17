@@ -57,6 +57,7 @@
             </ul>
             <ul class="path">
                 <li><a href="protected_areas.php">{TR_HTACCESS}</a></li>
+                <li>{TR_PROTECT_DIR}</li>
             </ul>
         </div>
 
