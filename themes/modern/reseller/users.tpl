@@ -1,5 +1,3 @@
-<!-- kilburn sale bien pero no se pasa no lista las filas de dominios tengo 8 y solo sale 1 -->
-
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -57,7 +55,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="manage_users.php">{TR_MANAGE_USERS}</a></li>
+                <li><a href="users.php">{TR_MANAGE_USERS}</a></li>
             </ul>
         </div>
 
@@ -94,42 +92,44 @@
             <!-- BDP: users_list -->
             <table>
                 <thead>
-                <tr>
-                    <th>{TR_USER_STATUS}</th>
-                    <th>{TR_USERNAME}</th>
-                    <th>{TR_CREATION_DATE}</th>
-                    <th>{TR_DISK_USAGE}</th>
-                    <th>{TR_ACTION}</th>
-                </tr>
+                    <tr>
+                        <th>{TR_USER_STATUS}</th>
+                        <th>{TR_USERNAME}</th>
+                        <th>{TR_CREATION_DATE}</th>
+                        <th>{TR_DISK_USAGE}</th>
+                        <th>{TR_ACTION}</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <!-- BDP: user_entry -->
-                <tr>
-                    <td><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="icon i_{STATUS_ICON}">{STATUS_ICON}</a></td>
-                    <td><a href="http://www.{USR_USERNAME}/" target="_blank" class="icon i_goto">{NAME}</a></td>
-                    <td>{CREATION_DATE}</td>
-                    <td>{DISK_USAGE} of {DISK_LIMIT} MB</td>
+                    <!-- BDP: user_entry -->
+                    <tr>
+                        <td><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="icon i_{STATUS_ICON}">{STATUS_ICON}</a></td>
+                        <td><a href="http://www.{USR_USERNAME}/" target="_blank" class="icon i_goto">{NAME}</a></td>
+                        <td>{CREATION_DATE}</td>
+                        <td>{DISK_USAGE} of {DISK_LIMIT} MB</td>
 
-                    <td>
-                        <a class="icon i_identity" href="domain_details.php?domain_id={DOMAIN_ID}">{TR_DETAILS}</a>
-                        <a class="icon i_details" href="change_user_interface.php?to_id={USER_ID}">{CHANGE_INTERFACE}</a>
-                        <!-- BDP: edit_option -->
-                        <a class="icon i_edit" href="user_edit.php?edit_id={USER_ID}">{TR_EDIT_USER}</a>
-                        <a class="icon i_user" href="domain_edit.php?edit_id={DOMAIN_ID}">{TR_EDIT_DOMAIN}</a>
-                        <a class="icon i_stats" href="domain_statistics.php?month={VL_MONTH}&year={VL_YEAR}&domain_id={DOMAIN_ID}">{TR_STAT}</a>
-                        <!-- EDP: edit_option -->
-                        <!-- BDP: usr_delete_show -->
-                        <!-- EDP: usr_delete_show -->
-                        <!-- BDP: usr_delete_link -->
-                        <a class="icon i_delete" href="#" onclick="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')">{ACTION}</a>
-                        <!-- EDP: usr_delete_link -->
-                    </td>
-                </tr>
-                <!-- BDP: user_details -->
-                <tr>
-                    <td colspan="5"><a href="http://www.{ALIAS_DOMAIN}/" target="_blank" class="icon i_goto">{ALIAS_DOMAIN}</a></td>
-                </tr>
-                <!-- EDP: user_details -->
+                        <td>
+                            <a class="icon i_identity" href="domain_details.php?domain_id={DOMAIN_ID}">{TR_DETAILS}</a>
+                            <a class="icon i_details" href="change_user_interface.php?to_id={USER_ID}">{CHANGE_INTERFACE}</a>
+                            <!-- BDP: edit_option -->
+                                <a class="icon i_edit" href="user_edit.php?edit_id={USER_ID}">{TR_EDIT_USER}</a>
+                                <a class="icon i_user" href="domain_edit.php?edit_id={DOMAIN_ID}">{TR_EDIT_DOMAIN}</a>
+                                <a class="icon i_stats" href="domain_statistics.php?month={VL_MONTH}&year={VL_YEAR}&domain_id={DOMAIN_ID}">{TR_STAT}</a>
+                            <!-- EDP: edit_option -->
+
+                            <!-- BDP: usr_delete_show -->
+                            <!-- EDP: usr_delete_show -->
+
+                            <!-- BDP: usr_delete_link -->
+                                <a class="icon i_delete" href="#" onclick="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')">{ACTION}</a>
+                            <!-- EDP: usr_delete_link -->
+                        </td>
+                    </tr>
+                    <!-- BDP: user_details -->
+                    <tr>
+                        <td colspan="5"><a href="http://www.{ALIAS_DOMAIN}/" target="_blank" class="icon i_goto">{ALIAS_DOMAIN}</a></td>
+                    </tr>
+                    <!-- EDP: user_details -->
                 <!-- EDP: user_entry -->
                 </tbody>
             </table>

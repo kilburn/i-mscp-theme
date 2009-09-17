@@ -1,4 +1,3 @@
-<!-- kilburn el boton de editar no responde al domain_id -->
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -9,6 +8,7 @@
         <title>{TR_DETAILS_DOMAIN_PAGE_TITLE}</title>
         <meta name="robots" content="nofollow, noindex" />
         <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/ispcp.js"></script>
         <!--[if IE 6]>
         <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
         <script type="text/javascript">
@@ -33,7 +33,9 @@
             </div>
             <ul class="location-menu">
                 <!-- <li><a class="help" href="#">Help</a></li> -->
+                <!-- BDP: logged_from -->
                 <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+                <!-- EDP: logged_from -->
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
@@ -133,16 +135,17 @@
                     <td>{VL_DOMALIAS_ACCOUNTS_LIIT}</td>
                 </tr>
             </table>
-            <table>
-                <td><form name="buttons" method="post" action="?">
-                        <input name="Submit" type="submit" class="button" onclick="MM_goToURL('parent','users.php');return document.MM_returnValue" value="  {TR_BACK}  " />
-                        &nbsp;&nbsp;&nbsp;
-                        <!-- BDP: edit_option -->
-                        <input name="Submit2" type="submit" class="button" onclick="MM_goToURL('parent','domain_edit.php?edit_id={DOMAIN_ID}');return document.MM_returnValue" value="   {TR_EDIT}   " />
-                        <!-- EDP: edit_option -->
-                    </form></td>
-            </table>
+            
+            <form name="buttons" method="post" action="?">
+                <div class="buttons">
+                    <input name="Submit" type="submit" onclick="MM_goToURL('parent','users.php');return document.MM_returnValue" value="{TR_BACK}" />
+                    <!-- BDP: edit_option -->
+                    <input name="Submit2" type="submit" onclick="MM_goToURL('parent','domain_edit.php?edit_id={DOMAIN_ID}');return document.MM_returnValue" value="{TR_EDIT}" />
+                    <!-- EDP: edit_option -->
+                </div>
+            </form>
         </div>
+        
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>

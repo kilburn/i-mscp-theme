@@ -1,4 +1,3 @@
-<!-- kilburn no responde VL_MAIL en el formulario y no atino con el campop de generar la contraseña automatica y es estado -->
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -38,7 +37,8 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="manage_users.php">{TR_ADD_USER}</a></li>
+                <li><a href="users.php">{TR_MENU_MANAGE_USERS}</a></li>
+                <li><a href="user_add1.php">{TR_ADD_USER}</a></li>
             </ul>
         </div>
 
@@ -51,26 +51,23 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-            <h2 class="general"><span>{TR_ADD_USER}</span></h2>
+            <h2 class="user"><span>{TR_ADD_USER}</span></h2>
             <!-- BDP: add_user -->
             <form name="reseller_add_users_first_frm" method="post" action="user_add3.php">
-                <input type="hidden" name="uaction" value="user_add3_nxt" /></td>
                 <fieldset>
                     <legend>{TR_CORE_DATA}</legend>
-
                     <table>
                         <td><label for="username">{TR_USERNAME}</label></td>
                         <td>{VL_USERNAME}</td>
                         <tr>
                             <td><label for="password">{TR_PASSWORD}</label></td>
                             <td>
-                                <input type="password" name="pass" id="password" value="{VL_USR_PASS}"/>
-                                <input name="genpass" type="submit" class="button" value=" {VL_PASSWORD_GENERATE} " />
+                                <input type="password" name="userpassword" id="password" value="{VL_USR_PASS}"/>
                             </td>
                         </tr>
                         <tr>
                             <td><label for="pass_rep">{TR_REP_PASSWORD}</label></td>
-                            <td><input type="password" name="pass" id="pass_rep" value="{VL_USR_PASS}"/></td>
+                            <td><input type="password" name="userpassword_repeat" id="pass_rep" value="{VL_USR_PASS}"/></td>
                         </tr>
                         <tr>
                             <td>
@@ -93,7 +90,12 @@
                             </td>
                             <td><input name="add_alias" type="checkbox" id="add_alias" value="on" /></td>
                         </tr>
-                        <td><strong>{TR_ADDITIONAL_DATA}</strong></td>
+                    </table>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>{TR_ADDITIONAL_DATA}</legend>
+                    <table>
                         <tr>
                             <td><label for="useruid">{TR_CUSTOMER_ID}</label></td>
                             <td><input type="text" name="useruid" id="useruid" value="{VL_USR_ID}"/></td>
@@ -132,7 +134,7 @@
                             <td><input type="text" name="usercity" id="usercity" value="{VL_USRCITY}" /></td>
                         </tr>
                         <tr>
-                            <td><label for="useratate">{TR_STATE}</label></td>
+                            <td><label for="useratate">{TR_STATE_PROVINCE}</label></td>
                             <td><input type="text" name="userstate" id="userstate" value="{VL_USRSTATE}" /></td>
                         </tr>
                         <tr>
@@ -147,8 +149,13 @@
                             <td><label for="userphone">{TR_PHONE}</label></td>
                             <td><input type="text" name="userphone" id="userphone" value="{VL_PHONE}" /></td>
                         </tr>
-                        <td><input name="Submit" type="submit" class="button" value="  {TR_BTN_ADD_USER}  " /></td>
                     </table>
+                </fieldset>
+                <div class="buttons">
+                    <input name="Submit" type="submit" value="{TR_BTN_ADD_USER}" />
+                    <input type="hidden" name="uaction" value="user_add3_nxt" />
+                </div>
+
             </form>
             <!-- EDP: add_user -->
         </div>

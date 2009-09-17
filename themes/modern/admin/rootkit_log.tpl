@@ -1,5 +1,3 @@
-<-- Kilburn echale un ojo macho el mas sencillo de todos y no sale bien, me sale el mensaje en rojo de cuando no esta creado el log aun -->
-
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -39,20 +37,23 @@
         <div class="left_menu">
             {MENU}
         </div>
-        <div class="body">            
+
+        <div class="body">
+
             <h2 class="general"><span>{TR_ROOTKIT_LOG}</span></h2>
-            <td><!-- BDP: props_list -->
-                <table>
-                    <tr>
-                        <td><strong>{FILENAME}:</strong></td>
-                    </tr>
-                    <tr>                        
-                        <td style="white-space:normal;">{LOG}</td>
-                    </tr>
-                </table>
-                <!-- EDP: props_list -->
-            </td>
-             </div>
+            <!-- BDP: props_list -->
+            <table>
+                <tr>
+                    <th>{FILENAME}:</th>
+                </tr>
+                <tr>
+                    <td>{LOG}</td>
+                </tr>
+            </table>
+            <!-- EDP: props_list -->
+            
+        </div>
+
         <div class="footer">
             ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
         </div>
