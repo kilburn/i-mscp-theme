@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+@IMPORT url("simple-ispcp.css");
+
+body{
+		text-align : center;
+}
+form{
+	text-align : left;
+	width : 296px;
+	height : 339px;
+	margin: 0 auto;
+	background-image : url('../images/login/logon_black.jpg');
+	background-repeat : no-repeat;
+	background-position: center top;
+	padding-top : 180px;
+	padding-left : 10px;
+	padding-right: 10px;
+}
+
+form fieldset legend{
+	color : #fff;
+}
+
+form table{
+}
+
+form div.buttons input{
+		background-image : url('../images/login/logon_button.png');
+		width : 110px;
+		height : 25px;
+		border : none;
+		line-height : 25px;
+}
+
+.body tr:nth-child(odd),
+.body td,
+.body tr{
+		background : transparent;
+		border : none;
+		color : #eee; 
+}
+
+a{
+	color : #eee;
+}
+
+.i_lock{
+	background-image : url('../images/login/i_lock.png'); 
+}
