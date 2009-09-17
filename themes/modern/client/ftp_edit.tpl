@@ -40,6 +40,7 @@
             </ul>
             <ul class="path">
                 <li><a href="ftp_accounts.php">{TR_MENU_OVERVIEW}</a></li>
+                <li>{TR_EDIT_FTP_USER}</li>
             </ul>
         </div>
 

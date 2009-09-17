@@ -61,6 +61,7 @@
             </ul>
             <ul class="path">
                 <li><a href="mail_accounts.php">{TR_MENU_OVERVIEW}</a></li>
+                <li>{TR_EDIT_EMAIL_ACCOUNT}</li>
             </ul>
         </div>
 

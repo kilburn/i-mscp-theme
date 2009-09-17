@@ -39,6 +39,7 @@
             </ul>
             <ul class="path">
                 <li><a href="mail_accounts.php">{TR_MENU_OVERVIEW}</a></li>
+                <li>{TR_EDIT_MAIL_AUTORESPONDER}</li>
             </ul>
         </div>
 

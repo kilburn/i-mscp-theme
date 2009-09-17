@@ -39,6 +39,7 @@
             </ul>
             <ul class="path">
                 <li><a href="domains_manage.php">{TR_MENU_OVERVIEW}</a></li>
+                <li>{TR_EDIT_ALIAS}</li>
             </ul>
         </div>
 

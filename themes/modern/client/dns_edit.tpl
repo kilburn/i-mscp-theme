@@ -123,7 +123,8 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="dns_add.php">{TR_MENU_ADD_DNS}</a></li>
+                <li><a href="domains_manage.php">{TR_MENU_OVERVIEW}</a></li>
+                <li>{TR_EDIT_DNS}</li>
             </ul>
         </div>
 

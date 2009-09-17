@@ -39,6 +39,7 @@
             </ul>
             <ul class="path">
                 <li><a href="mail_accounts.php">{TR_MENU_OVERVIEW}</a></li>
+                <li>{TR_ENABLE_MAIL_AUTORESPONDER}</li>
             </ul>
         </div>
 
@@ -55,7 +56,7 @@
             <form name="manage_users_common_frm" method="post" action="">
             	<fieldset>
             		<legend>{TR_ARSP_MESSAGE}</legend>
-            		<textarea name="arsp_message" cols="50" rows="15">{ARSP_MESSAGE}</textarea>
+            		<textarea name="arsp_message" cols="50" rows="15"></textarea>
             	</fieldset>
             	
             	<div class="buttons">
