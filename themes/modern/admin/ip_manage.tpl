@@ -100,11 +100,11 @@
                             <input name="ip_number_2" type="text" class="textinput" style="width:31px" value="{VALUE_IP2}" maxlength="3" />													.
                             <input name="ip_number_3" type="text" class="textinput" style="width:31px" value="{VALUE_IP3}" maxlength="3" />													.
                             <input name="ip_number_4" type="text" class="textinput" style="width:31px" value="{VALUE_IP4}" maxlength="3" />
+                        </td>
                     </tr>
                     <td>{TR_DOMAIN}</td>
                     <td><input type="text" name="domain" id="domain" value="{VALUE_DOMAIN}" />
-                    </td>
-                    </tr>
+                    </td>                    
                     <tr>
                         <td>{TR_ALIAS}</td>                        
                         <td><input type="text" name="alias" value="{VALUE_ALIAS}" />
