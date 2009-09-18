@@ -52,6 +52,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+            	<li><a href="mail_accounts.php">{TR_MENU_EMAIL_ACCOUNTS}</a></li>
                 <li><a href="mail_catchall.php">{TR_MENU_CATCH_ALL_MAIL}</a></li>
             </ul>
         </div>

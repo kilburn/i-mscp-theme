@@ -38,6 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+            	<li><a href="webtools.php">{TR_MENU_WEBTOOLS}</a></li>
                 <li><a href="error_pages.php">{TR_MENU_ERROR_PAGES}</a></li>
                 <li>{TR_ERROR_EDIT_PAGE} {EID}</li>
             </ul>

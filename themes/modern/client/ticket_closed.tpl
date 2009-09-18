@@ -46,6 +46,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+               	<li><a href="{SUPPORT_SYSTEM_PATH}">{TR_MENU_QUESTIONS_AND_COMMENTS}</a></li>
                 <li><a href="ticket_closed.php">{TR_CLOSED_TICKETS}</a></li>
             </ul>
         </div>

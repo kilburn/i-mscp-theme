@@ -47,6 +47,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+            	<li><a href="domains_manage.php">{TR_MENU_MANAGE_DOMAINS}</a></li>
                 <li><a href="subdomain_add.php">{TR_MENU_ADD_SUBDOMAIN}</a></li>
             </ul>
         </div>
