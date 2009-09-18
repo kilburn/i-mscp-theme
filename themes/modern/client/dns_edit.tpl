@@ -2,19 +2,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
-        <meta http-equiv="X-UA-Compatible" content="IE=8" />
-        <title>{TR_EDIT_DNS_PAGE_TITLE}</title>
-        <meta name="robots" content="nofollow, noindex" />
-        <link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/ispcp.js"></script>
-        <!--[if IE 6]>
-        <script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
-        <script type="text/javascript">
-            DD_belatedPNG.fix('*');
-        </script>
-        <![endif]-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<title>{TR_EDIT_DNS_PAGE_TITLE}</title>
+		<meta name="robots" content="nofollow, noindex" />
+		<link href="{THEME_COLOR_PATH}/css/ispcp.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="{THEME_COLOR_PATH}/js/ispcp.js"></script>
+		<!--[if IE 6]>
+		<script type="text/javascript" src="{THEME_COLOR_PATH}/js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<script type="text/javascript">
+			DD_belatedPNG.fix('*');
+		</script>
+		<![endif]-->
 		<script type="text/javascript">
 		/* <![CDATA[ */
 		function action_delete(url, subject) {
@@ -26,7 +26,7 @@
 		</script>
 		<script type="text/javascript">
 		/* <![CDATA[ */
-		
+
 			function in_array(needle, haystack) {
 				var n = haystack.length;
 				for (var i = 0; i < n; i++) {
@@ -34,10 +34,10 @@
 				}
 				return false;
 			}
-		
+
 			function dns_show_rows(arr_show) {
-				var arr_possible = new Array('name', 'ip_address', 'ip_address_v6', 
-					'srv_name', 'srv_protocol', 'srv_ttl', 'srv_prio', 
+				var arr_possible = new Array('name', 'ip_address', 'ip_address_v6',
+					'srv_name', 'srv_protocol', 'srv_ttl', 'srv_prio',
 					'srv_weight', 'srv_host', 'srv_port', 'cname');
 				var n = arr_possible.length;
 				var trname;
@@ -55,14 +55,14 @@
 					}
 				}
 			}
-		
+
 			function dns_type_changed(value) {
 				if (value == 'A') {
 					dns_show_rows(new Array('name', 'ip_address'));
 				} else if (value == 'AAAA') {
 					dns_show_rows(new Array('name', 'ip_address_v6'));
 				} else if (value == 'SRV') {
-					dns_show_rows(new Array('srv_name', 'srv_protocol', 'srv_ttl', 
+					dns_show_rows(new Array('srv_name', 'srv_protocol', 'srv_ttl',
 						'srv_prio', 'srv_weight', 'srv_host', 'srv_port'));
 				} else if (value == 'CNAME') {
 					dns_show_rows(new Array('name', 'cname'));
@@ -70,78 +70,78 @@
 					dns_show_rows(new Array('srv_prio', 'srv_host'));
 				}
 			}
-		
+
 			var IPADDRESS = "[0-9\.]";
 			var IPv6ADDRESS = "[0-9a-f:A-F]";
 			var NUMBERS = "[0-9]";
-		
+
 			function filterChars(e, allowed){
 				var keynum;
 				if (window.event){
-		        	keynum = window.event.keyCode;
-		        	e = window.event;
-			    } else if (e) {
+					keynum = window.event.keyCode;
+					e = window.event;
+				} else if (e) {
 					keynum = e.which;
 				} else {
 					return true;
 				}
-		
+
 				if ((keynum == 8) || (keynum == 0)) {
 					return true;
 				}
 				var keychar = String.fromCharCode(keynum);
-		
+
 				if (e.ctrlKey && ((keychar=="C") || (keychar=="c") || (keychar=="V") || (keychar=="v"))) {
 					return true;
 				}
 				var re = new RegExp(allowed);
 				return re.test(keychar);
 			}
-		
+
 		/* ]]> */
 		</script>
-    </head>
-    <body>
-        <div class="header">
-            {MAIN_MENU}
+	</head>
+	<body>
+		<div class="header">
+			{MAIN_MENU}
 
-            <div class="logo">
-                <img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
-                <img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
-            </div>
-        </div>
+			<div class="logo">
+				<img src="{THEME_COLOR_PATH}/images/ispcp_logo.png" alt="IspCP logo" />
+				<img src="{THEME_COLOR_PATH}/images/ispcp_webhosting.png" alt="IspCP omega" />
+			</div>
+		</div>
 
-        <div class="location">
-            <div class="location-area icons-left">
-                <h1 class="domains">{TR_MENU_MANAGE_DOMAINS}</h1>
-            </div>
-            <ul class="location-menu">
-                <!-- <li><a class="help" href="#">Help</a></li> -->
-                <!-- BDP: logged_from -->
-                <li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
-                <!-- EDP: logged_from -->
-                <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
-            </ul>
-            <ul class="path">
-            	<li><a href="domains_manage.php">{TR_MENU_MANAGE_DOMAINS}</a></li>
-                <li>{TR_EDIT_DNS}</li>
-            </ul>
-        </div>
+		<div class="location">
+			<div class="location-area icons-left">
+				<h1 class="domains">{TR_MENU_MANAGE_DOMAINS}</h1>
+			</div>
+			<ul class="location-menu">
+				<!-- <li><a class="help" href="#">Help</a></li> -->
+				<!-- BDP: logged_from -->
+				<li><a class="backadmin" href="change_user_interface.php?action=go_back">{YOU_ARE_LOGGED_AS}</a></li>
+				<!-- EDP: logged_from -->
+				<li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
+			</ul>
+			<ul class="path">
+				<li><a href="domains_manage.php">{TR_MENU_MANAGE_DOMAINS}</a></li>
+				<li>{TR_EDIT_DNS}</li>
+			</ul>
+		</div>
 
-        <div class="left_menu">
-            {MENU}
-        </div>
+		<div class="left_menu">
+			{MENU}
+		</div>
 
-        <div class="body">
-            <!-- BDP: page_message -->
-	            <div class="warning">{MESSAGE}</div>
-            <!-- EDP: page_message -->
+		<div class="body">
+			<!-- BDP: page_message -->
+				<div class="warning">{MESSAGE}</div>
+			<!-- EDP: page_message -->
 
-            <h2 class="domains"><span>{TR_MANAGE_DOMAIN_DNS}</span></h2>
-            <form name="edit_alias_frm" method="post" action="{ACTION_MODE}">
-            	<fieldset>
-            		<legend>{TR_EDIT_DNS}</legend>
-            		<table>
+			<h2 class="domains"><span>{TR_MANAGE_DOMAIN_DNS}</span></h2>
+			<form name="edit_alias_frm" method="post" action="{ACTION_MODE}">
+				<fieldset>
+					<legend>{TR_EDIT_DNS}</legend>
+					<table>
 						<!-- BDP: add_record -->
 							<tr>
 								<td>{TR_DOMAIN}</td>
@@ -201,7 +201,7 @@
 						<td><input type="text" name="dns_cname" value="{DNS_CNAME}" />.</td>
 					</tr>
 				</table>
-				
+
 				<div class="buttons">
 					<!-- BDP: form_edit_mode -->
 						<input name="Submit" type="submit" value="{TR_MODIFY}" />
@@ -213,19 +213,19 @@
 					<!-- EDP: form_add_mode -->
 					<input name="Submit" type="submit" onclick="MM_goToURL('parent','domains_manage.php');return document.MM_returnValue" value="{TR_CANCEL}" />
 				</div>
-            	</fieldset>
-            </form>
-        </div>
+				</fieldset>
+			</form>
+		</div>
 
-        <div class="footer">
-            ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
-        </div>
+		<div class="footer">
+			ispCP {VERSION}<br />build: {BUILDDATE}<br />Codename: {CODENAME}
+		</div>
 		<script type="text/javascript">
 		/* <![CDATA[ */
-		
+
 			dns_type_changed(document.getElementById('dns_type').value);
-		
+
 		/* ]]> */
 		</script>
-    </body>
+	</body>
 </html>
