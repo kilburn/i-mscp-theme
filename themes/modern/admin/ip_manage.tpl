@@ -94,20 +94,19 @@
                 </fieldset>
                 <table>
                     <tr>                        
-                        <td>{TR_IP}</td>
-                        <td>
-                            <input name="ip_number_1" type="text" class="textinput" style="width:31px" value="{VALUE_IP1}" maxlength="3" />	                       											.
-                            <input name="ip_number_2" type="text" class="textinput" style="width:31px" value="{VALUE_IP2}" maxlength="3" />													.
-                            <input name="ip_number_3" type="text" class="textinput" style="width:31px" value="{VALUE_IP3}" maxlength="3" />													.
-                            <input name="ip_number_4" type="text" class="textinput" style="width:31px" value="{VALUE_IP4}" maxlength="3" />
-                        </td>
+                        <td width="25"><label for="ip">{TR_IP}</label></td>
+                        <td><input name="ip_number_1" type="text" class="textinput" style="width:31px" value="{VALUE_IP1}" maxlength="3" />	                       											.</td>
+                        <input name="ip_number_2" type="text" class="textinput" style="width:31px" value="{VALUE_IP2}" maxlength="3" />													.
+                        <td><input name="ip_number_3" type="text" class="textinput" style="width:31px" value="{VALUE_IP3}" maxlength="3" />													.</td>
+                        <td><input name="ip_number_4" type="text" class="textinput" style="width:31px" value="{VALUE_IP4}" maxlength="3" /></td>
                     </tr>
-                    <td>{TR_DOMAIN}</td>
-                    <td><input type="text" name="domain" id="domain" value="{VALUE_DOMAIN}" />
-                    </td>                    
                     <tr>
-                        <td>{TR_ALIAS}</td>                        
-                        <td><input type="text" name="alias" value="{VALUE_ALIAS}" />
+                    <td><label for="domain">{TR_DOMAIN}</label></td>
+                    <td><input type="text" name="domain" id="domain" value="{VALUE_DOMAIN}" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="alias">{TR_ALIAS}</label></td>
+                        <td><input type="text" name="alias" id="alias" value="{VALUE_ALIAS}" />
                         </td>
                     </tr>
                     <tr>                        
