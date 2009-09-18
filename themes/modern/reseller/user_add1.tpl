@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -39,7 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="users.php">{TR_MENU_MANAGE_USERS}</a></li>
+            	<li><a href="users.php">{TR_MENU_MANAGE_USERS}</a></li>
                 <li><a href="user_add1.php">{TR_ADD_USER}</a></li>
             </ul>
         </div>
@@ -62,7 +61,7 @@
 					<legend>{TR_CORE_DATA}</legend>
 					<table>
 						<tr>
-							<td>{TR_DOMAIN_NAME} <span class="icon i_help" onmouseover="showTip('dmn_help', event)" onmouseout="hideTip('dmn_help')" />Help</span></td>
+							<td>{TR_DOMAIN_NAME} <span class="icon i_help" onmouseover="showTip('dmn_help', event)" onmouseout="hideTip('dmn_help')" >Help</span></td>
 							<td><input type="text" name="dmn_name" value="{DMN_NAME_VALUE}"/></td>
 						</tr>
 						<!-- BDP: expire -->
