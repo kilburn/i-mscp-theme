@@ -1,7 +1,6 @@
-<-- Kilburn funciona bien pero al agregar el segudo ticket la linea se pone a la derecha y no debajo no le veo el fallo -->
 <?xml version="1.0" encoding="{THEME_CHARSET}" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset={THEME_CHARSET}" />
@@ -16,13 +15,13 @@
             DD_belatedPNG.fix('*');
         </script>
         <![endif]-->
-		<script type="text/javascript">
-		/* <![CDATA[ */
-		function action_delete(url, subject) {
-			return confirm(sprintf("{TR_MESSAGE_DELETE}", subject));
-		}
-		/* ]]> */
-		</script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            function action_delete(url, subject) {
+                return confirm(sprintf("{TR_MESSAGE_DELETE}", subject));
+            }
+            /* ]]> */
+        </script>
     </head>
 
     <body>
@@ -58,59 +57,61 @@
             <div class="warning">{MESSAGE}</div>
             <!-- EDP: page_message -->
 
-			<!-- BDP: tickets_list -->
-		        <h2 class="support"><span>{TR_OPEN_TICKETS}</span></h2>
-		        <table>
-					<thead>
-						<tr>
-							<th>{TR_STATUS}</th>
-                            <th>{TR_TICKET_FROM}</th>
-                            <th>{TR_TICKET_TO}</th>
-							<th>{TR_SUBJECT}</th>
-							<th>{TR_URGENCY}</th>
-							<th>{TR_LAST_DATA}</th>
-							<th>{TR_ACTION}</th>
-						</tr>
-					</thead>
-					<tfoot>
-						<tr>
-							<td colspan="7"><input name="Submit" type="submit" class="button" onclick="MM_goToURL('parent','ticket_delete.php?delete=open');return document.MM_returnValue" value="{TR_DELETE_ALL}" /></td>
-						</tr>
-					</tfoot>
-					<tbody>
-						<!-- BDP: tickets_item -->
-                        <td><b>{NEW}</b></td>
-            <td>{FROM}</td>
-            <td>{TO}</td>
-            <td><img src="{THEME_COLOR_PATH}/images/icons/document.png" width="12" height="15" align="left" />
-			<script type="text/javascript">
-<!--
-			document.write('<a href="ticket_view.php?ticket_id={ID}&screenwidth='+screen.width+'" class="link">{SUBJECT}</a>');
-//-->
-			</script>
-			<noscript><a href="ticket_view.php?ticket_id={ID}&amp;screenwidth='800'" class="link"> {SUBJECT}</a></noscript>
-			</td>
-            <td>{URGENCY}</td>
-            <td>{LAST_DATE}</td>
-            <td><img src="{THEME_COLOR_PATH}/images/icons/delete.png" width="16" height="16" border="0" align="absmiddle" /> <a href="ticket_delete.php?ticket_id={ID}" onclick="return action_delete('ticket_delete.php?ticket_id={ID}', '{SUBJECT2}')" class="link">{TR_DELETE}</a></td>
-						<!-- EDP: tickets_item -->
-					</tbody>
-				</table>
-				<div class="paginator">
-					<!-- BDP: scroll_next_gray -->
-					<a class="icon i_next_gray" href="#" title="next">next</a>
-					<!-- EDP: scroll_next_gray -->
-					<!-- BDP: scroll_next -->
-					<a class="icon i_next" href="ticket_system.php?psi={NEXT_PSI}" title="next">next</a>
-					<!-- EDP: scroll_next -->
-					<!-- BDP: scroll_prev_gray -->
-					<a class="icon i_prev_gray" href="#" title="next">next</a>
-					<!-- EDP: scroll_prev_gray -->
-					<!-- BDP: scroll_prev -->
-					<a class="icon i_prev" href="ticket_system.php?psi={PREV_PSI}" title="previous">previous</a>
-					<!-- EDP: scroll_prev -->
-				</div>
-			<!-- EDP: tickets_list -->
+            <!-- BDP: tickets_list -->
+            <h2 class="support"><span>{TR_OPEN_TICKETS}</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>{TR_STATUS}</th>
+                        <th>{TR_TICKET_FROM}</th>
+                        <th>{TR_TICKET_TO}</th>
+                        <th>{TR_SUBJECT}</th>
+                        <th>{TR_URGENCY}</th>
+                        <th>{TR_LAST_DATA}</th>
+                        <th>{TR_ACTION}</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="7"><input name="Submit" type="submit" class="button" onclick="MM_goToURL('parent','ticket_delete.php?delete=open');return document.MM_returnValue" value="{TR_DELETE_ALL}" /></td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <!-- BDP: tickets_item -->
+                    <tr>
+                    <td><b>{NEW}</b></td>
+                    <td>{FROM}</td>
+                    <td>{TO}</td>
+                    <td><img src="{THEME_COLOR_PATH}/images/icons/document.png" width="12" height="15" align="left" />
+                        <script type="text/javascript">
+                            <!--
+                            document.write('<a href="ticket_view.php?ticket_id={ID}&screenwidth='+screen.width+'" class="link">{SUBJECT}</a>');
+                            //-->
+                        </script>
+                        <noscript><a href="ticket_view.php?ticket_id={ID}&amp;screenwidth='800'" class="link"> {SUBJECT}</a></noscript>
+                    </td>
+                    <td>{URGENCY}</td>
+                    <td>{LAST_DATE}</td>
+                    <td><img src="{THEME_COLOR_PATH}/images/icons/delete.png" width="16" height="16" border="0" align="absmiddle" /> <a href="ticket_delete.php?ticket_id={ID}" onclick="return action_delete('ticket_delete.php?ticket_id={ID}', '{SUBJECT2}')" class="link">{TR_DELETE}</a></td>
+                    </tr>
+                    <!-- EDP: tickets_item -->
+                </tbody>
+            </table>
+            <div class="paginator">
+                <!-- BDP: scroll_next_gray -->
+                <a class="icon i_next_gray" href="#" title="next">next</a>
+                <!-- EDP: scroll_next_gray -->
+                <!-- BDP: scroll_next -->
+                <a class="icon i_next" href="ticket_system.php?psi={NEXT_PSI}" title="next">next</a>
+                <!-- EDP: scroll_next -->
+                <!-- BDP: scroll_prev_gray -->
+                <a class="icon i_prev_gray" href="#" title="next">next</a>
+                <!-- EDP: scroll_prev_gray -->
+                <!-- BDP: scroll_prev -->
+                <a class="icon i_prev" href="ticket_system.php?psi={PREV_PSI}" title="previous">previous</a>
+                <!-- EDP: scroll_prev -->
+            </div>
+            <!-- EDP: tickets_list -->
 
         </div>
 
