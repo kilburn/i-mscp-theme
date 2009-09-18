@@ -38,6 +38,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+            	<li><a href="user_statistics.php">{TR_MENU_DOMAIN_STATISTICS}</a></li>
                 <li><a href="user_statistics.php">{TR_MENU_OVERVIEW}</a></li>
                 <li>{TR_DOMAIN_STATISTICS}</li>
             </ul>
@@ -74,18 +75,18 @@
 				<input type="hidden" name="domain_id" value="{DOMAIN_ID}" />
 			</form>
 				
-			<table width="100%" cellspacing="3">
-				<thead>
-					<tr>
-						<th>{TR_DAY}</th>
-						<th>{TR_WEB_TRAFFIC}</th>
-						<th>{TR_FTP_TRAFFIC}</th>
-						<th>{TR_SMTP_TRAFFIC}</th>
-						<th>{TR_POP3_TRAFFIC}</th>
-						<th>{TR_ALL_TRAFFIC}</th>
-					</tr>
-				</thead>
-				<!-- BDP: traff_list -->
+			<!--  BDP: traffic_table  -->
+				<table width="100%" cellspacing="3">
+					<thead>
+						<tr>
+							<th>{TR_DAY}</th>
+							<th>{TR_WEB_TRAFFIC}</th>
+							<th>{TR_FTP_TRAFFIC}</th>
+							<th>{TR_SMTP_TRAFFIC}</th>
+							<th>{TR_POP3_TRAFFIC}</th>
+							<th>{TR_ALL_TRAFFIC}</th>
+						</tr>
+					</thead>
 					<tfoot>
 						<tr>
 							<td>{TR_ALL}</td>
@@ -97,7 +98,7 @@
 						</tr>
 					</tfoot>
 					<tbody>
-						<!-- BDP: traff_item -->
+						<!-- BDP: traffic_table_item -->
 							<tr>
 								<td>{DATE}</td>
 								<td>{WEB_TRAFFIC}</td>
@@ -106,10 +107,10 @@
 								<td>{POP3_TRAFFIC}</td>
 								<td>{ALL_TRAFFIC}</td>
 							</tr>
-						<!-- EDP: traff_item -->
+						<!-- EDP: traffic_table_item -->
 					</tbody>
-				<!-- EDP: traff_list -->
-			</table>
+				</table>
+			<!--  EDP: traffic_table  -->
         </div>
 
         <div class="footer">

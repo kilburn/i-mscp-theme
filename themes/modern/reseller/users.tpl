@@ -16,7 +16,7 @@
         </script>
         <![endif]-->
         <script type="text/javascript">
-            <!--
+            /* <![CDATA[ */
             function action_status(url, dmn_name) {
                 if (!confirm(sprintf("{TR_MESSAGE_CHANGE_STATUS}", dmn_name)))
                     return false;
@@ -28,12 +28,11 @@
                     return false;
                 location = url;
             }
-            //-->
+            /* ]]> */
         </script>
     </head>
 
     <body>
-
         <div class="header">
             {MAIN_MENU}
 
@@ -119,7 +118,6 @@
 
                             <!-- BDP: usr_delete_show -->
                             <!-- EDP: usr_delete_show -->
-
                             <!-- BDP: usr_delete_link -->
                                 <a class="icon i_delete" href="#" oncliack="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')">{ACTION}</a>
                             <!-- EDP: usr_delete_link -->
@@ -153,6 +151,4 @@
         </div>
 
     </body>
-</html>
-</body>
 </html>

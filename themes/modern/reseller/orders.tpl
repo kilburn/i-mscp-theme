@@ -48,6 +48,7 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
+            	<li><a href="orders.php">{TR_MENU_ORDERS}</a></li>
                 <li><a href="orders.php">{TR_MENU_OVERVIEW}</a></li>
             </ul>
         </div>
