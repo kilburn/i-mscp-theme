@@ -620,3 +620,7 @@ div.tooltip{
 	width : 0;
 	overflow : hidden;
 }
+
+form table td{
+	vertical-align: top;
+}
