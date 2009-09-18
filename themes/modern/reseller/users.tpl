@@ -24,7 +24,7 @@
             }
 
             function action_delete(url, dmn_name) {
-                if (!confirm(sprintf("{TR_MESSAGE_DELETE}", dmn_name)))
+                if (!confirm(sprintf("{TR_MESSAGE_DELETE_ACCOUNT}", dmn_name)))
                     return false;
                 location = url;
             }
@@ -121,7 +121,7 @@
                             <!-- EDP: usr_delete_show -->
 
                             <!-- BDP: usr_delete_link -->
-                                <a class="icon i_delete" href="#" onclick="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')">{ACTION}</a>
+                                <a class="icon i_delete" href="#" oncliack="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')">{ACTION}</a>
                             <!-- EDP: usr_delete_link -->
                         </td>
                     </tr>
