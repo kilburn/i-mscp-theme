@@ -13,3 +13,7 @@
     <li><a href="{AWSTATS_PATH}">{TR_AWSTATS}</a></li>
     <!-- EDP: active_awstats -->
 </ul>
+
+<div class="isp_logo">
+	<img class="isp_logo" src="{ISP_LOGO}" alt="" />
+</div>

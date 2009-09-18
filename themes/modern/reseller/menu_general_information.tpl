@@ -5,3 +5,7 @@
     <li><a href="language.php">{TR_MENU_LANGUAGE}</a></li>
     <li><a href="settings_layout.php">{TR_MENU_LAYOUT_SETTINGS}</a></li>
 </ul>
+
+<div class="isp_logo">
+	<img class="isp_logo" src="{ISP_LOGO}" alt="" />
+</div>
