@@ -24,7 +24,7 @@
 			<div class="warning">{MESSAGE}</div>
 		<!-- EDP: page_message -->
 		<h2><span>{TR_DIRECTORY_TREE}</span></h2>
-				
+
 		<form action="">
 			<table style="empty-cells:show">
 				<thead>
@@ -44,7 +44,7 @@
 						<!-- EDP: list_item -->
 					</tr>
 				<!-- EDP: dir_item -->
-				
+
 				</tbody>
 			</table>
 		</form>

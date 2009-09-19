@@ -620,3 +620,12 @@ div.tooltip{
 	width : 0;
 	overflow : hidden;
 }
+
+form table td{
+	vertical-align: top;
+}
+
+.isp_logo{
+	margin : 0 auto;
+	text-align : center;
+}
