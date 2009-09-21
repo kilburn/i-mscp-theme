@@ -212,6 +212,7 @@ table .icon {
 	background-position : right top;
 	background-repeat : no-repeat;
 	width : 100%;
+	max-width : 1994px;
 	position : relative;
 }
 .graph span{
@@ -219,7 +220,7 @@ table .icon {
 	min-width : 3px;
 	height : 20px;
 	background-image : url('../images/background/graph_full.png');
-	background-repeat : repeat-x;
+	background-repeat : no-repeat;
 	width : 0;
 	background-position : left top;
 }

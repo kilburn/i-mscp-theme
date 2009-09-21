@@ -53,25 +53,20 @@
             <h2 class="stats"><span>{TR_DOMAIN_STATISTICS}</span></h2>
 
             <form name="domain_statistics_frm" method="post" action="domain_statistics.php">
-                <table>
-                    <tr>
-                        <td width="80">{TR_MONTH}</td>
-                        <td><select name="month" id="month">
-                                <!-- BDP: month_list -->
-                                <option {OPTION_SELECTED}>{MONTH_VALUE}</option>
-                                <!-- EDP: month_list -->
-                            </select>
-                        </td>
-                        <td  width="80">{TR_YEAR}</td>
-                        <td><select name="year" id="year">
-                                <!-- BDP: year_list -->
-                                <option {OPTION_SELECTED}>{YEAR_VALUE}</option>
-                                <!-- EDP: year_list -->
-                            </select>
-                        </td>
-                        <td><input name="Submit" type="submit" class="button" value="{TR_SHOW}" /></td>
-                    </tr>
-                </table>
+            	{TR_MONTH}
+            	<select name="month" id="month">
+            		<!-- BDP: month_list -->
+            			<option {OPTION_SELECTED}>{MONTH_VALUE}</option>
+            		<!-- EDP: month_list -->
+            	</select>
+            	
+            	{TR_YEAR}
+            	<select name="year" id="year">
+            		<!-- BDP: year_list -->
+            			<option {OPTION_SELECTED}>{YEAR_VALUE}</option>
+            		<!-- EDP: year_list -->
+            	</select>
+            	<input name="Submit" type="submit" class="button" value="{TR_SHOW}" />
                 <input name="uaction" type="hidden" value="show_traff" />
             </form>
 

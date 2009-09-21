@@ -54,79 +54,75 @@
             <h2 class="general"><span>{TR_SERVER_STATISTICS}</span></h2>
 
 
-            <form action="server_statistic.php" method="post" name="reseller_user_statistics" id="reseller_user_statistics">
-                    <table>
-                        <tr>
-                            <td width="80">{TR_MONTH}</td>
-                            <td><select name="month" id="month">
-                                    <!-- BDP: month_list -->
-                                    <option {OPTION_SELECTED}>{MONTH_VALUE}</option>
-                                    <!-- EDP: month_list -->
-                                </select>
-                            </td>
-                            <td  width="80">{TR_YEAR}</td>
-                            <td><select name="year" id="year">
-                                    <!-- BDP: year_list -->
-                                    <option {OPTION_SELECTED}>{YEAR_VALUE}</option>
-                                    <!-- EDP: year_list -->
-                                </select>
-                            </td>
-                            <td><input name="Submit" type="submit" class="button" value="  {TR_SHOW}  " />
-                            </td>
-                        </tr>
-                    </table>
-                    <input type="hidden" name="uaction" value="change_data" />
-                </form>
-                <br />
-                <table>
-                    <tr align="center">
-                        <td width="35" nowrap="nowrap">&nbsp;</td>
-                        <td><b>{TR_DAY}</b></td>
-                        <td><b>{TR_WEB_IN}</b></td>
-                        <td><b>{TR_WEB_OUT}</b></td>
-                        <td><b>{TR_SMTP_IN}</b></td>
-                        <td><b>{TR_SMTP_OUT}</b></td>
-                        <td><b>{TR_POP_IN}</b></td>
-                        <td><b>{TR_POP_OUT}</b></td>
-                        <td><b>{TR_OTHER_IN}</b></td>
-                        <td><b>{TR_OTHER_OUT}</b></td>
-                        <td><b>{TR_ALL_IN}</b></td>
-                        <td><b>{TR_ALL_OUT}</b></td>
-                        <td><b>{TR_ALL}</b></td>                        
-                    </tr>
-                    <!-- BDP: day_list -->
-                    <tr>
-                        <td align="center">&nbsp;</td>
-                        <td align="center"><b><a href="server_statistic_day.php?year={YEAR}&amp;month={MONTH}&amp;day={DAY}" class="link">{DAY}</a></b></td>
-                        <td align="center">{WEB_IN}</td>
-                        <td align="center">{WEB_OUT}</td>
-                        <td align="center">{SMTP_IN}</td>
-                        <td align="center">{SMTP_OUT}</td>
-                        <td align="center">{POP_IN}</td>
-                        <td align="center">{POP_OUT}</td>
-                        <td align="center">{OTHER_IN}</td>
-                        <td align="center">{OTHER_OUT}</td>
-                        <td align="center">{ALL_IN}</td>
-                        <td align="center">{ALL_OUT}</td>
-                        <td align="center">{ALL}</td>
+			<form action="server_statistic.php" method="post" name="reseller_user_statistics" id="reseller_user_statistics">
+				{TR_MONTH}
+				<select name="month" id="month">
+					<!-- BDP: month_list -->
+						<option{OPTION_SELECTED}>{MONTH_VALUE}</option>
+					<!-- EDP: month_list -->
+				</select>
+				
+				{TR_YEAR}
+				<select name="year" id="year">
+					<!-- BDP: year_list -->
+						<option{OPTION_SELECTED}>{YEAR_VALUE}</option>
+					<!-- EDP: year_list -->
+				</select>
+				<input name="Submit" type="submit" class="button" 	value="  {TR_SHOW}  " />
+				<input type="hidden" name="uaction" value="change_data" />
+			</form>
 
-                    </tr>
+                <table>
+                	<thead>
+	                    <tr>
+	                        <th>{TR_DAY}</th>
+	                        <th>{TR_WEB_IN}</th>
+	                        <th>{TR_WEB_OUT}</th>
+	                        <th>{TR_SMTP_IN}</th>
+	                        <th>{TR_SMTP_OUT}</th>
+	                        <th>{TR_POP_IN}</th>
+	                        <th>{TR_POP_OUT}</th>
+	                        <th>{TR_OTHER_IN}</th>
+	                        <th>{TR_OTHER_OUT}</th>
+	                        <th>{TR_ALL_IN}</th>
+	                        <th>{TR_ALL_OUT}</th>
+	                        <th>{TR_ALL}</th>                        
+	                    </tr>
+                	</thead>
+                    <tfoot>
+	                    <tr>
+	                        <td>{TR_ALL}</td>
+	                        <td>{WEB_IN_ALL}</td>
+	                        <td>{WEB_OUT_ALL}</td>
+	                        <td>{SMTP_IN_ALL}</td>
+	                        <td>{SMTP_OUT_ALL}</td>
+	                        <td>{POP_IN_ALL}</td>
+	                        <td>{POP_OUT_ALL}</td>
+	                        <td>{OTHER_IN_ALL}</td>
+	                        <td>{OTHER_OUT_ALL}</td>
+	                        <td>{ALL_IN_ALL}</td>
+	                        <td>{ALL_OUT_ALL}</td>
+	                        <td>{ALL_ALL}</td>
+	                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <!-- BDP: day_list -->
+	                    <tr>
+	                        <td><a href="server_statistic_day.php?year={YEAR}&amp;month={MONTH}&amp;day={DAY}" class="link">{DAY}</a></td>
+	                        <td>{WEB_IN}</td>
+	                        <td>{WEB_OUT}</td>
+	                        <td>{SMTP_IN}</td>
+	                        <td>{SMTP_OUT}</td>
+	                        <td>{POP_IN}</td>
+	                        <td>{POP_OUT}</td>
+	                        <td>{OTHER_IN}</td>
+	                        <td>{OTHER_OUT}</td>
+	                        <td>{ALL_IN}</td>
+	                        <td>{ALL_OUT}</td>
+	                        <td>{ALL}</td>
+	                    </tr>
                     <!-- EDP: day_list -->
-                    <tr>
-                        <td align="center">&nbsp;</td>
-                        <td align="center"><b>{TR_ALL}</b></td>
-                        <td align="center"><strong>{WEB_IN_ALL}</strong></td>
-                        <td align="center"><strong>{WEB_OUT_ALL}</strong></td>
-                        <td align="center"><strong>{SMTP_IN_ALL}</strong></td>
-                        <td align="center"><strong>{SMTP_OUT_ALL}</strong></td>
-                        <td align="center"><strong>{POP_IN_ALL}</strong></td>
-                        <td align="center"><strong>{POP_OUT_ALL}</strong></td>
-                        <td align="center"><strong>{OTHER_IN_ALL}</strong></td>
-                        <td align="center"><strong>{OTHER_OUT_ALL}</strong></td>
-                        <td align="center"><strong>{ALL_IN_ALL}</strong></td>
-                        <td align="center"><strong>{ALL_OUT_ALL}</strong></td>
-                        <td align="center"><strong>{ALL_ALL}</strong></td>
-                    </tr>
+	                </tbody>
                 </table>
         </div>
 
