@@ -37,7 +37,10 @@
                 <li><a class="logout" href="../index.php?logout">{TR_MENU_LOGOUT}</a></li>
             </ul>
             <ul class="path">
-                <li><a href="domain_statistics.php">{TR_DOMAIN_STATISTICS}</a></li>
+            	<li><a href="server_statistic.php">{TR_MENU_STATISTICS}</a></li>
+                <li><a href="reseller_statistic.php">{TR_RESELLER_STATISTICS}</a></li>
+                <li><!-- <a href="reseller_user_statistics.php?rid={RID}&amp;name={NAME}&amp;month={MONTH}&amp;year={YEAR}">-->{TR_RESELLER_USER_STATISTICS}<!-- </a> --></li>
+                <li>{TR_DOMAIN_STATISTICS}</li>
             </ul>
         </div>
 
@@ -81,30 +84,28 @@
                         <th>{TR_ALL_TRAFFIC}</th>
                     </tr>
                 </thead>
-                <!-- BDP: traff_list -->
                 <tfoot>
                     <tr>
                         <td>{TR_ALL}</td>
-                        <td>{WEB_TRAFFIC}</td>
-                        <td>{FTP_TRAFFIC}</td>
-                        <td>{SMTP_TRAFFIC}</td>
-                        <td>{POP3_TRAFFIC}</td>
-                        <td>{ALL_TRAFFIC}</td>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <!-- BDP: traff_item -->
-                    <tr>
-                        <td>{DATE}</td>
                         <td>{ALL_WEB_TRAFFIC}</td>
                         <td>{ALL_FTP_TRAFFIC}</td>
                         <td>{ALL_SMTP_TRAFFIC}</td>
                         <td>{ALL_POP3_TRAFFIC}</td>
                         <td>{ALL_ALL_TRAFFIC}</td>
                     </tr>
-                    <!-- EDP: traff_item -->
+                </tfoot>
+                <tbody>
+                    <!-- BDP: traffic_table_item -->
+                    <tr>
+                        <td>{DATE}</td>
+                        <td>{WEB_TRAFFIC}</td>
+                        <td>{FTP_TRAFFIC}</td>
+                        <td>{SMTP_TRAFFIC}</td>
+                        <td>{POP3_TRAFFIC}</td>
+                        <td>{ALL_TRAFFIC}</td>
+                    </tr>
+                    <!-- EDP: traffic_table_item -->
                 </tbody>
-                <!-- EDP: traff_list -->
             </table>
         </div>
 
