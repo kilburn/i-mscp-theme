@@ -102,8 +102,8 @@
 				<tbody>
 					<!-- BDP: user_entry -->
 					<tr>
-						<td><a href="#" onclick="action_status('{URL_CHNAGE_STATUS}', '{USR_USERNAME}')" class="icon i_{STATUS_ICON}">{STATUS_ICON}</a></td>
-						<td><a href="http://www.{USR_USERNAME}/" target="_blank" class="icon i_goto">{NAME}</a></td>
+						<td><a href="#" onclick="action_status('{URL_CHANGE_STATUS}', '{NAME}')" class="icon i_{STATUS_ICON}">{STATUS_ICON}</a></td>
+						<td><a href="http://{NAME}/" target="_blank" class="icon i_goto">{NAME}</a></td>
 						<td>{CREATION_DATE}</td>
 						<td>{DISK_USAGE} of {DISK_LIMIT} MB</td>
 
@@ -119,7 +119,7 @@
 							<!-- BDP: usr_delete_show -->
 							<!-- EDP: usr_delete_show -->
 							<!-- BDP: usr_delete_link -->
-								<a class="icon i_delete" href="#" oncliack="action_delete('{URL_DELETE_USR}', '{USR_USERNAME}')">{ACTION}</a>
+								<a class="icon i_delete" href="domain_delete.php?domain_id={DOMAIN_ID}">{ACTION}</a>
 							<!-- EDP: usr_delete_link -->
 						</td>
 					</tr>
