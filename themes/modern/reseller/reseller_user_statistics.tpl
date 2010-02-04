@@ -11,13 +11,12 @@
 </head>
 
 <body onload="MM_preloadImages('{THEME_COLOR_PATH}/images/icons/database_a.gif','{THEME_COLOR_PATH}/images/icons/hosting_plans_a.gif','{THEME_COLOR_PATH}/images/icons/domains_a.gif','{THEME_COLOR_PATH}/images/icons/general_a.gif' ,'{THEME_COLOR_PATH}/images/icons/manage_users_a.gif','{THEME_COLOR_PATH}/images/icons/webtools_a.gif','{THEME_COLOR_PATH}/images/icons/statistics_a.gif','{THEME_COLOR_PATH}/images/icons/support_a.gif')">
-<!-- BDP: logged_from --><table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td height="20" nowrap="nowrap" class="backButton">&nbsp;&nbsp;&nbsp;<a href="change_user_interface.php?action=go_back"><img src="{THEME_COLOR_PATH}/images/icons/close_interface.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" /></a> {YOU_ARE_LOGGED_AS}</td>
-      </tr>
-    </table>
-	<!-- EDP: logged_from -->
 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:100%;padding:0;margin:0 auto;">
+<!-- BDP: logged_from -->
+<tr>
+ <td colspan="3" height="20" nowrap="nowrap" class="backButton">&nbsp;&nbsp;&nbsp;<a href="change_user_interface.php?action=go_back"><img src="{THEME_COLOR_PATH}/images/icons/close_interface.png" width="16" height="16" border="0" style="vertical-align:middle" alt="" /></a> {YOU_ARE_LOGGED_AS}</td>
+</tr>
+<!-- EDP: logged_from -->
 <tr>
 <td align="left" valign="top" style="vertical-align: top; width: 195px; height: 56px;"><img src="{THEME_COLOR_PATH}/images/top/top_left.jpg" width="195" height="56" border="0" alt="ispCP Logogram" /></td>
 <td style="height: 56px; width:100%; background-color: #0f0f0f"><img src="{THEME_COLOR_PATH}/images/top/top_left_bg.jpg" width="582" height="56" border="0" alt="" /></td>
@@ -102,30 +101,26 @@
                               <td class="{ITEM_CLASS}" nowrap="nowrap" align="center"><b><a href="domain_statistics.php?month={MONTH}&amp;year={YEAR}&amp;domain_id={DOMAIN_ID}" class="link">{DOMAIN_NAME}</a></b></td>
                               <td class="{ITEM_CLASS}" nowrap="nowrap" align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                                   <tr>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_left_small.gif" width="13" height="20" alt="" /></td>
-                                    <td class="stats"><table border="0" cellspacing="0" cellpadding="0" align="left">
+                                    <td width="3"><img src="{THEME_COLOR_PATH}/images/bars/stats_left.png" width="3" height="20"></td>
+                                    <td class="statsBar"><table border="0" cellspacing="0" cellpadding="0" align="left">
                                         <tr>
-                                          <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_left.gif" width="7" height="13" alt="" /></td>
-                                          <td class="statsBar"><img src="{THEME_COLOR_PATH}/images/trans.gif" width="{TRAFF_PERCENT}" height="1" alt="" /></td>
-                                          <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_right.gif" width="7" height="13" alt="" /></td>
+                                          <td class="statsBar"><img src="{THEME_COLOR_PATH}/images/bars/stats_progress.png" width="{TRAFF_PERCENT}" height="20"></td>
                                         </tr>
                                     </table></td>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_right_small.gif" width="13" height="20" alt="" /></td>
+                                    <td width="3"><img src="{THEME_COLOR_PATH}/images/bars/stats_right.png" width="3" height="20"></td>
                                   </tr>
                                 </table>
                                   <b>{TRAFF_SHOW_PERCENT}&nbsp;%</b><br />
                                 {TRAFF_MSG}</td>
                               <td class="{ITEM_CLASS}" nowrap="nowrap" align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                                   <tr>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_left_small.gif" width="13" height="20" alt="" /></td>
-                                    <td class="stats"><table border="0" cellspacing="0" cellpadding="0" align="left">
+                                    <td width="3"><img src="{THEME_COLOR_PATH}/images/bars/stats_left.png" width="3" height="20"></td>
+                                    <td class="statsBar"><table border="0" cellspacing="0" cellpadding="0" align="left">
                                         <tr>
-                                          <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_left.gif" width="7" height="13" alt="" /></td>
-                                          <td class="statsBar"><img src="{THEME_COLOR_PATH}/images/trans.gif" width="{DISK_PERCENT}" height="1" alt="" /></td>
-                                          <td width="7"><img src="{THEME_COLOR_PATH}/images/bars/stats_right.gif" width="7" height="13" alt="" /></td>
+                                          <td class="statsBar"><img src="{THEME_COLOR_PATH}/images/bars/stats_progress.png" width="{DISK_PERCENT}" height="20"></td>
                                         </tr>
                                     </table></td>
-                                    <td width="13"><img src="{THEME_COLOR_PATH}/images/bars/stats_right_small.gif" width="13" height="20" alt="" /></td>
+                                    <td width="3"><img src="{THEME_COLOR_PATH}/images/bars/stats_right.png" width="3" height="20"></td>
                                   </tr>
                                 </table>
                                   <b>{DISK_SHOW_PERCENT}&nbsp;%</b><br />

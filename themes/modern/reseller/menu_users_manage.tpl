@@ -24,12 +24,14 @@
   <tr>
     <td height="3" width="193"><img src="{THEME_COLOR_PATH}/images/top/menu_separator.jpg" height="3" width="193" alt="" /></td>
   </tr>
+  <!-- BDP: alias_menu -->
   <tr>
     <td><a href="alias.php" class="submenu">{TR_MENU_DOMAIN_ALIAS}</a></td>
   </tr>
   <tr>
     <td height="3" width="193"><img src="{THEME_COLOR_PATH}/images/top/menu_separator.jpg" height="3" width="193" alt="" /></td>
   </tr>
+  <!-- EDP: alias_menu -->
   <tr>
     <td><a href="settings_welcome_mail.php" class="submenu">{TR_MENU_E_MAIL_SETUP}</a></td>
   </tr>
@@ -58,7 +60,7 @@
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td class="logoutbutton"><a href="../index.php?logout"><img src="{THEME_COLOR_PATH}/images/icons/logout_interface.png" width="24" height="24" border="0" alt="" />{TR_MENU_LOGOUT}</a></td>
+      <td class="logoutbutton"><a href="../index.php?logout"><img src="{THEME_COLOR_PATH}/images/icons/logout_interface.png" width="16" height="16" border="0" alt="" /> {TR_MENU_LOGOUT}</a></td>
     </tr>
     <tr>
       <td>&nbsp;</td>

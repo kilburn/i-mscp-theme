@@ -18,27 +18,31 @@
   <tr>
     <td height="3" width="193"><img src="{THEME_COLOR_PATH}/images/top/menu_separator.jpg" height="3" width="193" alt="" /></td>
   </tr>
+  <!-- BDP: isactive_subdomain_menu -->
   <tr>
     <td><a href="subdomain_add.php" class="submenu">{TR_MENU_ADD_SUBDOMAIN}</a></td>
   </tr>
   <tr>
     <td height="3" width="193"><img src="{THEME_COLOR_PATH}/images/top/menu_separator.jpg" height="3" width="193" alt="" /></td>
   </tr>
+  <!-- EDP: isactive_subdomain_menu -->
+  <!-- BDP: isactive_alias_menu -->
   <tr>
     <td><a href="alias_add.php" class="submenu">{TR_MENU_ADD_ALIAS}</a></td>
   </tr>
   <tr>
     <td height="3" width="193"><img src="{THEME_COLOR_PATH}/images/top/menu_separator.jpg" height="3" width="193" alt="" /></td>
   </tr>
-<!-- BDP: isactive_dns_menu -->
+  <!-- EDP: isactive_alias_menu -->
+  <!-- BDP: isactive_dns_menu -->
   <tr>
     <td><a href="dns_add.php" class="submenu">{TR_MENU_ADD_DNS}</a></td>
   </tr>
   <tr>
     <td height="3" width="193"><img src="{THEME_COLOR_PATH}/images/top/menu_separator.jpg" height="3" width="193" alt="" /></td>
   </tr>
-<!-- EDP: isactive_dns_menu -->
-    <tr>
+  <!-- EDP: isactive_dns_menu -->
+  <tr>
     <td>&nbsp;</td>
   </tr>
     <tr>
@@ -48,7 +52,7 @@
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td class="logoutbutton"><a href="../index.php?logout"><img src="{THEME_COLOR_PATH}/images/icons/logout_interface.png" width="24" height="24" border="0" alt="" />{TR_MENU_LOGOUT}</a></td>
+      <td class="logoutbutton"><a href="../index.php?logout"><img src="{THEME_COLOR_PATH}/images/icons/logout_interface.png" width="16" height="16" border="0" alt="" /> {TR_MENU_LOGOUT}</a></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
